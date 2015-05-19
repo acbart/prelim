@@ -1,0 +1,176 @@
+\section{Proposed Work}
+
+To test my hypotheses, a number of new pieces of technology and instruction will need to be created.
+
+\subsection{Sophisticated Data Science}
+
+Understanding the structure, meaning, and values of data can be a difficult problem for introductory students.
+Sophisticated Property explorer
+Data map builder
+Flowchart maker
+Sharing button
+Graphing tools
+
+\subsection{Mutual Language Translation}
+
+One of the biggest features of Kennel is the Mutual Language Translation.
+However, this system is still very incomplete.
+
+First and foremost, I am creating a new block-based programming environment that provides tools for Big Data Science while also offering an authentic, seamless transition to a serious programming experience.
+
+Work by Weintrop on the transition from Snap to Python analyzes this transition and offers a number of ways to mediate the transfer through programming tools. 
+One of the largest findings is that being able to write inline code inside a Block-based language is extremely helpful to students' learning \cite{Weintrop}.
+This idea can be pushed further to allow students to convert their block code to textual form and then translate the textual form back to blocks.
+This approach, Mutual Language Translation, is also being explored by Matsuzawa\cite{Matsuzawa} to support the transition from a desktop, block-based programming language to Java in an introductory programming class. 
+Although our core approaches are similar, we are looking to develop a browser-based version that supports a motivational programming paradigm with a strong long-term goal towards the development of a mature introductory Python environment that is ideal for novices from external domains.
+
+Unsupported Features
+	Classes
+	Unpacking
+	break/continue
+	
+	Abstraction
+	Syntax details: Colons, "set", "def"->"define"
+	Globals - not useful in a CS course, students shouldn't write functions that affect global
+	
+	Full isomorphism
+	
+Curiously, full isomorphism is impossible if only static analysis techniques are used.
+The biggest example of this is the indexing operator, which works for both dictionaries and lists. 
+Semantically, indexing a dictionary and a list are two very different operations with different purposes and costs.
+However, syntactically, the operation can be identical.
+Although some indexes are syntaxically unambiguous -- e.g., a string literal used as an index *cannot* be for a list -- there are many that are impossible to determine at compile-time using traditional static analysis.
+This is largely because Python is a dynamic language -- the parser has no idea what type a variable has, so it is impossible to tell if a given variable is a dictionary or a list.
+
+The underlying problem here is that Python actually supports a very rich model for supporting operators -- any object that implements the \texttt{\_\_getitem\_\_} function, in fact, will support indexing.
+
+However, there are techniques that can be applied to infer the types of most variables.
+There are edge cases that must be dealt with in a principled fashion.
+It is impossible to predict the type output of ``eval'', for instance -- but fortunately, ``eval'' is bad practice in general and should be forbidden to beginners.
+
+Simple dynamic analysis can be used to infer the type of a property over the course of the programs execution.
+
+\subsection{Meaningful Program Analysis}
+
+In a classroom of 80 students and minimal instructors, it is a challenge to keep students successful.
+Most students lack the programming knowledge to identify their own errors, let alone diagnose and fix them.
+Although 1-1 human tutoring is ideal for learners, there are simply not enough staff resources.
+For some kinds of problems, the system can support the student.
+
+WebCAT is well-known .
+Uses style checks, unit testing.
+There are other tests that can be used too.
+
+I propose a rich API for analyzing student code and tracking deficiencies.
+
+Figure \ref{fig-example-analysis} provides a potential mock-up of this system.
+
+\begin{figure*}[ht]
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{stringstyle=\color{mymauve}}
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+\begin{lstlisting}[columns=fullflexible]
+function check(code, ast, variables) {
+	if 
+
+\end{lstlisting}
+\caption{Analysis API Mock-up}
+\label{fig-example-analysis}
+\end{figure*}
+
+
+\subsection{Student Tracking and Reporting}
+
+In order to scale the learning experience, instructors and course staff need to have access to a wealth of information about students.
+
+Some of these students, they will be out-of-touch with. They show up to their office hours for the first time (without knowing that they previously met with other TAs)
+
+This environment will be able to provide just-in-time feedback and report meaningful information to instructors.
+
+\subsection{Instructional Materials}
+
+Finally, adaptable instructional materials will be created that take advantage of these tools in order to optimally instruct students.
+
+These materials will be made widely available to the greater CS Education community to encourage adoption and improvement.
+
+\subsection{More Libraries}
+
+The CORGIS project depends on having an extensive and varied collection of datasets. 
+Students should be able to find a dataset that appeals to their personal interests but provides a sound learning experience.
+The same data source can be expressed in many ways, representing different levels of abstraction and different affordances.
+Consider the data map in figure
+
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{center}
+\tikzset{
+    bnode/.style = {   
+        align=center,                                           
+        draw,
+        rectangle split,
+        rectangle split horizontal,
+        rectangle split parts=2
+    }
+}
+\begin{tikzpicture}
+    
+    \node[bnode]
+       (middle)
+       {      \nodepart{one}
+          ``city'' \nodepart{two}
+          ``temperature''};
+
+    \draw (middle.one south) -- +(0,-1) node[draw, anchor=north](q) {string};
+    \draw (middle.two south) -- +(0,-1) node[draw, anchor=north](q) {integer};
+\end{tikzpicture}
+\caption{Weather Data Maps}
+\label{data-maps-weather}
+\end{center}
+\end{wrapfigure}
+
+Finding data sources can be a challenging task.
+A component of my research plan is to publish best practices and techniques for finding, organizing, and XXX datasets.
+
+Although finding data sets is one challenge, getting them into a suitable shape can be even more difficult.
+Novice students struggle with 
+When organizing data for students, 
+
+Data map
+
+Some datasets were chosen because they were low-hanging fruit -- extensively documented, freely available. 
+
+\begin{easylist}
+& Low-hanging fruit
+& Student-driven
+\end{easylist}
+
+
+
+Simulation sources
+
+Blockly integration
+
+Blocks for real-time data
+
+Python translation
+
+Program analysis
+
+Automatically assessing
+Automatically tracking
+Automatically guiding
+Modelling students

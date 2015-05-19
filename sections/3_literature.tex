@@ -1,0 +1,312 @@
+\section{Introductory Computing}
+
+In the following sections, we review existing literature on the many forms that introductory computer science has taken.
+This is not intended to be an exhaustive look at all the ways to teach Computer Science.
+Instead, it will be illustrative of the many approaches that the community has been exploring over the past few decades, along with the successes and failures of the different approaches.
+It will begin with a look at what content should be taught and who should receive the instruction.
+Then we will explore the approaches and tools that have been used to mediate the instruction and, finally, the assessments used to measure the success of the approaches.
+
+\subsection{The Content}
+
+There is a serious, on-going debate about what novice students in computing should learn, with limited consensus. 
+Complicating this discussion is the bifurcation of introductory computing into Computational Thinking (sometimes referred to as CS-0) and Computer Science (sometimes referred to as CS-1).
+At the same time, both of these pathways claim to be ``more than just programming.''
+
+
+\subsubsection{Programming}
+
+Programming is the process of writing explicit instructions, executable by a computational agent, to solve a seemingly-infinite number of computationally-susceptible problems, such as summing large lists of data, processing and rendering images, or creating complex interactive media. Programmers write instructions to the computer that will be executed on command, instructions that come in a variety of forms called \textit{languages}. These sequences of instructions, programs, were originally hard-wired into the machinery of a computer, but are now created using programs called \textit{programming environments}. Today, these environments are arguably the primary tools of a developer, and are where both experts and novices spend the majority of their time. The learning environment of a programmer, therefore, are these programming environments.
+
+\subsubsection{Computer Science}
+
+Computer Science is often described as neither being about Computers, nor being a science.
+Instead, it is a complicated blend of engineering, science, art, and several other disciplines.
+It attempts to solve problems using computation, finding what is theoretically computable and what is not, and many other complicated tasks.
+A full description of what Computer Science is and is not is outside the scope of this proposal.
+Computer Science Curriculum 2013 \cite{CS2013} is an attempt to codify the entire breadth of an undergraduate CS education.
+However, it does not attempt to dictate the exact implementation and order of material.
+Traditionally, certain topics are typical -- decision, iteration, and the nature of data and control flow.
+
+Different curriculums, therefore, suggest different approaches.
+The ``How to Design Programs'' curriculum emphasizes a functional programming model, using a LISP-descended language named Racket.
+The only looping mechanism that students are taught is recursion.
+The dominance of the Object-Oriented Model in software engineering usually leads to a strong emphasis in introductory courses -- in fact, there is even an ``Objects First'' curriculum.
+There are other approaches, of course -- some instructors focus on an initially imperative programming style, to focus on high level concepts such as program state and coding instructions.
+
+\subsubsection{Computational Thinking}
+
+In the past few years, there has been a push for "Computational Thinking" in curriculums outside of Computer Science. 
+The phrase was coined by Seymour Papert in 1993~\cite{papert1996} and popularized by Dr. Jeannette Wing's 2006 paper~\cite{wing2006}, which opened a floodgate of discussion about the term. 
+Unfortunately, there is still limited consensus on \textit{what} exactly CT is, whether it should be universally taught, how it should be taught, and how to identify when it has been taught.
+
+An excellent resource for summarizing the history of Computational Thinking research is the 2013 dissertation by Wienberg~\cite{weinberg2013}. 
+This comprehensive survey analyzed 6906 papers directly or indirectly related to Computational Thinking from 2006-2011, describing research efforts and findings. 
+Those papers were filtered down to 164 papers that substantially related to Computational Thinking in order to draw more meaningful conclusions. 
+Finally, 57 of these papers were given closer treatment to analyze their research methods.
+
+Weinberg paints an interesting picture of Computational Thinking research. 
+As might be expected, there has been a steady increase in published papers on the topic since 2006.
+The movement is focused in the US, with less than a quarter of first-authors being outside the United States, even though 55\% of Computer Science research (beyond just Computer Science Education research) is published outside of North America~\cite{Randolph2008}. 
+Research is divided evenly between K-12 and undergraduate, and there is no strong presence of research on continuing or post-graduate education initiatives that involve Computational Thinking.
+    
+An important contribution by Weinberg is a taxonomic breakdown of the aforementioned 164 research papers based on whether they primarily focus on modeling, pedagogy, or assessment. 
+This taxonomy is documented in Appendix \ref{app:weinberg-taxonomy}, and a summary of the results of this breakdown is shown in Figure \ref{weinberg-taxonomy}. 
+Over half of the research on CT describes approaches to pedagogy (Curriculum and Program Description), leaving a small amount to modeling (Philosophy and Opinion) and assessment (Research and Evaluation). 
+The lack of assessment research is understandable given the youth of this area of research, but still troubling.
+
+\begin{figure*}[h]
+    \centering
+		
+		\def\angle{90}
+		\def\radius{3}
+		\def\cyclelist{{"deepred","red","deepgreen","green","deepblue","blue"}}
+		\newcount\cyclecount \cyclecount=-1
+		\newcount\ind \ind=-1
+		\begin{tikzpicture}[nodes = {font=\sffamily}]
+			\foreach \percent/\name in {
+					48/Curriculum Description,
+					7/Program Description,
+					12/Research,
+					5/Evaluation,
+					23/Philosophy,
+					6/Opinion
+				} {
+					\ifx\percent\empty\else               % If \percent is empty, do nothing
+							\global\advance\cyclecount by 1     % Advance cyclecount
+							\global\advance\ind by 1            % Advance list index
+							\ifnum5<\cyclecount                 % If cyclecount is larger than list
+								\global\cyclecount=0              %   reset cyclecount and
+								\global\ind=0                     %   reset list index
+							\fi
+							\pgfmathparse{\cyclelist[\the\ind]} % Get color from cycle list
+							\edef\color{\pgfmathresult}         %   and store as \color
+							% Draw angle and set labels
+							\draw[fill={\color!50},draw={\color}] (0,0) -- (\angle:\radius)
+								arc (\angle:\angle+\percent*3.6:\radius) -- cycle;
+							\node at (\angle+0.5*\percent*3.6:0.8*\radius) {\percent\,\%};
+							\node[pin=\angle+0.5*\percent*3.6:\name]
+								at (\angle+0.5*\percent*3.6:\radius) {};
+							\pgfmathparse{\angle+\percent*3.6}  % Advance angle
+							\xdef\angle{\pgfmathresult}         %   and store in \angle
+						\fi
+					};
+			\end{tikzpicture}
+    \caption{Percentage of Papers in Each Category of the Weinberg Taxonomy}
+    \label{weinberg-taxonomy}
+\end{figure*} 
+
+Even more troubling, however, is the further analysis of the 57 empirical studies.
+Only fifteen (26\%) studies include or sought an operational definition of computational thinking, and only six go beyond the superficial (solely describing computational thinking as a "way of thinking", a "fundamental skill", or a "way of solving problems"). 
+The failure to identify an operational definition weakens the theoritical strength of the studies.
+This weakness likely stems from the background of the researchers: 28\% of the articles involved non-CS majors and \textbf{only 18\% of the articles involved education experts.} 
+In other words, over four-fifths of this educationally-oriented research was performed by people with no real formal training in educational research techniques.
+This is particularly troubling given that Computational Thinking is a strong target for interdisciplinary endevaors.
+
+Weinberg reflects on the continuing debate about the importance of Computational Thinking:
+\begin{quote}
+    Many, like Wing, believe computational thinking to be a revolutionary concept, one as 
+important to a solid educational foundation as are reading, writing, and arithmetic (Bundy, 2007\cite{bundy2007}) 
+(Day, 2011\cite{day2011}). Others believe its potential and significance are overstated (Denning, 2009\cite{denning2009}; 
+Hemmendinger, 2010\cite{hemmendinger2010}), and some have voiced concern that by joining forces with other 
+disciplines computer science might be diluting either one or both of the participating disciplines 
+(Cassel, 2011\cite{cassel2011}; Jacobs, 2009\cite{jacobs2009}). Both the praise and the criticism for computational thinking could 
+perhaps be tempered by reflecting on a historical quote by Pfeiffer in 1962: “Computers are too 
+important to overrate or underrate. There is no real point in sensationalizing or exaggerating 
+activities which are striking enough without embellishment. There is no point in belittling 
+either.” (Pfeiffer, 1962\cite{pfeiffer1962}).
+\end{quote}
+
+Computational Thinking often strives to teach more than just the practical mechanics of programming and Computer Science.
+Instead, it is suggested as a set of cognitive techniques, such as iterative design, a debugging mindset, and more.
+Philosophers often also describe ``dispositions or attitudes'' that a computational thinker should exhibit\cite{csta-computational-thinking}:
+\begin{itemize}
+\item Confidence in dealing with complexity
+\item Persistence in working with difficult problems
+\item Tolerance for ambiguity
+\item The ability to deal with open ended problems
+\item The ability to communicate and work with others to achieve a common goal or solution.
+\end{itemize}
+Though defined for K-12 education, these dispositions seem equally relevant to university-level students. The first four dispositions influenced our use of student-defined big data projects where complexity, difficulty, ambiguity and open-endedness are present. The last disposition influenced our use of multi-disciplinary cohorts.
+
+There are key differences in these two educational pathways (Computer Science and Computational Thinking) that strongly influence course design.
+First, Computational Thinking courses are usually terminal and intended for non-majors -- there is little-to-no expectation that they will take more Computer Science courses.
+By comparison, CS-1 is a foundational course meant for students majoring in Computer Science.
+Typically, expectations are lower for students in CS-0, and less material is covered -- critically, there is a reduced emphasis on programming in favor of higher level concepts.
+Many students that try to transition from CS-0 directly to CS-2 will struggle, and it is still unclear how these students can be brought to success.
+
+Regardless of the differences between these different subjects, it is clear that both Computational Thinking and Computer Science rely on programming to some degree, and some degree of the subject must be taught before these students will really succeed with the rest of the material.
+Although Computational Thinking is more than just programming, it is still a crucial element.
+
+\subsection{The Learners}
+
+In any instructional design model, a crucial task early on is to identify the audience of the instruction -- what their backgrounds are, their motivations, their abilities, and their goals.
+
+The most obvious audience for instruction on introductory computing is undergraduate computer science majors -- the ones who come to college explicitly to learn computing. 
+These students often have already had prior successful computing experiences -- either in high school AP courses or through their own side-projects.
+However, some large percentage of students typically enter without any prior experience, and are overwhelmed by the material and the gap between themselves and their more experienced peers.
+Harvey Mudd has had great success in separating these two classes of learners to improve the introductory computing experience.~\cite{Alvarado:2010:WCE:1734263.1734281}
+
+Recent efforts have started to push introductory computing into lower grades, i.e. K-12.
+Younger students tend to have less fully defined domains, which means that it is more important to rely on situational interests and short-term expectations of usefulness.
+These students also have a weaker overall cognitive base to draw on, necessitating simpler materials.
+However, this can be an advantage for students, as it represents a level playing field.
+Of course, the imbalance of computational resources (e.g., computers) across the world can make it difficult to provide meaningful experiences for these students.
+
+A final categorization is non-majors taking Computational Thinking, a primary target of my research efforts.
+These students present a unique profile.
+A few of them will have had prior programming experience, but most of them have had very minimal interactions with computers (indeed, some will describe themselves as ``not a computer person'').
+These students may not believe that Computational Thinking will help them.
+This is largely because they have more clearly defined domain identities, and may not see how Computational Thinking fits into them.
+So, indeed, these students often have low motivation and low ability.
+
+\subsection{The Contexts}
+
+As part of the overarching goal to bring more students into Computer Science, a large number of contexts have been explored in Introductory computing. 
+The context of a learning experience grounds the learner in what they already known, in order to teach the new material.
+Many introductory computing experiences focused on presenting the content as purely as possible, which can come across as abstract and detached~\cite{Zografski}.
+However, starting with Seymour Papert's work with robotics and the LOGO programming environment in the 70s~\cite{papert1996}, instructors have been interested in motivating students' first experience with rich contexts.
+Two particularly popular approaches have emerged since then -- Digital Media ``Computation'' (Manipulation)~\cite{Forte} and Game Design~\cite{Zografski}.
+However, an alternative approach that is steadily gaining popularity is [Big] Data Science ~\cite{Anderson}.
+
+
+
+\subsubsection{Interest-Driven Contexts}
+
+As it became clear that Computer Science had a serious image problem (Denning describes its perception by the public ``stodgy and nerdy''~\cite{Denning:2005}), work began on making Computer Science ``Fun'' and approachable. 
+A key goal was to increase diversity and to broaden participation. 
+This led to the rise of ``Interest-Driven Contexts'', emphasizing problems and projects that would be situationally interesting to a wide audience.
+Guzdial, for instance, was largely responsible for the creation of the Media Computation approach, where students use computational techniques (e.g., iteration and decision) to manipulate sound, images, videos, and other digital artifacts.
+For instance, students might use a nested, numerically-indexed \texttt{for} loop in order to adjust the red-value of the pixels in an image, treating it as a two-dimensional array of binary triples, in order to reduce the red-eye of a photo.
+
+Although wildly deployed, a review of these curricular materials by Guzdial \cite{guzdial2006imagineering} in light of Situated Learning Theory found that 1) students did not find this an authentic context, and 2) intense rhetoric was insufficient to convince them that it was authentic. 
+Few students find it expedient and helpful to remove the red-eye from family photos by writing python scripts, when they could easily use a GUI-based program to automate the task instead.
+Guzdial leaves open the question of what contexts can be truly authentic for non-majors, given the relative novelty of teaching introductory computing for non-majors.
+Ben-Ari echos this question by suggesting a very narrow selection of authentic contexts and communities in his paper exploring the application of Situated Learning Theory to Computer Science in general \cite{ben2004situated}.
+Critically, the opposite problem could occur -- if an instructor is effective at convincing students a context is authentic, they may believe them.
+There are serious ethical issues involved in mispresenting the utility of a context, leading students to develop an embarrassing misconception of the field -- imagine a young child believing that all of Computer Science is game design, because that is what they started off doing.
+
+There are other disadvantages of an Interest-driven approach.
+The motivation literature describes ``Seductive Details'' (interesting but irrelevant adjuncts)~\cite{harp1998seductive} as interfering both with short-term problem completion and long-term transfer.
+In other words, students get hung up on unimportant aspects of the context that they ignore the content.
+Consider a student using the game and animation development environment Scratch, which allows beginners to create sprites from images.
+A young learner may be so amused by the ability to change the color and shape of their image, that they neglect their assigned work.
+Although a well-regulated learner would not be distracted, most of the at-risk population that would benefit from these contexts are unable to deal with such distractions.
+
+\subsubsection{Useful-Driven Contexts}
+
+An alternative focus to Interest is Usefulness, the idea that the context should be immediately authentic to the learner.
+To some extent, it is impossible (or at least prohibitively difficult) to find a one-size-fits-all context that will be useful to all learners.
+To do so could be considered preauthentication.
+However, in practice, some contexts are broadly useful that they are likely to engage a diverse crowd of learners, and simultaneously providing opportunities to empower the learners.
+Perhaps the most open-ended and valuable context is pursuing real-world problems across many different domains.
+
+In the past two decades, the field of Data Science has emerged at the intersection of Computer Science, Statistics, Mathematics, and a number of other fields.
+This field is concerned with answering real-world problems through data abstractions.
+As a context, there are pedagogical penalties for using it, since it introduces a wide variety of new content -- visualization, statistics, ethics, social impacts... the list is long.
+However, a good instructor can downplay the focus on these side-areas as needed, or even emphasize subject matter's strengths (e.g., a statistics major might find it interesting to use their mathematical background to strengthen their problem-solving investigation).
+However, there are other difficulties: bringing in real-world data requires real sophistication by the instructor, especially when working with Big Data.
+
+The use of data analysis as a form of contextualization is not novel, and represents a new and actively growing movement.
+Recently, low velocity and low volume data sets have been provided by Anderson et al to explore interesting questions in CS-0 courses \cite{Anderson}, building on a small history of similar projects.
+Typically, these questions are provided as uniform experiences for the students in the course -- everyone works with the same dataset.
+Upper division courses have employed these situated learning experiences using data of varying size and complexity for several years \cite{Egger, datamining, Waldman}.
+Many authors collaborated to produce a new framework centered around these ideas -- ``Social Computing for Good'', a collection of approaches and projects for interdisciplinary students to solve using computing ~\cite{Social-good}.
+Although this framework presents some ideas, there are still unsolved technical and pedagogical problems in how to optimally bring these materials to learners.
+
+\subsection{The Facilitations}
+
+The faciliations of a learning experience are the scaffolds used to support the learner, which must eventually be faded away as they progress.
+Although in an ideal experience, the learner will complete all materials with no more support than an expert, in practice they often need help getting started.
+Many such tools have been created to support computer science education over the years.
+Some of these tools have a deep integration into the learners environment  -- which is typically a programming environment.
+Programming environments are an integrated tool for programmers to write, execute, and debug code.
+There are many, many programming environments out there, and many have been designed with learners in mind (e.g., Dr. Racket, Greenfoot, Scratch, etc.).
+This section describes some common tools and ideas that are used in CS Education - it is meant to be more illustrative than exhaustive, but highlights the primary technological means that are used to support learners.
+
+\subsubsection{Block-based Programming}
+
+A historically successful approach to gently introducing students to programming is block-based programming, such as Scratch and its successor Snap!.
+These environments introduce high-level programming concepts by having students connect blocks representing programming constructs in order to avoid syntactical barriers -- grammatically-incorrect combinations are forbidden by the design of the system.
+Although equivalent in computational power, block-based languages have long been known to be unsuitable for professional developers because of their failure to scale and their inflexibilty. 
+And yet, instructional design dictates that the learning context should match the performance context as closely as possible to ensure transfer.
+Therefore, a recent criticism of this approach is that transferring students from a block-based language to a traditional text-based language is a non-trivial problem that must be studied closely.
+
+\subsubsection{Visual Programming Environments}
+
+Another common facilitation is Visual Programming, which features images as a principle component of the process of abstraction.
+Students struggle with the idea of ``abstraction'', representing complex real-world phenomenon with simplified representations.
+Although an expert computer scientist is comfortable treating today's weather as a single number, it can be challenging for a beginner to separate out the complexities and mentally model the computer's knowledge.
+Visual Programming seeks to alleviate this problem by definitively including image information along with the representation -- and by extension, also including position, shape, color, etc.
+This can be extremely effective for agent-based systems (e.g., NetLogo~\cite{tisue2004netlogo}) and game/animation environments (e.g., GreenFoot~\cite{Kolling:2010}).
+
+A major trade-off of such a system is that students become dependent on the images as a crutch, and believe that an image is a necessary component of the representation process.
+They will still eventually have to deal with abstract ideas that do not necessarily have pictoral representations -- ``Manager'' style classes that drive more abstract components of computation often have suffer from such a challenge.
+Some systems incorporate an ethereal construct -- NetLogo has the idea of ``Observers'', which can help students adjust to the idea.
+
+\subsubsection{``Run'' Buttons}
+
+Compiling and running a program is a multi-step process -- a consummate computer scientist should have an awareness of how the system translates and links the high level code into a format runnable by the system.
+Many low level programming languages demand the user interact with it through a command line, in order to take advantage of all the configurations it demands.
+Modern programming environments often hide all of this complexity away with a simple ``run'' button.
+In some cases, this is further abstracted by hiding the concept of a ``main'' function -- e.g., in GreenFoot, students define behavior for objects through a special class hook, and the system is responsible for executing these objects according to its own schedule.
+Insulating from the command line hides ``real programming'', and this may affect students' perceptions of the systems' authenticity -- an instructor may also consider it insulation from crucial knowledge on how a program should be run, and the messiness that can be involved in the process.
+
+\subsubsection{Program Analysis}
+
+Modern environments often perform some kind of analysis of a program in order identify flaws, whether syntactical, stylistic, or semantic~\cite{Ihantola:2010}, providing automated guidance to the learner.
+The latter-most of these is a true challenge that requires the instructor to provide additional information to the system (e.g., unit tests and program constraints).
+The former are more straight-forward, and have broad application to programming.
+Program analysis is a complicated process that combines static parsing of programs (often using type information) and dynamic analysis (requiring the system to be run).
+The Unit Testing approach has led to the popularity of Test-driven development~\cite{webcat}.
+
+\subsubsection{Program Visualization}
+
+Beginners often struggle with understanding the idea of Program State, that a computer has a model that changes over the lifetime of a program.
+Some environments and external tools can create visual representations of this state by executing an algorithm line-by-line.
+For instance, the Online Python Tutor~\cite{Guo:2013} can map every line of code to an image representing the current stack and heap. 
+Astute beginners can use this to explore how an individual statement affects the state of the system and to diagnose problems in their code.
+
+\subsection{The Assessments}
+
+A critical component of the educational process is assessment, both formatively to support the learning process and summatively to evaluate the students' (and research projects) success.
+The Instructional Design process dictates that assessment tools align strongly with the high level performance objectives, requiring instructional designers to know what behaviors, skills, attitudes, and knowledge they expect of their students.
+Different learners have different end-goals, and therefore require different measures of success.
+For example, Computer Science students need to have a strong knowledge of how to program and solve certain kinds of problems; meanwhile, Computational Thinking students have lower requirements towards their knowledge of programming, but need to have a clear idea of how to apply what they know to their own fields' problems.
+
+In an important retrospective paper, Guzdial listed and reviewed four hypotheses being measured by the Media Computation curriculum, evaluating whether the goals of the project were being met~\cite{Guzdial:2013:EHM:2493394.2493397}.
+\begin{description}
+	\item[Retention Hypothesis] Did more students stay in the course because of the new curriculum?
+	\item[Gender Hypothesis] Were more women and other minorities retained and report higher engagement?
+	\item[Learning Hypothesis] Did students learn more?
+	\item[More-Computing Hypothesis] Did students choose to continue their study of Computer Science (e.g., by taking more classes or trying online curriculums)?
+\end{description}
+By evaluating the project against these hypotheses, Guzdial was able to do more than just identify the strengths and weaknesses of the Media Computation curriculum - he was able to identify weaknesses and strengths in his research approach.
+For instance, Guzdial criticized the project for measuring absolute learning outcomes, rather than measuring learning gains for individual students -- pre- and post- tests are more reliable indicators of performance than only post- tests.
+The lesson from this is that it critical to identify early and often what you are trying to assess and how it will be assessed.
+
+\subsubsection{Performance Context}
+
+Instructional Design dictates that assessment should be driven by the performance context.
+However, the young and diverse nature of Computer Science and Computational Thinking make it difficult to narrow down what the performance context is.
+Therefore, we take advantage of the context in order to solidify the performance context as the formalization of a problem, the abstraction of data related to the problem, and the creation of an algorithm to solve the problem.
+This high-level goal contains several components -- most importantly, however, is that the goal is wrapped up in the idea of an algorithmic representation of a solution, necessitating students to write some code.
+
+\subsubsection{Assessment Tools}
+
+Given the goal, how do we assess success in introductory computing?
+Expert programmers often measure the correctness of their programs using Unit Tests -- each individual unit of source code (such as a function or object, depending on the paradigm of the language) is given sample data along with the expected, correct output.
+These unit tests can be run constantly during development to assess the ongoing validity of the code.
+In some ways, these are simple measures of student success, and the test-driven development methodology has taken off to the point that one modern language, Pyret\footnote{\url{http://www.pyret.org}}, requires that all functions be written alongside its unit tests before it will even compile.
+And yet Unit Tests are limited measures of achievement in the view of Situated Learning, which advocates for more active measures such as performance assessments.
+
+Projects can be seen as a more authentic form assessment, and is suggested heavily by Situated Learning Theory.
+Although projects introduce a considerable amount of complexity,
+Evaluating a project requires some level of recital (e.g., by the student to an instructor) and can be graded against a rubric.
+Of course, such measures can introduce a significant amount of bias -- care must be taken while developing the rubric in order to ensure reproducibility and reduce variance as instructors review the material.
+
+Other aspects of Computational Thinking and Computer Science can be assessed with simpler instruments.
+For instance, verbal information can be judged using a multiple choice examination, short answer questions, and other simplistic question types (e.g., matching programming constructs to their definition).
+Intellectual skills such as iterating over data can be tested with short programming exercises.
+More complicated conceptual knowledge can be evaluated by requiring the students create concept maps and paragraph responses.
+However, generalized, repeatable concept inventories remain an elusive prize for Computer Science educators, although Tew and Guzdial~\cite{Tew:2011:FLI:1953163.1953200} have had some measure of success.
+
