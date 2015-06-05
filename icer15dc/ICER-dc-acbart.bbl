@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{anderson}
+R.~E. Anderson et~al.
+\newblock Introductory programming meets the real world: Using real problems
+  and data in cs1.
+\newblock In {\em Proceedings of the 45th ACM Technical Symposium on Computer
+  Science Education}, SIGCSE '14, pages 465--466, New York, NY, USA, 2014. ACM.
+
+\bibitem{imagineering}
+M.~Guzdial and A.~E. Tew.
+\newblock Imagineering inauthentic legitimate peripheral participation: An
+  instructional design approach for motivating computing education.
+\newblock In {\em Proceedings of the Second International Workshop on Computing
+  Education Research}, ICER '06, pages 51--58, New York, NY, USA, 2006. ACM.
+
+\bibitem{music}
+B.~D. Jones.
+\newblock Motivating students to engage in learning: {The} {MUSIC} model of
+  academic motivation.
+\newblock {\em International Journal of Teaching and Learning in Higher
+  Education}, 21(2):272--285, 2009.
+
+\bibitem{mlt}
+Y.~Matsuzawa, T.~Ohata, M.~Sugiura, and S.~Sakai.
+\newblock Language migration in non-cs introductory programming through mutual
+  language translation environment.
+\newblock In {\em Proceedings of the 46th ACM Technical Symposium on Computer
+  Science Education}, SIGCSE '15, pages 185--190, New York, NY, USA, 2015. ACM.
+
+\end{thebibliography}
