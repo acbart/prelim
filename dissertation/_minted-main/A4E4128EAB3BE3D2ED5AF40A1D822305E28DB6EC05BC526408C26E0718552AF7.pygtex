@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYGdefault{n}{mport} \PYGdefault{n}{weather}
+\PYGdefault{n}{mport} \PYGdefault{n}{matplotlib}\PYGdefault{p}{.}\PYGdefault{n}{pyplot} \PYGdefault{k}{as} \PYGdefault{n}{plt}
+
+\PYGdefault{n}{elsius\PYGdefaultZus{}temperatures} \PYGdefault{p}{=} \PYGdefault{p}{[]}
+\PYGdefault{k}{or} \PYGdefault{n}{t} \PYGdefault{k}{in} \PYGdefault{n}{weather}\PYGdefault{p}{.}\PYGdefault{n}{get\PYGdefaultZus{}forecasts}\PYGdefault{p}{(}\PYGdefault{err}{\PYGdefaultZsq{}}\PYGdefault{n}{Miami}\PYGdefault{p}{,} \PYGdefault{n}{FL}\PYGdefault{err}{\PYGdefaultZsq{}}\PYGdefault{p}{):}
+\PYGdefault{n}{celsius} \PYGdefault{p}{=} \PYGdefault{p}{(}\PYGdefault{n}{t} \PYGdefault{p}{\PYGdefaultZhy{}} \PYGdefault{l+m}{32}\PYGdefault{p}{)} \PYGdefault{p}{/} \PYGdefault{l+m}{1.8}
+\PYGdefault{n}{celsius\PYGdefaultZus{}temperatures}\PYGdefault{p}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{celsius}\PYGdefault{p}{)}
+\PYGdefault{n}{lt}\PYGdefault{p}{.}\PYGdefault{n}{title}\PYGdefault{p}{(}\PYGdefault{err}{\PYGdefaultZsq{}}\PYGdefault{n}{Celsius} \PYGdefault{n}{Temperatures} \PYGdefault{k}{in} \PYGdefault{n}{Miami}\PYGdefault{err}{\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{lt}\PYGdefault{p}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{celsius\PYGdefaultZus{}temperatures}\PYGdefault{p}{)}
+\PYGdefault{n}{lt}\PYGdefault{p}{.}\PYGdefault{n}{show}\PYGdefault{p}{()}
+\end{Verbatim}

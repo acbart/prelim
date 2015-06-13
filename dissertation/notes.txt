@@ -1,0 +1,9 @@
+Should Blockly be like CodingBat? Problems + Test cases, that students work through?
+
+Things we wish we had:
+   Python -> Blockly
+   
+Gathering data on motivation
+    surveys, interviews, observational data
+    
+Facebook activity of downloading your own data and doing analysis on it.

@@ -3,10 +3,12 @@
 As I am now three years into my PhD, my research builds on significant prior work. First and foremost, my CORGIS project has already been used in several introductory programming experiences, and seen publication at multiple venues, including two very successful workshops.
 My more recent work with Kennel represents a largely unpublished effort, but its key elements have already seen successful deployment in the Computational Thinking class.
 
+\subsection{CORGIS}
+
 My primary research project for the first two years of my dissertation led to CORGIS: Collections of Real-time, Giant, Interesting, Situated Datasets.
 This project's goal is to make simplistic data sources available to learners early in their programming experience, so that they can explore Big Data Science contexts.
 
-\subsection{Technical Infrastructure}
+\subsubsection{Technical Infrastructure}
 
 The foundation of this proposal rests on prior work developing the RealTimeWeb project, a software architecture framework that provides introductory programming students with an easy way to access and manipulate distributed real-time data\cite{bart-transforming}.
 Real-time data is a specific branch of Big Data -- specifically, high velocity data.
@@ -52,7 +54,7 @@ This caching is typically done using a simple key-value store on the local files
 Limits can be set on the size or lifespan of the data in the cache, allowing the system to update itself according to the velocity of the external data service.
 Using open-source REST API generating tools such as Eve~\cite{Eve}, existing high volume datasets can be quickly transformed into distributed datasets, alleviating the issues of data storage and transmission.
 
-\subsection{Semi-Automatic Library Generation}
+\subsubsection{Semi-Automatic Library Generation}
 
 Our client libraries are easily available through a curated, online gallery; each library is designed to be quickly adapted to instructors' specific academic desires. 
 This gallery also provides a tool for rapidly prototyping new libraries based on our framework.
@@ -65,7 +67,7 @@ This compiler can be easily extended to new languages by providing a template.
 This specification format has two major components: the functions, which connect to the relevant URL endpoints, and the domain objects, that are generated from a successful HTTP request. 
 This open-source tool has been used to successfully and rapidly develop a number of the existing client libraries.
 
-\subsection{Contextualizing with CORGIS}
+\subsubsection{Contextualizing with CORGIS}
 
 The RealTimeWeb toolchain has been deployed for several semesters in introductory Computer Science courses for majors, ranging from the first course all the way to a Data Structures level course.
 These integrations ranged from small assignments to entire semester projects using the software.
@@ -82,13 +84,66 @@ Similar results have been found from its integration in the Computational Thinki
 		\label{fig-expected-benefit}
 \end{wrapfigure}
 
-\subsection{Limitations of CORGIS}
+\subsubsection{Limitations of CORGIS}
 
 Although CORGIS has more or less successfully solved the problem of integrating high velocity data, and has started supporting high volume data, further work is required to solve the high variety data problem.
 Furthermore, there is no principled strategy for pedagogically integrating these tools into a classroom -- instructors tend to choose data streams based on their own situational interest, rather than through a deep understanding of the affordances and limitations of the dataset.
 Further work is required both on the technical and philosophical side in order to support these processes.
 
-\subsection{Block-Based Programming}
+\subsection{Kennel}
+
+In this section of the paper, I introduce my new online programming environment named Kennel.
+The goal of Kennel is to be a beginner-friendly programming environment that scaffolds the learner into a more mature environment while supporting a number of theory-driven, pedagogical objectives.
+Internally, Kennel uses a modified version of the open-source Blockly library to provide a block editor, a modified version of the open-source Skulpt library to execute python code, and an unmodified version of the open-source CodeMirror library to provide a text editor.
+The system promotes the learning transfer process by supporting Mutual Language Transformation between Blockly and Python -- at any time, code can be transferred back-and-forth between the block editor and the text editor.
+This transfer is highly optimized so that there is no usability delay in observing the differences between blocks and text.
+Additionally, Python expressions and code blocks can be inlined inside of the Blockly program in order to provide more piece-meal integrations.
+
+The Skulpt execution environment resides entirely within the users' browser, so there is no reliance on an external server to compile and run students' code.
+This system also includes a built-in, client-side Property Explorer to support program and data visualization.
+This execution environment supports a large number of native Python libraries, including custom ones developed for Big Data analysis.
+The long-term goal of this project is to support a useful set of rich libraries so that sophisticated applications can be developed -- going beyond traditional console-based problems.
+In this sense, the project is similar to other Skulpt-based environments such as Pythy and CodeSkulptor.
+However, Kennel seeks to maintain 100\% compatibility with existing Python APIs so that all code written is authentic.
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+\label{fig-blockly-custom}
+\psfig{file=images/blockly-custom.eps, width=\linewidth}
+\caption{Code Block, Code Expression, and user-defined Function blocks can be used to write inline Python code}
+\end{wrapfigure}
+
+Kennel is not just a code-authoring environment but also a system for guided practice.
+Instructors can create problems with interactive feedback.
+As students complete and struggle with milestones within the problem, they can be given just-in-time feedback, support, and encouragement.
+As they complete problems, this data can be reported to an interested central location, suitable for grading and course completion information.
+The system also tracks a number of events and user interactions for fine-grained analysis.
+
+\subsubsection{Mutual Language Translation}
+
+Work by Weintrop on the transition from Snap to Python offers a number of ways to mediate the transfer through programming tools. 
+One of the largest findings is that being able to write inline code inside a Block-based language is extremely helpful to students' learning \cite{Weintrop}.
+Figure \ref{fig-blockly-custom} demonstrates how Blockly can support arbitrary code execution through the Code Block, Code Expression, and user-defined Function blocks.
+This idea can be pushed further to allow students to convert their block code to textual form and then translate the textual form back to blocks.
+This approach, Mutual Language Translation, is also being explored by Matsuzawa\cite{Matsuzawa} to support the transition from a desktop, block-based programming language to Java in an introductory programming class. 
+Although our core approaches are similar, there are major differences.
+First, translating a dynamically-typed language is a non-trivial improvement over translating a statically-typed language -- in fact, the former is technically impossible to do with 100\% accuracy, and requires a number of novel solutions in order to achieve a reasonable measure of success.
+Second, my version is browser-based version, rather than relying on client-side tools, greatly enhancing the portability and providing more sophisticated student tracking.
+
+Figure \ref{fig-mlt-overview} gives an overview of the flow of code in the environment, and figures \ref{fig-example-blockly} and \ref{fig-example-python} demonstrate the near-equivalency of the output of the two code editors.
+Blockly outputs valid python source code, which can be passed into Skulpt in order to retrieve a JSON representation of the Abstract Syntax Tree.
+Alternatively, the Python source of the Skulpt program can be edited directly by the user. 
+Either way, this AST is parsed using our Py2Block library in order to generate an XML representation that Blockly can transform into its blocks.
+
+Blockly already supports compilation of its blocks to Python, JavaScript, and Dart.
+However, this multiple language support comes at a cost of reduced isomorphism - each language has different syntax for their common operations, and it is impossible to create a fully-featured block language with a one-to-one mapping between them.
+For example, JavaScript has no support for parallel assignment, a commonly-used feature in Python, while Python does not have increment or decrement operators.
+
+Instead of trying to satisfy multiple languages, we have dropped support for JavaScript in favor of a more full-featured mapping to Python.
+Most of the changes are minor details that introduce pythonic syntax details: functions blocks are labeled ``define'', assignment blocks have an ``='' operator, the ``add item to list'' block is renamed to ``append''.
+New language features are now also available -- Blockly has been extended to include support for creating and retrieving dictionaries, a crucial data structure in Python.
+Some behavior of Blockly has been modified: for instance, the original code creation uses the \texttt{global} keyword within closures in order to prevent beginners from having unexpected behavior with aliased global properties -- however, this introduces additional complexity and may not be useful in a introductory context, where beginners should encounter useful struggles when they attempt to reuse global variables in a local scope.
+
+\subsubsection{Big Data Science}
 
 \begin{wrapfigure}{R}{0.5\textwidth}
 \label{fig-mlt-overview}
@@ -147,3 +202,36 @@ By supporting a GUI library like TKinter or PyQT, students could construct an en
 This overcomes a limitation of traditional python development - python code can only be run in a Python interpreter with the appropriate libraries, and most end-users do not have such software already installed.
 Once relevant libraries are added to our Skulpt fork, students can create and share sophisticated programming projects seamlessly.
 
+\subsubsection{Guided Problems}
+
+A limitation of programming environments like Snap! is that they are not meant to be pedagogically interactive - students completing an assignment in the system are not guided to success.
+Instead, they are given a blank canvas and expected to work towards some externally defined goal, only knowing they are complete according to some external measurement (e.g., a problem description given by an instructor).
+Although this is tremendously useful for free-form constructivist and discovery learning experiences, they limit the system's ability to guide students that are just starting out.
+To provide these more scaffolded learning experiences, Kennel includes a mechanism for problems.
+
+A problem in Kennel includes a rich text description and instructor-provided logic.
+This logic is specified as a prioritized mapping of predicates to messages -- the student's code and the output of their program's execution are passed to the predicates and matched against their ordered.
+When a predicate is triggered, the student is offered the corresponding message -- a suggestion or motivational remark, depending on what the instructor has made available.
+A common example is a predicate that checks whether the students used iteration (e.g., a \texttt{foreach} loop) within their code, and then warns the student that iteration is required for that problem.
+In a large class size, this simplistic but automated feedback is tremendously useful.
+However, the API is currently very limited, resulting in a large investment by the problem designer in creating new materials and hints.
+
+\subsubsection{Persistence and Event Tracking}
+
+In my pilot of Kennel, the system is embedded within an online, interactive textbook based off the popular Runestone platform. % Cite runestone
+All work completed by the student is reported to the system in order to assign course credit.
+Additionally, in-progress development is persisted on the server using a fault-tolerant caching mechanism, described in Figure \ref{ft-cm}.
+\begin{figure}
+\begin{enumerate}
+  \item User triggers a change \textit{Or} Client reloads page, and an entry is found in the LocalStorage.
+	\item Change is stored in LocalStorage.
+	\item Change is sent to server.
+  \item Server successfully stores change \textit{Or} Fails to store the change.
+	\item Upon receipt of successful change, the Client clears entry in LocalStorage \textit{Or} It never recieves the receipt and instead keeps the entry until a page reload.
+\end{enumerate}
+\caption{Fault-Tolerant Caching Mechanism}
+\label{ft-cm}
+\end{figure}
+Finally, all student interactions with the systems' user interface are tracked for logging purposes.
+This includes students program edits, down to nearly the key-stroke level.
+These can be used in order to build up a complete representation of the students code as they develop, furthering the analysis of student programs for common patterns of mistakes.

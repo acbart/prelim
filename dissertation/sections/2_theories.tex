@@ -48,6 +48,36 @@ In this preliminary proposal, I will take advantage of SL Theory as a generalize
 
 The original work in Situated Learning Theory was categorically not about pedagogy or instructional design- it described how people learn and the importance of context and collaboration, but it did not recommend a particular style of classroom.
 
+\subsection{Theories of Instructional Design}
+
+Instructional Design is the systematic design of effective Learning Experiences. One of the most influential\cite{anglin1992reference} instructional theories is Gang\'{e}'s Theory of Instruction, a complex Cognitivist model that categorizes different types of learning outcomes (e.g., ``Verbal Information'' such as reciting the definition of a term, ``Attitudinal'' such as choosing to not smoke) and breaks down the process of learning into nine coherent steps. Gang\'{e} stresses that different learning outcomes require very different instructional implementations of the general instructional model. This instructional theory informs the design of complete Instructional Design models such as the Dick and Carey model \cite{carey2001systematic}. Although different ID models suggest different approaches to creating instructional materials, those materials are all typically patterned after Gang\'{e}'s instructional events.
+
+\subsubsection{Gagn\'{e}'s Instructional Events}
+
+\begin{figure}
+\begin{description}
+	\item[(1) Gain Attention:] Stimulate the learner and motivate them to engage with the material.
+	\item[(2) Describe Objectives:] Inform the learner will be able to do because of the instruction.
+	\item[(3) Stimulating Recall of Prior Knowledge:] Remind students of their prior knowledge.
+	\item[(4) Present the Material:] Using text, graphics, etc., give the instructional materials.
+	\item[(5) Provide Guidance:] Give instructions on how to use the instructional materials.
+	\item[(6) Elicit Performance:] Have the learners actively apply the new knowledge.
+	\item[(7) Provide Feedback:] Show the learner what they did well and poorly on.
+	\item[(8) Assess Performance Test:] Evaluate the learner on their performance
+	\item[(9) Enhance Retention and Transfer:] Generalize the instruction by showing similar applications.
+\end{description}
+\caption{Gang\'{e}'s Nine Events of Instruction}
+\label{gange-events}
+\end{figure}
+
+Gang\'{e}'s nine events are summarized in Figure \ref{gange-events}, taken indirectly from\cite{gagne1985conditions}. This model is described as an ordered, one-way sequence; however, in practice, some steps might be repeated and cycled between. For instance, very negative feedback might prompt the learner to return from step 7 to step 6. Modifications of the model have also been discussed in the literature. For example, to adapt for more Constructivist tastes, one could swap steps 4 and 6, so that students have the opportunity to engage with the materials before receiving instruction.
+
+Instructional Designers often identify three key interactions in a learning experience. In the simplest case, an instructor presents some new material, a learner participates in questions related to it, and the instructor assesses their performance as being excellent. Although it might appear that Gagn\'{e}'s model maps presentation to steps 1--5, participation to step 6, and assesssment to 7--9, this is an over-simplification of a much richer set of interactions. For instance, step 1 (Gain Attention) often involves a dialogue or other participation from the students, and step 7 often requires re-presentation of existing material or presentation of new material. In practice, every learning experience will end up being a unique combination of these interactions.
+
+Instructors and learners are involved in all of these interactions in different capacities and degrees. Presentation is primarily a flow of information from the Instructor to the learner. Participation is primarily an externalization of knowledge by the learner for the Instructor. Assessment is a mediation between the Instructor and the learner to align the externalization.
+
+Instructional Design Models such as Dick \& Carey usually delay the design of instructional materials till the end of the entire process, focusing initially on analysis of the learners, the performance context, the instructional goal, and a host of other critical factors. At that point, a content delivery system is chosen based on its educational affordances and suitability for the learning experience being developed. This delay reflects the typical role of an Instructional Designer as a \textit{consumer} of instructional technology -- they survey the available techniques and technology (e.g., traditional lecture, essay writing, websites), and choose the one that fits their need. In the remainder of this paper, we use instead take the Software Designer role of \textit{producer} of instructional technology in order to analyze some of the decisions that go into the design of these environments, from the retrospective of an Instructional Designer.
+
 \subsubsection{Situated Learning Environment Design}
 
 Situated Learning Theory is a theory of learning, not a theory of instructional design. However, subsequent research by Brown \cite{brown1989situated} and others expanded the theory so that it could be applied to the design of learning experiences. These expansions often naturally dictate the use of active learning techniques, demphasizing the role of lecture in favor of collaborative, problem-based learning activities.
@@ -118,9 +148,16 @@ If they are in tune with their learners, this might actually be an effective con
 However, because the integration is only at the surface level, it is possible that the learners will see this as a forced reference, and they will have a more negative reaction.
 It is also possible that they will not recognize the reference, or feel no positive emotions with it -- many contexts do not take into account gender, racial, or socio-economic characteristics of the anticipated learner.
 
+
+\subsection{Theories of Motivation}
+
+Theories of learning are distinctive from theories of motivation; the former determines how learning occurs, but the latter determines if and why learning occurs.
+Situated Learning Theory, Constructivism, and other theories of learning have implications for how people choose to engage in the learning process, but they are not sufficient in themselves.
+Instead, it is useful to turn to the dedicated motivational models as a lens to explore why people choose to participate and excel in Computer Science.
+In this preliminary proposal, we lean on the MUSIC Model of Academic Motivation as a primary framework.
+
 \subsubsection{MUSIC Model of Academic Motivation}
 
-In this preliminary proposal, we lean on the MUSIC Model of Academic Motivation as a primary framework.
 The decision to use the MUSIC model was based on several criteria.
 Although there are many motivational models available, few strive to be holistic models specifically developed for academics.
 For example, theories like Expectancy-Value and Cognitive Evaluation Theory have a wider scope and have stemmed from other disciplines such as healthcare.
@@ -148,3 +185,27 @@ At all times, instructors can consider whether they are leveraging at least one 
 As the latter, it offers both a quantified instrument (MMAMI) and a structure to anchor a qualitative investigation on.
 The model has also directly been used tactically in course design: Jones describes a controlled classroom experiment to motivate students by having an experimental group reflect on how a course satisfies the constructs of the MUSIC model (e.g., prompted to answer ``How will the material presented here will be useful to you?'').
 Quantitative data gathered after the experiment indicated a significant increase in motivation.~\cite{mcginley2014brief}
+
+\subsubsection{Other Models}
+
+Although the MUSIC Model is a holistic model, it can be useful to explore other theories of motivation that it draws on.
+Self-efficacy is just such a theory, concerned with a learners judgment of their own capabilities.
+Self-efficacy is often a strong predictor of students performance.
+Students that believe they will fail will often do so, despite whatever ability they may have.
+Self-regulation is another such model, explaining how students approach the learning process.
+Self-regulated learners will work earlier, more often, and more intelligently to solve problems.
+They know when to get help, and how to ask for it.
+Unfortunately, self-regulatory abilities are in short supply.
+There are many other theories that are worth exploring.
+
+\subsubsection{Extrinsic Motivation}
+
+Although ideally, students will always be internally motivated to learn new subjects, this isn't always the case.
+Academics are a careful balance of extrinsic and intrinsic motivation, with both internal and external rewards.
+For instance, the ultimate goal of most formal education is certification, either by an accredited university or some other independent body.
+In order to keep students on task, positive and negative grades are assigned based on performance.
+Although these grades can drive negative behavior (e.g., nit-picking, arguments, etc.), they are ultimately necessary for some class of learners.
+It can be a serious challenge for instructors to assign grades and use other forms of extrinsic motivation, to avoid dragging students along in a rigid environment but also not preventing students from floundering.
+Too loose with a grading scheme, and students may deprioritize a course over stricter ones.
+Too hard, and students may feel overwhelmed.
+Although my research will not focus much on extrinsic motivation, it is important to understand its role in the classroom experience.

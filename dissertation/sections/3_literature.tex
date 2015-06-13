@@ -139,6 +139,8 @@ Although Computational Thinking is more than just programming, it is still a cru
 
 \subsection{The Learners}
 
+In any instructional design model, a crucial task early on is to identify the audience of the instruction -- what their backgrounds are, their motivations, their abilities, and their goals.
+
 The most obvious audience for instruction on introductory computing is undergraduate computer science majors -- the ones who come to college explicitly to learn computing. 
 These students often have already had prior successful computing experiences -- either in high school AP courses or through their own side-projects.
 However, some large percentage of students typically enter without any prior experience, and are overwhelmed by the material and the gap between themselves and their more experienced peers.
@@ -219,14 +221,52 @@ Many such tools have been created to support computer science education over the
 Some of these tools have a deep integration into the learners environment  -- which is typically a programming environment.
 Programming environments are an integrated tool for programmers to write, execute, and debug code.
 There are many, many programming environments out there, and many have been designed with learners in mind (e.g., Dr. Racket, Greenfoot, Scratch, etc.).
+This section describes some common tools and ideas that are used in CS Education - it is meant to be more illustrative than exhaustive, but highlights the primary technological means that are used to support learners.
 
-One such historically successful approach to gently introducing students to programming is block-based programming, such as Scratch and its successor Snap!.
+\subsubsection{Block-based Programming}
+
+A historically successful approach to gently introducing students to programming is block-based programming, such as Scratch and its successor Snap!.
 These environments introduce high-level programming concepts by having students connect blocks representing programming constructs in order to avoid syntactical barriers -- grammatically-incorrect combinations are forbidden by the design of the system.
-There are many other such facilitations. In this proposal, we suggest new technological facilitations to support the process of learning about datasets and data science.
+Although equivalent in computational power, block-based languages have long been known to be unsuitable for professional developers because of their failure to scale and their inflexibilty. 
+And yet, instructional design dictates that the learning context should match the performance context as closely as possible to ensure transfer.
+Therefore, a recent criticism of this approach is that transferring students from a block-based language to a traditional text-based language is a non-trivial problem that must be studied closely.
+
+\subsubsection{Visual Programming Environments}
+
+Another common facilitation is Visual Programming, which features images as a principle component of the process of abstraction.
+Students struggle with the idea of ``abstraction'', representing complex real-world phenomenon with simplified representations.
+Although an expert computer scientist is comfortable treating today's weather as a single number, it can be challenging for a beginner to separate out the complexities and mentally model the computer's knowledge.
+Visual Programming seeks to alleviate this problem by definitively including image information along with the representation -- and by extension, also including position, shape, color, etc.
+This can be extremely effective for agent-based systems (e.g., NetLogo~\cite{tisue2004netlogo}) and game/animation environments (e.g., GreenFoot~\cite{Kolling:2010}).
+
+A major trade-off of such a system is that students become dependent on the images as a crutch, and believe that an image is a necessary component of the representation process.
+They will still eventually have to deal with abstract ideas that do not necessarily have pictoral representations -- ``Manager'' style classes that drive more abstract components of computation often have suffer from such a challenge.
+Some systems incorporate an ethereal construct -- NetLogo has the idea of ``Observers'', which can help students adjust to the idea.
+
+\subsubsection{``Run'' Buttons}
+
+Compiling and running a program is a multi-step process -- a consummate computer scientist should have an awareness of how the system translates and links the high level code into a format runnable by the system.
+Many low level programming languages demand the user interact with it through a command line, in order to take advantage of all the configurations it demands.
+Modern programming environments often hide all of this complexity away with a simple ``run'' button.
+In some cases, this is further abstracted by hiding the concept of a ``main'' function -- e.g., in GreenFoot, students define behavior for objects through a special class hook, and the system is responsible for executing these objects according to its own schedule.
+Insulating from the command line hides ``real programming'', and this may affect students' perceptions of the systems' authenticity -- an instructor may also consider it insulation from crucial knowledge on how a program should be run, and the messiness that can be involved in the process.
+
+\subsubsection{Program Analysis}
+
+Modern environments often perform some kind of analysis of a program in order identify flaws, whether syntactical, stylistic, or semantic~\cite{Ihantola:2010}, providing automated guidance to the learner.
+The latter-most of these is a true challenge that requires the instructor to provide additional information to the system (e.g., unit tests and program constraints).
+The former are more straight-forward, and have broad application to programming.
+Program analysis is a complicated process that combines static parsing of programs (often using type information) and dynamic analysis (requiring the system to be run).
+The Unit Testing approach has led to the popularity of Test-driven development~\cite{webcat}.
+
+\subsubsection{Program Visualization}
+
+Beginners often struggle with understanding the idea of Program State, that a computer has a model that changes over the lifetime of a program.
+Some environments and external tools can create visual representations of this state by executing an algorithm line-by-line.
+For instance, the Online Python Tutor~\cite{Guo:2013} can map every line of code to an image representing the current stack and heap. 
+Astute beginners can use this to explore how an individual statement affects the state of the system and to diagnose problems in their code.
 
 \subsection{The Assessments}
-
-%TODO
 
 A critical component of the educational process is assessment, both formatively to support the learning process and summatively to evaluate the students' (and research projects) success.
 The Instructional Design process dictates that assessment tools align strongly with the high level performance objectives, requiring instructional designers to know what behaviors, skills, attitudes, and knowledge they expect of their students.
