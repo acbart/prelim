@@ -1,34 +1,58 @@
 \section{Educational Theories}
 
 There are many theories of how people learn, how to teach, and how to engage with students. 
-In this section of the proposal, we review dominant theories that guide the research.
-First, we will discuss how people learn, and the dominant theories that guide researchers.
-Then, we will discuss Instructional Design, which is concerned with how to support the learning process.
-Finally, we will look at motivation and engagement, the reason people choose to direct their energy towards goals.
+In this proposal, I investigate Academic Motivation - the process by which people choose to direct energy towards learning.
+Motivation is well understood to be a crucial part of education, particularly in Computer Science~\cite{Carter:2011}.
 
-\subsection{Theories of Learning}
+\subsection{MUSIC Model of Academic Motivation}
 
+In this preliminary proposal, I lean on the MUSIC Model of Academic Motivation as a primary framework.
+The decision to use the MUSIC model was based on several criteria.
+Although there are many motivational models available, few strive to be holistic models specifically developed for academics.
+For example, theories like Expectancy-Value and Cognitive Evaluation Theory have a wider scope and have stemmed from other disciplines such as healthcare. %TODO: Cite
+The MUSIC Model is derived from a meta-analysis of these other theories, incorporating only the academically relevant components.
+Further, the MUSIC model is a tool meant for both design and evaluation, allowing it to be used in all phases of this work.
+Finally, the model and its associated instrument, the MUSIC Model of Academic Motivation Inventory (MMAMI) , has been extensively validated and utilized in other educational domains, making it a reliable device\cite{jones-validity}.
 
-There are many, many theories of learning, far more than can be accurately captured here.
-However, there are a few major paradigms worth discussing briefly: Cognitivism, Constructivisim, and Behavioralism.
-Cognitivism emerged as a response to classical theories on Behaviorist learning -- the latter posits learning as a ``black box'' process, and the former encourages researchers to ``pry open the box'' \cite{learningtheories}.
-This in turn led to the development of Constructivism, which describes learning as an active process of linking knowledge based on prior, subjective experiences.
-These theories are not replacements for each, but lenses for analyzing different learning experiences. Cognitivism and Constructivism in particular are usually more useful for studying higher learning.
+The MUSIC model identifies five key constructs in motivating students \cite{jones-description}:
+\begin{description}
+	\item[eMpowerment:] The amount of control that a student feels that they have over their learning -- e.g., course assignments, lecture topics, etc. This is amount of Agency that a student percieves.
+	\item[Usefulness:] The expectation of the student that the material they are learning will be valuable to their short- and long- term goals. There is no clear delineation of the time-scale for these goals, but there is nonetheless a distinction between strategic skills that students need to be successful in careers and personal interests and the tactical skills they need to complete present-day tasks.
+	\item[Success:] The student's belief in their own ability to complete assignments, projects, and other elements of a course with the investment of a reasonable, fulfilling amount of work. Most students desire experiences that are successful, but still challenging enough to be worth it.
+	\item[Interest:] The student's perception of how the assignment appeals to situational or long-term, individual interests. The former covers the aspects of a course related to attention, while the latter covers topics related to the fully-identified areas of focuses of the student. It can be difficult to parse out the difference between individual interests and long-term career goals -- there can be alignment between these two components.
+	\item[Caring:] The students perception of other stakeholders' attitudes toward them. These stakeholders primarily include their instructor and classmates, but also can be extended to consider other members of their learning experience (e.g., administration, external experts, etc.). It can also be viewed as the extension towards society as a whole.
+\end{description}
 
-\subsubsection{Situated Learning Theory}
+Students are motivated when one or more of these constructs is sufficiently activated.
+They are not all required to achieve maximal levels, and in fact that is not always desired -- it is possible, for instance, for a student to feel too empowered, and become overwhelmed by possibilities.
+For some of these constructs, a careful balance is required, and it may not be possible to ever achieve a minimal level; no matter how exciting you make your lecture, you may never convince your students it is interesting, although it is possible that they will still consider it useful and stay motivated.
+Crucially, students' subjective \textit{perception} of these constructs is a defining requirement and is more important than objective reality.
+It does not matter if you believe that your lecture is Useful, if you have not convinced your students that it is (although an instructor's beliefs are a powerful tool for convincing their students).
 
-Situated Learning Theory, originally proposed by Lave and Wenger, argues that learning normally occurs as a function of the activity, context, and culture in which it is situated\cite{lave-situated}.
+The MUSIC model is often used as an organizational framework and an evaluative tool.
+As the former, it is a list of factors to consider when building modules, assignments, and content of a course.
+At all times, instructors can consider whether they are leveraging at least one construct to motivate their students.
+As the latter, it offers both a quantified instrument (MMAMI) and a structure to anchor a qualitative investigation on.
+The model has also directly been used tactically in course design: Jones describes a controlled classroom experiment to motivate students by having an experimental group reflect on how a course satisfies the constructs of the MUSIC model (e.g., prompted to answer ``How will the material presented here will be useful to you?'').
+Quantitative data gathered after the experiment indicated a significant increase in motivation~\cite{mcginley2014brief}.
+The MUSIC model is therefore a very flexible resource for studying motivation.
+
+The MUSIC model has not been seriously applied to Computer Science education before, although a number of other motivational frameworks have been leveraged in studies.
+Many of these studies often find results that hint at many of the elements of the MUSIC model.
+For instance, Mitchell~\cite{Mitchell:2000} interest, usefulness, and ``intellectual challenges'' (success) as three primary elements influencing success in computer science.
+Although they do not discuss empowerment and social elements, many other studies often suggest these themes.
+Still, it should be acknowledged that it is an open question whether the MUSIC model can be applied directly, or if this domain has different characteristics from other disciplines.
+
+\subsection{Situated Learning Theory and Authenticity}
+
+Although most of this proposal relies on the MUSIC Model of Academic Motivation, I will discuss Situated Learning Theory briefly.
+Situated Learning Theory, originally proposed by Lave and Wenger, argues that learning normally occurs as a function of the activity, context, and culture in which it is situated~\cite{lave-situated}.
 Therefore, tasks in the learning environment should parallel real-world tasks, in order to maximize the \textit{authenticity}.
 Contextualization is key in these settings, as opposed to decontextualized (or ``inert'') settings.
 The key difference is that learning is driven by the problem being solved, rather than the tools available – therefore, the problem being solved should lead directly to the tool being taught.
+This argument suggests that this is a key aspect of motivating students.
 
-A critical element of these situated environments is the need for social interaction and collaboration, as learners become involved in and acculturated by ``Communities of Practice'' \cite{brown1989situated}.
-Members of a CoP share purposes, tools, processes, and a general direction -- they should have a commonly recognized domain. 
-This interaction occurs not only between individuals and the experts of the community (commonly represented by teachers) in an apprenticeship model, but also occurs between different learners as they adapt at uneven paces.
-This communication between peers leads to growth among both individuals, especially when access to authentic experts is limited.
-As the learner develops into an expert, they shift from the outside of the community's circle to the center, becoming more and more engaged -- this is the process of ``Legitimate Peripheral Participation''.
-
-Authenticity is another crucial, recurring theme within Situated Learning Theory.
+Authenticity is a crucial, recurring theme within Situated Learning Theory.
 All instruction and assessment must be aligned with reality such that success in the former leads to success in the latter.
 However, there is a subtle nuance here -- authenticity is a perceived trait, not an objective one.
 Students derive value from their learning only if they \textit{perceive} authenticity, regardless of whether the instructor has successfully authenticated the experience.
@@ -47,20 +71,10 @@ SL Theory clearly has value, but only as a function of the way that it is applie
 In this preliminary proposal, I will take advantage of SL Theory as a generalized tool for exploring the topic of authenticity throughout introductory Computer Science.
 
 The original work in Situated Learning Theory was categorically not about pedagogy or instructional design- it described how people learn and the importance of context and collaboration, but it did not recommend a particular style of classroom.
-
-\subsubsection{Situated Learning Environment Design}
-
-Situated Learning Theory is a theory of learning, not a theory of instructional design. However, subsequent research by Brown \cite{brown1989situated} and others expanded the theory so that it could be applied to the design of learning experiences. These expansions often naturally dictate the use of active learning techniques, demphasizing the role of lecture in favor of collaborative, problem-based learning activities.
-
-Choi \& Hannafin \cite{situated-cognition} describe a particularly useful, concrete framework for designing situated learning environments and experiences. Because there is no official name given to this framework, as a matter of convenience we will refer to it as the Situated Learning Environment Design Framework (SLED Framework). This framework has four key principles:
-
-\begin{wrapfigure}{R}{0.5\textwidth}
-		\begin{center}
-				\psfig{file=images/content-context-2.eps, width=\linewidth}
-		\end{center}
-		\caption{Content vs. Context}
-		\label{fig-content-context}
-\end{wrapfigure}
+Subsequent research by Brown \cite{brown1989situated} and others expanded the theory so that it could be applied to the design of learning experiences.
+These expansions often naturally dictate the use of active learning techniques, reducing the role of lecture in favor of collaborative, problem-based learning activities.
+Choi \& Hannafin \cite{situated-cognition} describe a particularly useful, concrete framework for designing situated learning environments and experiences.
+The Choi \& Hannafin framework has four key principles:
 
 \begin{description}
 	\item[Context] ``... The problem's physical and conceptual structure as well as the purpose of activity and the social milieu in which it is embedded''\cite{rogoff1984everyday}, context is driven not just by the atmosphere of the problem at hand, but also by the background and culture surrounding the problem.
@@ -86,8 +100,18 @@ Choi \& Hannafin \cite{situated-cognition} describe a particularly useful, concr
 	Ultimately, the learner should join in the process of assessment as they transition to an expert – being able to meta-cognitively self-evaluate the effectiveness of ones methods and communicate results to others are key abilities of experts. 
 \end{description}
 
+\subsection{Contexts vs. Content}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+		\begin{center}
+				\psfig{file=images/content-context-2.eps, width=\linewidth}
+		\end{center}
+		\caption{Content vs. Context}
+		\label{fig-content-context}
+\end{wrapfigure}
+
 There is a reciprocal relationship between contexts and content.
-Figure \ref{fig-content-context} demonstrates an example of this relationship for the expected emphasis on big data as context vs. content throughout an undergraduate curriculum, from a CS-0 (non-majors) course all the way to an upper-level course specifically on big data.
+Figure \ref{fig-content-context} demonstrates an example of this relationship for the expected emphasis on big data as a context vs. content throughout an undergraduate curriculum, from a CS-0 (non-majors) course all the way to an upper-level course specifically on big data.
 Just as the upper-level course would naturally use big data as its context and content, a CS-0 course could still have content related to big data.
 However, the majority of the use of big data would be as the framing story for assignments, especially in earlier parts of the course.
 When students learn programming in the context of, say, game development, they are almost necessarily learning content related to game development that may not be universal to computer science -- e.g., how graphical resources are organized and accessed within the game engine.
@@ -100,6 +124,7 @@ Learners start to see other contexts as nothing more than distractions and unnec
 This makes sense -- you would hope that Computer Science majors in their third semester would be naturally interested in the material, and this is borne out in experimental data.
 For instance, Yarosh \& Guzdial attempted to integrate Media Computation in a CS-2 (Data Structures) course, and found that the learners had ``outgrown the desire for a context''~\cite{yarosh2008narrating}. 
 These results are similar to results we found in our interventions with a CS-3 (Data Structures and Algorithms), where students seemed more irked by the surrounding context than intrigued.
+
 
 \begin{figure}[!ht]
 	\begin{center}
@@ -117,34 +142,4 @@ In this scenario, the instructors consider replacing the wall with a comic book 
 If they are in tune with their learners, this might actually be an effective context -- perhaps they know that their learners are comic book fans.
 However, because the integration is only at the surface level, it is possible that the learners will see this as a forced reference, and they will have a more negative reaction.
 It is also possible that they will not recognize the reference, or feel no positive emotions with it -- many contexts do not take into account gender, racial, or socio-economic characteristics of the anticipated learner.
-
-\subsubsection{MUSIC Model of Academic Motivation}
-
-In this preliminary proposal, we lean on the MUSIC Model of Academic Motivation as a primary framework.
-The decision to use the MUSIC model was based on several criteria.
-Although there are many motivational models available, few strive to be holistic models specifically developed for academics.
-For example, theories like Expectancy-Value and Cognitive Evaluation Theory have a wider scope and have stemmed from other disciplines such as healthcare.
-The MUSIC Model is derived from a meta-analysis of these other theories, incorporating only the academically relevant components.
-Further, the MUSIC model is a tool meant for both design and evaluation, allowing it to be used in all phases of this work.
-Finally, the model and its associated instrument, the MUSIC Model of Academic Motivation Inventory (MMAMI) , has been extensively validated and utilized in other educational domains, making it a reliable device\cite{jones-validity}.
-
-The MUSIC model identifies five key constructs in motivating students \cite{jones-description}:
-\begin{description}
-	\item[eMpowerment:] The amount of control that a student feels that they have over their learning -- e.g., course assignments, lecture topics, etc..
-	\item[Usefulness:] The expectation of the student that the material they are learning will be valuable to their short and long term goals. There is no clear delineation of the time-scale for these goals, but there is nonetheless a distinction between strategic skills that students need to be successful in careers and personal interests and the tactical skills they need to complete present-day tasks.
-	\item[Success:] The student's belief in their own ability to complete assignments, projects, and other elements of a course with the investment of a reasonable, fulfilling amount of work.
-	\item[Interest:] The student's perception of how the assignment appeals to situational or long-term interests. The former covers the aspects of a course related to attention, while the latter covers topics related to the fully-identified areas of focuses of the student.
-	\item[Caring:] The students perception of other stakeholders' attitudes toward them. These stakeholders primarily include their instructor and classmates, but also can be extended to consider other members of their learning experience (e.g., administration, external experts, etc.).
-\end{description}
-
-Students are motivated when one or more of these constructs is sufficiently activated.
-They are not all required to achieve maximal levels, and in fact that is not always desired -- it is possible, for instance, for a student to feel too empowered, and become overwhelmed by possibilities.
-For some of these constructs, a careful balance is required, and it may not be possible to ever achieve a minimal level; no matter how exciting you make your lecture, you may never convince your students it is interesting, although it is possible that they will still consider it useful and stay motivated.
-Much like in Situated Learning Theory, students' subjective \textit{perception} of these constructs is a defining requirement and is more important than objective reality.
-
-The MUSIC model is often used as an organizational framework and an evaluative tool.
-As the former, it is a list of factors to consider when building modules, assignments, and content of a course.
-At all times, instructors can consider whether they are leveraging at least one construct to motivate their students.
-As the latter, it offers both a quantified instrument (MMAMI) and a structure to anchor a qualitative investigation on.
-The model has also directly been used tactically in course design: Jones describes a controlled classroom experiment to motivate students by having an experimental group reflect on how a course satisfies the constructs of the MUSIC model (e.g., prompted to answer ``How will the material presented here will be useful to you?'').
-Quantitative data gathered after the experiment indicated a significant increase in motivation.~\cite{mcginley2014brief}
+I suggest that the process of motivating students using a context is non-trivial, and in the following section I will explore prior work in contexts for Computer Science Education.

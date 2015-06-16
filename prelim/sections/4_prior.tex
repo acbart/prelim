@@ -1,4 +1,8 @@
-\section{Big Data Science}
+\section{Technical Issues in Data Science}
+
+Silva~\cite{Silva:2014} taught an introductory course truly focused on techniques for tackling Big Data: NoSQL, MapReduce, NewSQL. They did not conduct any kind of evaluation of their work. 
+
+\subsection{Big Data}
 
 Big Data is much in the news these days, from reports of massive data
 dredging by the NSA to tens of millions of credit cards stolen by
@@ -42,7 +46,7 @@ A more precise definition is the ``3V Model'' \cite{douglas2012importance}, whic
 
 In the remainder of this section, I describe common challenges associated with different kinds of data.
 
-\subsection{High Velocity Data}
+\subsubsection{High Velocity Data}
 
 It is not trivial to enable introductory students to work with high velocity data, which is necessarily distributed. Without any scaffolding, it is necessary to delay the use of such data until much later in the course. In a prior paper \cite{realtimeweb-splashe}, we outline the biggest barriers to high velocity data as a context:
 \begin{description}
@@ -53,7 +57,7 @@ It is not trivial to enable introductory students to work with high velocity dat
 	\item[Efficiency] Even when the internet connection is stable, it might not always be fast. Requiring a round-trip to a server can greatly drag on the testing and development process, frustrating the student and decreasing the time spent learning.
 \end{description}
 
-\subsection{High Volume Data}
+\subsubsection{High Volume Data}
 
 In this section, we highlight some of the more challenging aspects of introducing high volume data, similar to how we previously outlined the challenges of high velocity data.
 Some of these challenges are technical in nature, and some of them of a more pedagogical nature.
@@ -75,7 +79,7 @@ Careful consideration must be made when choosing problems and designing contexts
 \end{description}
 
 
-\subsection{High Variety Data}
+\subsubsection{High Variety Data}
 
 \begin{description}
 \item[Inconsistency of Storage:] High variety data is composed of many different kinds of file formats -- some of which are more complicated than others.
