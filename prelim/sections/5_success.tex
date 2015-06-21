@@ -114,19 +114,18 @@ When students are ready to run their programs against live data, they can move o
 This caching mechanism also benefits from an assessment view - a students program can be checked for robustness by invisibly changing the values returned by the big data functions.
 Figures \ref{fig-example-blockly} and \ref{fig-example-python} demonstrate the CORGIS library in action both in regular Python code and the equivalent Blockly code.
 
-\begin{figure*}[hb]
+\begin{figure}
+\label{fig-example-blockly}
+\label{fig-example-python}
+\caption{Blockly vs. Python Code}
 \centering
 \begin{minipage}[b]{.75\linewidth}
-\caption{Blockly Code}
-\label{fig-example-blockly}
 \psfig{file=images/blockly-example.eps, width=\linewidth}
 \end{minipage}
 
 \smallskip
 
 \begin{minipage}[b]{.75\linewidth}
-\caption{Python Code}
-\label{fig-example-python}
 \begin{python}
 import weather
 import matplotlib.pyplot as plt
@@ -140,7 +139,7 @@ plt.plot(celsius_temperatures)
 plt.show()
 \end{python}
 \end{minipage}
-\end{figure*}
+\end{figure}
 
 
 \subsubsection{Authenticity of Data}
