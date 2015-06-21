@@ -1,39 +1,210 @@
-\section{Proposed Technical Work}
+\section{Intervention Context}
 
-To help support testing my hypotheses, a number of new pieces of technology and instruction will need to be created.
+With the development of new technology described in the following section, interventions will be staged through Virginia Tech's new ``Introduction to Computational Thinking'' course, created to help fulfill the university's new General Education Requirements~\cite{vt-vision}. 
+This course has already been run for two semesters, deeply incorporating much of my existing research work.
+The course is taught and developed primarily by Dr. Dennis Kafura, although I have also been involved as associate instructor, managing course materials, server and technology administration, and assisting with in-class teaching.
+However, now that the course is more solidly defined, my role is shifting into a more observational function in order to drive my dissertation work.
+As a research endeavor, the course is heavily instrumented to provide data on its novel pedagogies and technologies.
+Although there are confounding factors to working with such a heavily experimental course, it presents a unique testbed for materials and is an excellent source for mining research results.
 
-\subsection{Normalization of Difficulty}
+\subsection{The Learners}
 
-Programming knowledge
+The students in the Computational Thinking course present a unique profile.
+A few of them will have had prior programming experience, but most of them have had very minimal interactions with computers (indeed, they often describe themselves as ``not a computer person'').
+These students may not believe that Computational Thinking will help them.
+This is largely because they have more clearly defined domain identities, and may not see how Computational Thinking fits into them.
+So, indeed, these students often have low motivation, especially in their sense of Success and Usefulness.
 
-Domain knowledge
+In the first offering of the course, 25 students enrolled in the course, and 20 students finished the coursework.
+In the second offering, 40 students initially enrolled and 35 successfully passed the course.
+Figure \ref{data-demographics} indicates the relevant demographic data collected through surveys.
+Largely, the students represent the population at Virginia Tech, albeit with some disproportion towards certain majors than others.
+It is worth pointing out the excellent gender diversity within the class.
 
-\subsection{Instructor Guides}
+\begin{figure*}
+\begin{minipage}{\linewidth}
+\centering
+	\begin{tabular}{c|c|c}
+	  \multicolumn{3}{c}{Gender}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Female & 6 & 21 \\
+		Male & 13 & 18 \\
+	\end{tabular}
+\centering
+	\begin{tabular}{c|c|c}
+	  \multicolumn{3}{c}{Prior Programming Experience}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Yes & 10 & 7 \\
+		No & 10 & 32 \\
+	\end{tabular}
+\centering
+	\begin{tabular}{c|c|c}
+		\multicolumn{3}{c}{Year}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Freshman & 2 & 5 \\
+		Sophomore & 7 & 11 \\
+		Junior & 6 & 11 \\
+		Senior & 5 & 10 \\
+		Unknown & 0 & 2 \\
+	\end{tabular}
+\centering	
+	\begin{tabular}{c|c|c}
+	  \multicolumn{3}{c}{Colleges}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Engineering & 2 & 2 \\
+		Agriculture & 0 & 1 \\
+		Sciences & 7 & 5 \\
+		Liberal Arts & 9 & 23 \\
+		Architecture & 1 & 7 \\
+		Natural Resources & 0 & 0 \\
+	\end{tabular}
+\caption{Demographic Data of Computational Thinking Students}
+\label{data-demographics}
+\end{minipage}
+\end{figure*}
 
-\subsection{Developer Guides}
 
-\subsection{Data Discoverability}
+\subsection{The Content}
 
-Understanding the structure, meaning, and values of data can be a difficult problem for introductory students.
-Using Data Science as the introductory context puts an increased emphasis on data structures and algorithms, making this content more critical for the learner.
-Currently, there are not many tools available through Kennel to scaffold students.
+Virginia Tech defines four learning objectives for ``Computational and Quantitative Thinking''~\cite{vt-vision}. Although the Computational Thinking only satisfies four of these objectives outright, they are all considered valuable end-goals:
+\begin{enumerate}
+	\item Explain the application of computational or quantitative thinking across multiple knowledge domains.
+	\item Apply the foundational principles of computational or quantitative thinking to frame a question and devise a solution in a particular field of study.
+	\item Identify the impacts of computing and information technology on humanity.
+	\item Construct a model based on computational methods to analyze complex or large-scale phenomenon.
+	\item Draw valid quantitative inferences about situations characterized by inherent uncertainty.
+	\item Evaluate conclusions drawn from or decisions based on quantitative data.
+\end{enumerate}
 
-The Property Explorer is probably the current greatest tool available to students for understanding program state.
-However, field trials with it show that most students do not take advantage of the tool, with few reported events in the systems' tracker.
-The usability of the property explorer, and its connection to the concept of Program State, must be elucidated to the student more clearly.
+This content is mapped roughly into four instructional units on Computational Modelling, Algorithms, Data Intensive Inquiry, and Social Impacts. The lattermost unit is threaded throughout the course, while the first three are roughly sequential. Figure \ref{course-outline} gives a high-level overview of the content of this course.
 
-More tools are also desirable for engaging learners.
-A number of graphical representations are used throughout the Computational Thinking course in order to visualize topics such as Abstraction and program flow.
-For instance, students build Data Map Diagrams as seen in Figure \ref{data-maps-weather}, intended to help them navigate complex data structures.
-The system can be extended to create simplified graphical visualizations of the students code and the data model in order to connect to these other course topics.
+\begin{figure*}
+\begin{tabularx}{\textwidth}{ |l|X| }
+\hline
+Topic (Length) &	Description \\\hline
+Computational Modeling \newline\newline
+ (2 weeks) & Model-based investigation of how complex global behavior arises from the interaction of many “agents”, each operating according to local rules. Students use case-based reasoning and encounter basic computation constructs in a highly supportive simulation environment. \\\hline
+Fundamentals of Algorithms \newline (4 weeks) & Study of the basic constructs of programming logic (sequence, decisions, and iteration) and program organization (procedures). A block-based programming language is used to avoid syntactic details. Students can see how these constructs are expressed in Python. \\\hline
+Data-intensive Inquiry \newline (7 weeks) & Project-based exploration of complex phenomena by algorithmically manipulating large-scale data from real-world sources. Students construct algorithms in Python using a supportive framework for accessing the data. \\\hline
+Social Impacts \newline (2 weeks) & Explore and discuss contemporary societal issues involving computing and information technology. \\\hline
+\end{tabularx}
+\caption{High-Level Course Overview}
+\label{course-outline}
+\end{figure*}
 
-Currently, the implementation of MatPlotLib and other APIs is very minimal -- eventually, complete support for their functionality is needed.
-There are other novel additions that can be introduced too -- for example, recent work by \cite{pixly} integrates media computation into Blockly environments.
-By integrating such material into Kennel, we can provide students a comparative point between the different introductory programming contexts, in order to meaningfully evaluate the affordances of the different approaches.
-Crucially, care must be taken to keep Kennel as a pure Python programming environment, without introducing cumbersome non-standard 3rd party libraries as occurs in CodeSkulptor~\cite{code-skulptor}.
-As all of these materials extend the functionality of Kennel is new and innovating ways, but this material is less valuable if it reduces the authenticity and transferability of the learning experience.
+It is clear that this material aligns smoothly with the content described in this preliminary proposal, in particular a focus on algorithms and abstraction.
 
-\subsection{More Libraries}
+\subsection{The Course}
+
+The course uses a considerable amount of modern pedagogical techniques, many of which represent ongoing research questions.
+Perhaps the most influential technique is the organization of students into cohorts.
+Near the beginning of the semester, students are put into groups of 5-6, balancing based on year and gender where possible, and avoiding putting similar majors into the same group.
+These cohorts primarily function as a support structure that students can rely on to get help and encouragement.
+Although cohorts work together on many smaller in-class assignments, every student is ultimately responsible for their own work -- the final project, for instance, is individual to each student.
+
+Class time is split between presentation (typically stand-up lecture) and participation (typically computer-based work or cohort discussion) using an Active Learning style whereever possible.
+Earlier questions in the course often have students completing questions on paper or doing more kinetic exercises.
+Later questions rely on the automated Kennel questions, until the students reach the open-ended project work.
+
+Work in the class is considered to be under a mastery style -- deadlines are enforced only in so far as they motivate students to complete assignments, not in order to punish.
+Students are free to work on the material as long as they need.
+A recurring message within the course is that ``failing is okay, as long as you keep trying''.
+
+\section{Research Questions}
+
+In this section, I outline the research problems that I will explore.
+
+\subsection{The Use of Datasets}
+
+\textbf{What are the issues using datasets, and how do we manage them?}
+
+In this section, I outline a number of the biggest issues in using datasets as an introductory context.
+Existing research in this area is largely concerned with providing examples of how to use datasets, rather than solving these more generalized problems.
+I will develop meaningful classifications, theories, guides, and materials to help instructors and course developers manage these issues.
+
+\begin{description}
+  \item[Preparation of Datasets:] One of the most general questions when it comes to these datasets is how to organize and prepare the dataset. Where should the data come from? Data can be collected by organizations, by the instructor, by the students (e.g., using data in their own lives), or any of a number of different sources. That data can be based on a simulation or predicted model (e.g., fantasy football), or observations of a real phenomenon (e.g., weather reports)? I will analyze these different sources, the affordances and costs associated with them, and develop conclusions on the best way to leverage them. This will include guides on how to find and develop datasets.
+	\item[Normalization of Difficulty:] An incredibly useful problem to solve is how to meaningfully normalize difficulty between datasets and identify the difficulty of a given dataset. If this could be accomplished, instructors could confidently empower students to pursue distinct projects while ensuring that they are having a mostly uniform experiences. Difficulty creeps through in a number of ways, as described in the following list. \begin{description}
+	  \item[Domain Knowledge Required:] Understanding a dataset requires the student to understand the greater context, entities, relationships, and reality that the dataset abstracts. In some cases, students (especially in Computational Thinking) bring useful prior knowledge that help them to rapidly comprehend a dataset. When this knowledge is not present, an extra level of difficulty is added. For example, in the Computational Thinking class, students easily grasped the Weather dataset (featuring an abstraction of temperature as a number), but struggled with the Stock Value dataset (featuring an abstraction of stock values as numbers) -- even though both datasets had the exact same data structure.
+		
+		However, there are other ways that domain knowledge can be a problem -- students' prior knowledge can be limited, incorrect, or difficult to leverage, for example. I will describe best practices for helping students get to know datasets and identifying whether a dataset is suitable for a given student or sets of students.
+		\item[Computing Knowledge Required:] Anyone making a dataset must become familiar with how to structure the data. Anyone using a dataset must become familiar with how to process it. Any programming interfaces made available (e.g., special libraries and frameworks) incur their own costs. Although some languages are made specifically to handle data processing using high-level declarative techniques (e.g., SQL), other languages require different levels of specificity on how to manipulate the data. In a practical setting, there are major advantages to choosing the ``simplest'' option (one might argue, for example, that a declarative language makes filtering easier than a functional language does, and a functional language makes filtering easier than a imperative language does). However, when the goal is to teach concepts, there may be other advantages related to the learning objectives to using these datasets. I will analyze and describe the pedagogical affordances that different data structures and programming styles create.
+		\item[Dataset Knowledge Required:] In general, learning to work with a new dataset requires time and attention to become familiar with its particular structure and design. Why was it organized the way it was (e.g., as a list of dictionaries as opposed to a dictionary of lists).
+	\end{description}
+		Understanding the structure, meaning, and values of data can be a difficult problem for introductory students.
+		Using Data Science as the introductory context puts an increased emphasis on data structures and algorithms, making this content more critical for the learner.
+		Currently, there are not many tools available to scaffold students in getting to know datasets.
+		An example of a possible approach is Spyder's Variable Explorer, seen in figure \ref{fig-spyder-explorer}, which allows users to drill-down through a data structure (assuming it uses native Python \texttt{list}s and \texttt{dict}s) by opening nested windows. 
+		Although this tool is powerful, it is limited pedagogically by offering very little supplementing knowledge.
+		However, it does provide a useful example of a way to visually explore a dataset.
+
+		A number of graphical representations are used throughout the Computational Thinking course in order to visualize topics such as Abstraction and program flow.
+		For instance, students build Data Map Diagrams as seen in Figure \ref{data-maps-weather}, intended to help them navigate complex data structures.
+		A system will be created to generate simplified graphical visualizations of the students code and the data model in order to connect to these other course topics.
+		The system will be available for data used in the course regularly, and should be extremely beginner-friendly.
+		
+		On the other hand, guidance will be created for dataset developers and instructors to adjust the structure and content of a dataset to normalize its difficulty.
+		For example, a highly-nested dataset can be semi-automatically adjusted to drop levels of nesting in favor of a flatter structure.
+		Alternatively, a list datapoints could be grouped by one of their features to make it easier to conduct grouped analysis (e.g., grouping weather reports by city or year so it is easier to calculate averages).
+		There are a wide range of techniques that could be suggested based on a situation -- automatic analysis of the dataset could help provide suggestions on where the complexity can be increased, decreased, or aligned with specific learning objectives. 
+	\item[Reliability of the Dataset:] There are a number of issues that the student and instructor should become aware of about the nature of the data, as a secondary concern. Was the data collected correctly? Were mistakes made in processing it? Are the abstractions false? Although some instructors may not find it a primary learning objective, students need to be aware of the possibilty of mistakes in the process of preparing a dataset, and instructors need to be aware of the ethical ramifications of presenting a dataset as reliable or authentic.
+	\item[Availability of the Dataset:] Some organizations make their data available only through certain channels -- students have to sign a legal agreement, or register for an API key. Organizations such as FERPA and HIPPA exist in order to ensure the privacy and dignity of captive populations (e.g., school children, patients). These organizations define rules for how data on such populations can be published and made available. Often, interesting data exists behind walled gardnes. Although novel techniques such as Differential Privacy (where data is probabilistically modified to protect anonymity~\cite{dwork2011differential}) can be used to mitigate these problems, it is simply a fact that some data is utterly unaccessible. I will explore the options available to mitigate the dataset, and their affect on the authenticity of the data.
+	
+	Of course, the format of the dataset itself may lead to unavailability. Many developers have limited experience, time, and interest with the best way to package data for others' consumption, especially when it comes to beginners. It can be easy to release a dataset as a PDF or in some obscure binary format. Overtime, data can also disappear behind dead/moved URLs. A major challenge for organizing data can be finding it and interpreting it. I will analyze the common pitfalls committed in releasing data to develop preventive and corrective measures.
+	\item[Interestingness of the Dataset:] Does the dataset have generalized appeal, or is it more niche?
+	\item[Freshness of the Dataset:] Has this dataset been explored before? Have people already used it to answer questions?
+	\item[Usefulness of the Dataset:] Does the dataset hold the answers to any questions? Is getting results from it like pulling water from a stone? How much work is required to answer these questions -- is it a problet or a project?
+	\item[Data Variety] Data can often be 
+\end{description}
+
+\subsubsection{Data Discoverability}
+
+\textbf{How can we minimize the cognitive load required for students to start using a given dataset?}
+
+\begin{figure}[!ht]
+\label{fig-spyder-explorer}
+\psfig{file=images/spyder-explorer.eps, width=\linewidth}
+\caption{The Spyder Programming Environment for Python has a Powerful Variable Explorer Tool}
+\end{figure}
+
+\subsection{Comparison of Contexts}
+
+\subsection{Academic Motivation and Learning?}
+There is strong evidence that motivation predicts performance in the course, and my research will contribute to this growing base.
+Motivation in the course will be primarily assessed through self-reported surveys based heavily on the MUSIC Model of Academic Motivation Inventory (MMAMI).
+Students will be non-anonymously surveyed using the complete instrument at key points in the semester, and regularly surveyed using a miniaturized version throughout the semester.
+These miniaturized versions will be used as follow-ups to specific course exercises in order to determine more finely-grained answers about where students found motivation.
+Additionally, targeted qualitative data will be gathered in order to refine this quantitative data.
+
+This motivational data will be combined with evidence of engagement with the course across several different dimensions. Therefore, the complete list of motivational sources is:
+\begin{description}
+	\item[Attendance:] Did the students regularly attend class?
+	\item[Retention:] Did the students complete the course with a passing grade?
+	\item[Coursework:] Did the students regularly complete coursework and homework on time?
+	\item[Struggle:] Did the students continue with materials even after setbacks?
+	\item[Continuation:] Do students intend to follow-up the course with further courses and learning experiences in Computational Thinking?
+	\item[Observations:] Did the course staff report students as being motivated, according to their own observations? In Spring 2014, for example, teaching assistants were asked to rank their students on a scale of 1--4 to indicate how engaged they were.
+	\item[Self-report:] Did the students report themselves as being motivated, according to MMAMI and other surveys?
+	\item[Success:] Did the students succeed at the final project and overall course?
+\end{description}
+This evidence, along with the MUSIC model's data, can be used to explore academic motivation within Computer Science more holistically.
+
+\subsection{Extension of Materials}
+
+\subsubsection{Instructor Guides}
+
+\subsubsection{Developer Guides}
+
+
+One of the biggest question lurking in my research is: how strong a preference do students have towards different contexts?
+It is extremely challenging to ask this question, because students cannot be exposed to all the different kinds of contexts.
+Furthermore, different learners respond to different contexts in their own way, and it may not be possible to generalize any results found.
+By studying large user populations (possibly in concert with other universities), the latter can be mitigated.
+To mitigate the former, it is possible to expose students to representative samples of other contexts. 
+Some of this requires immense new technology, e.g., integrating recent work with Pixly \cite{pixly} that adds media computation into Blockly environments could enable students to try media computation in the same course.
+Although limited, this at least will start to answer this research question.
+
+\subsubsection{More Libraries}
 
 The CORGIS project depends on having an extensive and varied collection of datasets. 
 Students should be able to find a dataset that appeals to their personal interests but provides a sound learning experience.

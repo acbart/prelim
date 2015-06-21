@@ -1,17 +1,25 @@
 \section{Existing work}
 
 As I am now three years into my PhD, my research builds on significant prior work. First and foremost, my CORGIS project has already been used in several introductory programming experiences, and seen publication at multiple venues, including two very successful workshops.
-My more recent work with Kennel represents a largely unpublished effort, but its key elements have already seen successful deployment in the Computational Thinking class.
-
 My primary research project for the first two years of my dissertation led to CORGIS: Collections of Real-time, Giant, Interesting, Situated Datasets.
 This project's goal is to make simplistic data sources available to learners early in their programming experience, so that they can explore Big Data Science contexts.
 
 \subsection{Technical Infrastructure}
 
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \begin{center}
+			\psfig{file=images/rtw-client-library.eps, width=\linewidth}
+			%\includegraphics[width=0.48\textwidth]{"images/rtw-client-library"}
+    \end{center}
+    \vspace{-\bigskipamount}
+    \caption{RealTimeWeb Client Library Architecture}
+    \label{fig-cla}
+\end{wrapfigure}
+
 The foundation of this proposal rests on prior work developing the RealTimeWeb project, a software architecture framework that provides introductory programming students with an easy way to access and manipulate distributed real-time data\cite{bart-transforming}.
 Real-time data is a specific branch of Big Data -- specifically, high velocity data.
 
-As our focus shifts from real-time data to big data in general, we have renamed our overarching project from RealTimeWeb to CORGIS. Our work is now available at \url{http://think.cs.vt.edu/corgis/}. As a successor to the RealTimeWeb project, CORGIS retains all the previously developed libraries for accessing high velocity data; however, it also contains our new libraries for working with high volume data.
+As our focus shifts from real-time data to datasets in general, we have renamed our overarching project from RealTimeWeb to CORGIS. Our work is now available at \url{http://think.cs.vt.edu/corgis/}. As a successor to the RealTimeWeb project, CORGIS retains all the previously developed libraries for accessing high velocity data; however, it also contains our new libraries for working with high volume data.
 These libraries are paired with potential assignments and helpful documentation for deployment.
 Long term, we intend to gather and disseminate data on the success of these libraries, with the hopes to establish a community of developers and educators that create new resources.
 For clarity's sake, we use the name RealTimeWeb to refer to the architecture we have developed to rapidly connect to high velocity data streams.
@@ -32,16 +40,6 @@ Instructors can specify policies for how the system returns data -- if the cache
 For example, consider the United States Geological Services' Earthquake data stream, which exposes a function to retrieve a list of earthquakes around the world for a given time period (e.g., past hour, past day, past week, etc.). 
 The instructor could provide a cache to simulate a period of high seismic activity, returning a large number of earthquakes every time the function is called.
 If the user exhausts the data in the cache, it might be programmed to return an empty list, signaling no further activity.
-
-\begin{wrapfigure}{R}{0.5\textwidth}
-    \begin{center}
-			\psfig{file=images/rtw-client-library.eps, width=\linewidth}
-			%\includegraphics[width=0.48\textwidth]{"images/rtw-client-library"}
-    \end{center}
-    \vspace{-\bigskipamount}
-    \caption{RealTimeWeb Client Library Architecture}
-    \label{fig-cla}
-\end{wrapfigure}
 
 Our High Volume libraries often work by providing sampled versions of the data internally, so that students can work with faster, representative subsets.
 Then, when they are ready for full deployment, they can switch to a ``full production'' mode -- trading speed for quality. 
@@ -67,26 +65,32 @@ This open-source tool has been used to successfully and rapidly develop a number
 
 \subsection{Contextualizing with CORGIS}
 
-The RealTimeWeb toolchain has been deployed for several semesters in introductory Computer Science courses for majors, ranging from the first course all the way to a Data Structures level course.
+\begin{figure}
+		\begin{center}
+				\psfig{file=images/contexts-compared.eps, width=\linewidth}
+		\end{center}
+		\caption{CT Students' Perceptions of the Appeal of Various Introductory Programming Contexts}
+		\label{fig-contexts-compared}
+\end{figure}
+
+\begin{figure}
+		\begin{center}
+				\psfig{file=images/expected-benefit.eps, width=.5\linewidth}
+		\end{center}
+		\caption{CS Majors' Perceptions of the Benefit of Working with Learning Different Technologies}
+		\label{fig-expected-benefit}
+\end{figure}
+
+The CORGIS project has been deployed for several semesters in introductory Computer Science courses for majors, ranging from the first course all the way to a Data Structures level course.
 These integrations ranged from small assignments to entire semester projects using the software.
 So far, the focus of the evaluation has been on the motivational influence of the system.
 Quantitative data was collected by surveying students attitudes using well-established motivational frameworks and instruments, and indicates that students tended to find real-time data engaging~\cite{realtimeweb}.
 In some courses, qualitative data was gathered through small group interviews, where students attribute increased engagement with the authentic, real-world connection offered by real-time data.
-Similar results have been found from its integration in the Computational Thinking course -- students cite working with the realistic data as a key factor in engaging with course materials.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-		\begin{center}
-				\psfig{file=images/expected-benefit.eps, width=\linewidth}
-		\end{center}
-		\caption{Students' Perceptions of the Benefit of Working with Learning Different Technologies}
-		\label{fig-expected-benefit}
-\end{wrapfigure}
-
-\subsection{Limitations of CORGIS}
-
-Although CORGIS has more or less successfully solved the problem of integrating high velocity data, and has started supporting high volume data, further work is required to solve the high variety data problem.
-Furthermore, there is no principled strategy for pedagogically integrating these tools into a classroom -- instructors tend to choose data streams based on their own situational interest, rather than through a deep understanding of the affordances and limitations of the dataset.
-Further work is required both on the technical and philosophical side in order to support these processes.
+Similar results have been found from its integration in a Computational Thinking course -- students cite working with the realistic data as a key factor in engaging with course materials.
+Refer to figure \ref{fig-contexts-compared}, the result of an end-of-course survey (34 responses, 87\% response rate).
+Students were asked to respond via a Likert scale to the statement, ``Other schools teach Computational Thinking in different ways. Consider these different styles, and indicate how much you would prefer or avoid them.''
+Although this is an extremely shallow question, since students were only exposed to two contexts (computational modelling and working with data), it is an encouraging, preliminary result.
 
 \subsection{Block-Based Programming}
 
@@ -96,23 +100,21 @@ Further work is required both on the technical and philosophical side in order t
 \caption{The flow of code in the Mutual Language Translation system}
 \end{wrapfigure}
 
-In accordance with our motivational theory, we seek to move past interest-based programming into broadly useful programming contexts.
-To that end, we use Data Science as an authentic context for teaching introductory computing.
-As previously mentioned, Skulpt supports a number of Python APIs, and it can also be extended with any existing pure-python libraries or JavaScript libraries that use the Skulpt API.
-We use a fork of Skulpt with partially equivalent implementations for the popular MatPlotlib library~\cite{SkulptMatPlotLib} and also extended it with our own implementation of the CORGIS project.
-The Waywaard MatPlotLib API provides a ``plot(list)'' function to create simple line plots.
-By basing everything around the MatPlotLib API, students can seamlessly shift to a serious programming environment without loss of code or productivity. 
+Programming is a difficult thing to learn, and there exist many tools to scaffold that process.
+One of the more popular approaches is Block-based Programming Environments, which allow the user to build their program from pieces of provided code constructs.
+This prevents common syntax errors and some of the the ``blank canvas'' effect.
+The CORGIS project has been leveraged in several different block-based environments, including a Python-based system based on Blockly and the popular programming environment/language Snap!. 
+Both systems implement their own layer around CORGIS in order to provide access to rich datasets.
+The Python/Blockly system has additional tools for creating plotted visualizations of data, and the Snap! interface has generalized support for accessing online data.
+Although the Snap! tools were created as part of a spin-off project, the Python/Blockly tools are my own work.
 
-The CORGIS (Collection of Real-time, Giant, Interesting Datasets) project strives to make it trivial to bring Big Data into introductory programming courses through carefully scaffolded libraries -- including rapidly changing high velocity data (e.g., weather, stocks) or massive high volume datasets (e.g., census and crime report data).
-These libraries are pure python, and are rapidly integrated into Skulpt and exposed through the block editor, as seen in figure \ref{fig-example-blockly}.
-Data returned from their interface is extremely simple -- usually either primitive (numbers and text) or simply structured (heterogenous dictionaries and homogenous lists), ensuring that students can begin working with Big Data blocks at the earliest possible point in the course.
-
-During the course, students take advantage of the internal caching mechanism of the CORGIS libraries to work on recorded data.
+During the Computational Thinking course, students take advantage of the internal caching mechanism of the CORGIS libraries to work on recorded data.
 This simplifies the debugging process since programs perform predictably and are no longer dependent on external data services.
 When students are ready to run their programs against live data, they can move offline to a traditional programming environment and run in regular production.
 This caching mechanism also benefits from an assessment view - a students program can be checked for robustness by invisibly changing the values returned by the big data functions.
+Figures \ref{fig-example-blockly} and \ref{fig-example-python} demonstrate the CORGIS library in action both in regular Python code and the equivalent Blockly code.
 
-\begin{figure*}[ht]
+\begin{figure*}[hb]
 \centering
 \begin{minipage}[b]{.75\linewidth}
 \caption{Blockly Code}
@@ -141,9 +143,26 @@ plt.show()
 \end{figure*}
 
 
-Eventually, more sophisticated visualizations will be required.
-Users are often highly motivated to create user interfaces to control their software interactively.
-By supporting a GUI library like TKinter or PyQT, students could construct an entire python program in the browser, and then immediately share their work with friends, families, and potentially even colleagues.
-This overcomes a limitation of traditional python development - python code can only be run in a Python interpreter with the appropriate libraries, and most end-users do not have such software already installed.
-Once relevant libraries are added to our Skulpt fork, students can create and share sophisticated programming projects seamlessly.
+\subsubsection{Authenticity of Data}
 
+Careful consideration must be made when choosing problems and designing contexts so that the data leads to optimally authentic learning experiences.
+In practice, datasets can vary greatly in authenticity -- some data is collected incorrectly or has other errors, some data was predicted from a model rather than observed from real phenomenon.
+A curious component of authenticity, however, is that it is a function of the observer.
+A persuasive instructor might convince a class of students that an entirely artificial dataset was representative of real-world data, especially if it confirmed students' existing biases.
+There are ethical issues with artificial datasets and the stories that they tell.
+However, there are serious pedagogical benefits to generating datasets that fit instructor's goals -- data that leads to interesting visualizations, or clean results.
+An important facet of my research will be exploring the ethical and pedagogical ramifications of the authenticity of datasets.
+
+One of the big dangers when attempting to create meaningful context for learners is the problem of \textit{Preauthentication}: attempting to design for authenticity without sufficient knowledge of the audience. This is a problem shared by any approach to introductory material. Petraglia gives a compelling example \cite{preauthentication}:
+	
+\begin{quotation}
+    The task of balancing a checkbook, for instance, may be an authentic task from the perspective of a 21-year-old, but we would question its authenticity from the perspective of a 5-year-old. But more to the point, even among 21-year-olds, for whom we believe the task should be authentic, there are some who will find any given lesson in personal finance irrelevant, inaccurate, or otherwise inappropriate. 
+\end{quotation}
+Preauthentication stems from over-generalizations and run-away assumptions.
+If you attempt to reduce an entire classroom to a list of likes and dislikes, you run the risk of ignoring each individual learner's rich history and background that they will be building from. 
+It is difficult to plan for and work against this ever-present danger when designing reusable assignments. 
+Petraglia \cite{preauthentication} recommends that rather than attempting to design around students prior understanding, it is better to simply convince the learner of the authenticity of the problem.
+But this is limiting, since it ignores the prior experiences and understanding that a student brings to their learning.
+Instead, it would be better to find a middle ground where students are given flexibility while maintaining a relatively uniform experience for students.
+In an ideal learning environment, students will have freedom to explore datasets of their own choosing, possibly from a list.
+Of course, this must be balanced with the students inexperience with finding datasets, requiring the process be given time and attention.
