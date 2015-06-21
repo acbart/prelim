@@ -58,9 +58,9 @@ It is worth pointing out the excellent gender diversity within the class.
 		Architecture & 1 & 7 \\
 		Natural Resources & 0 & 0 \\
 	\end{tabular}
+\end{minipage}
 \caption{Demographic Data of Computational Thinking Students}
 \label{data-demographics}
-\end{minipage}
 \end{figure*}
 
 
@@ -199,9 +199,9 @@ A given dataset has some motivational value that is a function of the student, t
 \subsubsection{Comparison of the Context} As outlined in section 3, there are a number of different contexts available to instructors. What makes data science a particularly effective one, compared to the alternatives? I will conduct surveys of students in order to find out how they compare from their perspective. The goal of this research question is to find out the trade-offs and value of this context, and whether it can be a true all-in-one.
 
 \begin{figure}[!ht]
-\label{fig-spyder-explorer}
 \psfig{file=images/spyder-explorer.eps, width=\linewidth}
-\caption{The Spyder Programming Environment for Python has a Powerful Variable Explorer Tool}
+\caption{The Variable Explorer in the Spyder Programming Environment}
+\label{fig-spyder-explorer}
 \end{figure}
 
 \subsection{Academic Motivation and Learning?}
@@ -272,10 +272,26 @@ A key part of my research will be explicitly identifying trade-offs and affordan
 		%  +(0,-1) 
 \end{tikzpicture}
 \begin{center}
-(A) List of Weathers
+\textbf{(A) List of Weathers}
 \end{center}
 \end{minipage}
+\hspace{1cm}
 \begin{minipage}{.4\textwidth}
+\begin{center}
+\begin{tikzpicture}
+		\node[align=center, draw] (root)
+		  {List of}
+		;
+		
+    \draw (root) -- +(0, -1) node[draw, anchor=north](q) {integer};
+		%  +(0,-1) 
+\end{tikzpicture}
+\end{center}
+\begin{center}
+\textbf{(C) List of Temperatures}
+\end{center}
+\end{minipage}
+\vspace{1cm}
 \tikzset{
     bnode/.style = {   
         align=center, draw,
@@ -301,22 +317,9 @@ A key part of my research will be explicitly identifying trade-offs and affordan
 		\draw (root.four south) -- +(0, -1) node[draw, anchor=north](q) {integer};
 		%  +(0,-1) 
 \end{tikzpicture}
-\begin{center}
-(B) Dictionary of Weathers
-\end{center}
-\end{minipage}
 
-
-\begin{tikzpicture}
-		\node[align=center, draw] (root)
-		  {List of}
-		;
-		
-    \draw (root) -- +(0, -1) node[draw, anchor=north](q) {integer};
-		%  +(0,-1) 
-\end{tikzpicture}
 \begin{center}
-(C) List of Temperatures
+\textbf{(B) Dictionary of Weathers}
 \end{center}
 
 \end{center}
