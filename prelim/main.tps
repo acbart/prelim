@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=main.tex
+Document=sections\5_success.tex
 
 [Frame0_View0,0]
-TopLine=12
-Cursor=575
+TopLine=171
+Cursor=7010
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=sections\4_prior.tex
 
 [Frame1_View0,0]
-TopLine=120
+TopLine=147
 Cursor=8276
 
 [Frame2]
@@ -50,11 +50,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\5_success.tex
+Document=main.tex
 
 [Frame2_View0,0]
-TopLine=98
-Cursor=7010
+TopLine=12
+Cursor=575
 
 [Frame3]
 Flags=0
@@ -68,11 +68,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\3_literature.tex
+Document=sections\8_publication.tex
 
 [Frame3_View0,0]
-TopLine=0
-Cursor=212
+TopLine=14
+Cursor=1160
 
 [Frame4]
 Flags=0
@@ -86,11 +86,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\2_theories.tex
+Document=sections\10_appendix.tex
 
 [Frame4_View0,0]
-TopLine=208
-Cursor=15633
+TopLine=135
+Cursor=9292
 
 [Frame5]
 Flags=0
@@ -122,11 +122,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\6_technology.tex
+Document=sections\2_theories.tex
 
 [Frame6_View0,0]
-TopLine=424
-Cursor=26117
+TopLine=221
+Cursor=15633
 
 [Frame7]
 Flags=0
@@ -140,11 +140,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\10_appendix.tex
+Document=sections\3_literature.tex
 
 [Frame7_View0,0]
-TopLine=143
-Cursor=9292
+TopLine=0
+Cursor=212
 
 [Frame8]
 Flags=0
@@ -158,11 +158,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\9_conclusion.tex
+Document=sections\6_technology.tex
 
 [Frame8_View0,0]
-TopLine=0
-Cursor=449
+TopLine=464
+Cursor=22778
 
 [Frame9]
 Flags=0
@@ -176,11 +176,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\8_publication.tex
+Document=sections\9_conclusion.tex
 
 [Frame9_View0,0]
-TopLine=14
-Cursor=1160
+TopLine=0
+Cursor=633
 
 [Frame10]
 Flags=0
@@ -194,11 +194,11 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\1_problem.tex
+Document=sections\7_work.tex
 
 [Frame10_View0,0]
-TopLine=9
-Cursor=1183
+TopLine=0
+Cursor=0
 
 [Frame11]
 Flags=0
@@ -215,7 +215,7 @@ Class=BibTeXView
 Document=references.bib
 
 [Frame11_View0,0]
-TopLine=1606
+TopLine=1615
 Cursor=51983
 
 [Frame12]
@@ -230,13 +230,13 @@ NormalPos.top=26
 NormalPos.right=1141
 NormalPos.bottom=362
 Class=LaTeXView
-Document=sections\7_work.tex
+Document=sections\1_problem.tex
 
 [Frame12_View0,0]
-TopLine=0
-Cursor=0
+TopLine=9
+Cursor=1183
 
 [SessionInfo]
 FrameCount=13
-ActiveFrame=0
+ActiveFrame=8
 
