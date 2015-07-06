@@ -1,5 +1,5 @@
 
-\documentclass{acm_proc_article-sp}
+\documentclass{sig-alternate}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
@@ -11,6 +11,10 @@
     text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
     text width=6em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{goal_block} = [rectangle, draw, fill=blue!20, 
+    text width=0.95\columnwidth, text centered, rounded corners, minimum height=4em]
+\tikzstyle{process_block} = [rectangle, draw, fill=blue!20, 
+    rounded corners]
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
     minimum height=2em]
@@ -44,13 +48,10 @@ However, there has been few reported cases of its usage in Computer Science Educ
 
 This paper describes a specific, popular Instructional Design model through a Computer Science Education case study.
 
-\subsection{Theories}
-Instructional Design draws on many practical educational theories.
-Cognitive Load Theory
-
 \subsection{Roles}
 An Instructional Designer is expected to be the advocate for the learner.
 They are, first and foremost, dedicated to providing an optimal learning experience.
+The instructional designer may or may not be responsible for actually physically teaching the learners (indeed, some instructional materials are designed without any physical instructor at all).
 
 \subsection{Models of Instructional Design}
 
@@ -146,19 +147,72 @@ Many students struggled to write basic programs because of their inadequate unde
 Our final goal statement is:
 
 \textit{An Undergraduate, non-CS major} (\textbf{Learners})...\\
-\textit{... Writing code} (\textbf{Performance Context}) ...\\
+\textit{... Given source code} (\textbf{Performance Context}) ...\\
 \textit{... Will be able to identify the name, value, origin, and type of a variable at any given step within the code} (\textbf{Action})... \\
 \textit{... Taking advantage of any resources from the internet and their Integrated Debugging Environment} (\textbf{Tools}).
 
 \subsection{Conduct Instructional Analysis}
 
+The next step is conduct an Instructional Analysis, which will spell out exactly what the successful learner will do in the performance context.
+Like the Instructional Goal, it does not describe how to teach the material, although it is easy for practice-oriented thinkers to accidentally start diagramming the lesson instead.
+The Instructional Analysis first requires the designer to classify the goal statement based on the the kind of learning it requires.
+Then, the designer identifies and organizes the \textit{subskills} involved in the skill being learned, and places them into an Instructional Analysis Diagram.
+
+Dick \& Carey describe 4 learning outcomes, based on the work by Gagn\'{e}.
+\textbf{Verbal Information} requires the simplest form of learning: it represents simple, declarative knowledge to be memorized and recalled (e.g., ``What is the worst-case runtime of the major sorting algorithms?'').
+Very little presentation is usually needed for Verbal Information, although students may find it useful to practice such material.
+\textbf{Intellectual Skills} are more complicated problem-solving tasks that demand some level of deeper cognition (e.g., ``Write a program to compute the sum of a list of numbers'').
+Many types of knowledge in Computer Science require Intellectual Skills, but range greatly in complexity.
+\textbf{Psychomotor Skills} are much rarer in Computer Science, describing the coordination of mental and physical activity (e.g., ``Type the alphabet using a keyboard'').
+\textbf{Attitudes} is the fourth type, describing goals where the learner makes a choice (e.g., ``Choose to persevere in the face of segfaults'').
+Gagn\'{e} also identified a fifth domain, \textbf{Cognitive Strategies}, but Dick \& Carey includes this as a particularly ill-structured form of Intellectual Skills.
+Readers familiar with Bloom's Taxonomy will find these outcomes similar -- mappings exist between these lists, suggesting their rough equivalence.
+It is up to the designer to choose their preferred schema.
+
+\begin{figure*}
+\begin{center}
+	\psfig{file=images/ia_simple.eps, width=\linewidth}
+	%\includegraphics[width=0.48\textwidth]{"images/rtw-client-library"}
+\end{center}
+\vspace{-\bigskipamount}
+\caption{The Abridged Skill Analysis Diagram}
+\label{fig-sa}
+\end{figure*}
+
+Once the goal is classified, the instructor performs a Subskill Analysis to concretely describe the goal and its components. 
+Intellectual Skills and Psychomotor Skills is a typically straightforward process of creating a flowchart that breaks down each step into multiple levels.
+Much as you would decompose the steps of a program, you decompose the skills into increasingly simpler steps.
+Unlike a programming language, however, it is strictly up to the designer to decide when to terminate the iterative decomposition.
+It is also possible to have branches and cycles, as is typical for flowcharts.
+Some of the most basic subskills can be considered ``Entry Skills'' -- the learner can be expected to already have mastered them before the instruction begins.
+These substeps might, in turn, involve Verbal Knowledge, which is denoted with a triangular ``V'' node.
+Verbal Information is much simpler to diagram, although the designer can cluster the topics if they want;
+in the runtime analysis example from before, for example, you might group the algorithms by their Big O values.
+Attitudinal Skills can be considered a special form of the other skills: to resolve it, simply consider what skill the behavior in the goal is most akin to.
+
+In this case study, our instructional goal is best classified as an Intellectual Skill.
+Figure \ref{fig-sa} is an abridged version of the Instructional Analysis Diagram created for the goal.
+The complete diagram is available in the online appendix.
 
 \subsection{Conduct Learner and Context Analysis}
 
+During the next phase, you will need to identify properties about the learners, the learning context, and the performance context. 
 There are many factors involved in learner and context analysis.
 
+Dick \& Carey suggest 8 crucial factors: (1) entry skills, (2) prior knowledge of the topic 
+area, (3) attitudes toward content and potential delivery system, (4) academic 
+motivation, (5) educational and ability levels, (6) general learning preferences, 
+(7) attitudes toward the organization giving the instruction, and (8) group characteristics.
+
 \subsection{Write Performance Objectives}
+
+For every 
+Writing performance objectives is a simple, but repetitive, phase.
+
 \subsection{Develop Assessment Instruments}
+
+There are four kinds of assessments.
+
 \subsection{Develop Instructional Strategy}
 As software developers, it is extremely tempting to 
 \subsection{Develop and Select Instructional Materials}
@@ -186,6 +240,25 @@ Gang\'{e}'s nine events are summarized in Figure \ref{gange-events}, taken indir
 
 
 \subsection{Conduct Formative Evaluation}
+
+\begin{figure}
+\begin{tabular}{l|l|c|c|c}
+	Phase & Student & Pretest & Posttest & Difference\\\hline
+	1-1 & \#1 & 37.8\% & 100\% & +62.2\%\\
+	1-1 & \#2 & 51.8\% & 100\% & +48.2\%\\
+	1-1 & \#3 & 35.7\% & 84.6\% & +49.1\%\\\hline
+	SG & \#1 & 21.7\% & 93.3\% & +71.6\%\\
+	SG & \#2 & 54.6\% & 100\% & +45.4\%\\
+	SG & \#3 & 64.3\% & 91\% & +26.7\%\\
+	SG & \#4 & 32.7\% & 80\% & +47.3\%\\
+	SG & \#5 & 69.4\% & 91\% & +21.6\%\\\hline
+	& \textbf{Average} & 45.9\% & 92.5\% & +46.6\%\\
+	& \textbf{StdDev} & 7.5\% & 16.6\% & 16.4\%\\
+\end{tabular}
+\caption{Student Performance during Formative Evaluation}
+\label{fe-results}
+\end{figure}
+
 \subsection{Revise Instruction}
 \subsection{Conduct Summative Evaluation}
 
