@@ -1,0 +1,39 @@
+5 hour intervention
+
+This paper describes our position that CS Educators should start reaching out
+, and also describes our experience teaching a summer Governer's for Agriculture students
+
+Agriculture
+    Agriculture has a disporportionate female population
+    Only one student signed up for Computational Thinking
+Bioinformatics
+    Bioinformatics is an increasingly popular subect and a 
+    However it is distinct from the field of Agriculture at large
+    Represents a narrow specialization in the field, only genetics
+Population
+    N=20
+    High school students
+    Sampling bias
+    
+Day 1: Abstraction
+    Abstract Things
+    Stakeholders
+Day 2: Algorithms
+    Blockly Maze
+    Card Sorting
+Day 3: Programming
+    Language
+    Blockpy
+    Codecademy
+Day 4: HCI
+    CS and Ag
+        Some of the innovations
+Day 5: 
+    Presentations
+    Summary Presentation
+Results
+    Learning Gains
+    Interest
+    Usefulness
+    Success
+Future

@@ -1,0 +1,55 @@
+Introduction
+    Problem: Students need scaffolding, but want to accomplish things and get to maturity
+    Solution: A block-based environment that promotes transfer while allowing you to accomplish things.
+        Block-based environments
+        Interest, Usefulness, and motivation
+        Data Science as a Context
+BlockPy
+    Data Science
+        CORGIS datasets integration
+        Visualization for graphs and plots
+    Mutual Language Translation
+        Mistuawaka citations
+        Figure giving an overview of the toolchain
+        Figure demonstrating the block-code conversion
+        Describe the technical challenge of matching blocks and code
+    Code Embedding
+        Weintrop citations
+    Data Explorer
+        Reveals State over time
+        Emphasis on name, type, value
+        Also controls printer, loaded modules
+    Guided Practice
+        Concrete API Examples
+    Instructor Tools
+        Question Editing
+        Dashboard
+            Figure of the dashboard showing student's submission comparisons
+Missing features
+    Blocks
+        Object-Oriented
+        Tuples, Sets
+    Text
+        Python 3 features
+        Refactoring
+        Multiple Code files
+Research Study
+    CT class population description
+        
+    View of Blockly
+        Data: Students are split between more/less blockly
+    MLT:
+        Few to no events for mutual language translation (only instructors demonstrating things)
+        How do we make it intentional?
+    Automatic Checker:
+        Overall, lot's of positive feedback about this
+        Some students reported the motivating remarks helpful, some reported them to be boring.
+        One student was subverting it by abusing the output checking
+Future work
+    Technical Work
+        Static/dynamic type inference to improve block rendering
+        Support other contexts for comparison (e.g., turtles, processing)
+    Research Questions
+        How can the system promote transfer to a more mature environment?
+        How can we rapidly get students familiar with a data source?
+        How can we improve the teacher tools?
