@@ -1,6 +1,6 @@
 \section{Existing work}
 
-As I am now three years into my PhD, my research builds on significant prior work. First and foremost, my CORGIS project has already been used in several introductory programming experiences, and seen publication at multiple venues, including two very successful workshops.
+As I am now three years into my PhD, my research builds on significant prior work. First and foremost, my CORGIS project has already been used in several introductory programming experiences, and seen publication at multiple venues, including two successful SIGCSE workshops.
 My primary research project for the first two years of my dissertation led to CORGIS: Collections of Real-time, Giant, Interesting, Situated Datasets.
 This project's goal is to make simplistic data sources available to learners early in their programming experience, so that they can explore Big Data Science contexts.
 
@@ -27,7 +27,7 @@ For clarity's sake, we use the name RealTimeWeb to refer to the architecture we 
 At the heart of our project are carefully engineered, open-source client libraries through which students can access the data provided by real-time web services.
 We provide client libraries for a number of data sources, such as business reviews from Yelp, weather forecasts from the National Weather Service, and social content from link-sharing site Reddit.com.
 Each of these client libraries is in turn available for three common beginner languages: Java, Python, and Racket. 
-These libraries do more than just streamline the process of accessing distributed data, however; each library is built with a persistence layer that enables the library to work without an internet connection.
+These libraries do more than just streamline the process of accessing distributed data, however. Each library is built with a persistence layer that enables the library to work without an internet connection.
 Not only does this ensure that students without a solid internet connection can maintain productivity, it also simplifies developing unit tests. 
 In fact, this technical scaffolding for the students circumvents most of the difficulties of distributed computing, including HTTP access, data validation, and result parsing.
 Figure \ref{fig-cla} demonstrates the architecture used in our libraries.
@@ -58,7 +58,7 @@ As an open-source project, we encourage collaborators to explore and extend the 
 
 The process of connecting to online data sources is fairly uniform: performing an HTTP request to a URL returns formatted data (typically JSON or XML). 
 This information must then be parsed into native data structures, and then filtered and transformed into an appropriate domain object using the language's proper construct (e.g., structs for Racket, classes for Java).
-We've established a JSON-based client library specification file format that can be compiled to appropriate source code in each of the three target languages using the modern templating language Jinja2. 
+We have established a JSON-based client library specification file format that can be compiled to appropriate source code in each of the three target languages using the modern templating language Jinja2. 
 This compiler can be easily extended to new languages by providing a template.
 This specification format has two major components: the functions, which connect to the relevant URL endpoints, and the domain objects, that are generated from a successful HTTP request. 
 This open-source tool has been used to successfully and rapidly develop a number of the existing client libraries.
@@ -81,32 +81,32 @@ This open-source tool has been used to successfully and rapidly develop a number
 		\label{fig-expected-benefit}
 \end{figure}
 
-The CORGIS project has been deployed for several semesters in introductory Computer Science courses for majors, ranging from the first course all the way to a Data Structures level course.
+The CORGIS project has been deployed for several semesters in introductory Computer Science courses for majors, ranging from the first course to a junior-level Data Structures course.
 These integrations ranged from small assignments to entire semester projects using the software.
 So far, the focus of the evaluation has been on the motivational influence of the system.
 Quantitative data was collected by surveying students attitudes using well-established motivational frameworks and instruments, and indicates that students tended to find real-time data engaging~\cite{realtimeweb}.
 In some courses, qualitative data was gathered through small group interviews, where students attribute increased engagement with the authentic, real-world connection offered by real-time data.
 
-Similar results have been found from its integration in a Computational Thinking course -- students cite working with the realistic data as a key factor in engaging with course materials.
-Refer to figure \ref{fig-contexts-compared}, the result of an end-of-course survey (34 responses, 87\% response rate).
+Similar results have been found from its integration in a Computational Thinking course. Students cite working with the realistic data as a key factor in engaging with course materials.
+Refer to Figure \ref{fig-contexts-compared}, the result of an end-of-course survey (34 responses, 87\% response rate).
 Students were asked to respond via a Likert scale to the statement, ``Other schools teach Computational Thinking in different ways. Consider these different styles, and indicate how much you would prefer or avoid them.''
 Although this is an extremely shallow question, since students were only exposed to two contexts (computational modelling and working with data), it is an encouraging, preliminary result.
 
 \subsection{Block-Based Programming}
 
 Programming is a difficult thing to learn, and there exist many tools to scaffold that process.
-One of the more popular approaches is Block-based Programming Environments, which allow the user to build their program from pieces of provided code constructs.
-This prevents common syntax errors and some of the the ``blank canvas'' effect.
-The CORGIS project has been leveraged in several different block-based environments, including a Python-based system based on Blockly and the popular programming environment/language Snap!. 
+One of the more popular approaches is block-based programming environments, which allow the user to build a program from pieces of provided code constructs.
+This prevents common syntax errors and some of the the ``blank canvas'' effect (the initial shock and disorientation a learner can suffer from when confronted with an empty slate).
+The CORGIS project has been used in several different block-based environments, including a Python-based system based on Blockly and the popular programming environment/language Snap!. 
 Both systems implement their own layer around CORGIS in order to provide access to rich datasets.
-The Python/Blockly system has additional tools for creating plotted visualizations of data, and the Snap! interface has generalized support for accessing online data.
-Although the Snap! tools were created as part of a spin-off project, the Python/Blockly tools are my own work.
+The Python/Blockly system has additional tools for creating visualizations of data, and the Snap! interface has generalized support for accessing online data.
+The Snap! tools were created as part of a spin-off project by Jonathon Hellmann~\cite{hellmann2015datasnap}. The Python/Blockly tools are my own work.
 
-During the Computational Thinking course, students take advantage of the internal caching mechanism of the CORGIS libraries to work on recorded data.
+During the Computational Thinking course, students use the internal caching mechanism of the CORGIS libraries to work on recorded data.
 This simplifies the debugging process since programs perform predictably and are no longer dependent on external data services.
-When students are ready to run their programs against live data, they can move offline to a traditional programming environment and run in regular production.
-This caching mechanism also benefits from an assessment view - a students program can be checked for robustness by invisibly changing the values returned by the big data functions.
-Figure \ref{fig-example-blockly} demonstrate the CORGIS library in action both in regular Python code and the equivalent Blockly code.
+When students are ready to run their programs against live data, they can move to a traditional programming environment (such as Spyder or PyCharm) and run in regular production.
+This caching mechanism also helps during assessment. A student's program can be checked for robustness by invisibly changing the values returned by the big data functions.
+Figure \ref{fig-example-blockly} demonstrate the CORGIS library in action both with regular Python code and the equivalent Blockly code.
 
 \begin{figure}
 \caption{Blockly vs. Python Code}

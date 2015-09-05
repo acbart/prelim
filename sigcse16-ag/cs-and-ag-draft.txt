@@ -1,0 +1,77 @@
+Introduction
+    This paper describes our position that CS Educators should start reaching out to Ag majors (via Computational Thinking), and also describes our experience teaching a summer Governer's for Agriculture students
+Agriculture Education
+    Agriculture is one of the most important disciplines, and is rapidly integrating technology as a first-order tool:
+        * Farms are starting to collect Big Data about their animals, and this needs to be approached with different tools
+        * PCDart, a major dairy-herd program, has a procedural query language built-in
+    Lower socio-economic status, want to demonstrate that CS is useful rather than just a fun toy
+    Agriculture majors tend to have low opinions towards computing, and focus on Digital Literacy rather than Computational Thinking:
+        * A Computer Literacy Course for the College of Agriculture: A Survey of Student Attitudes, Evaluations and Performance (https://kb.osu.edu/dspace/bitstream/handle/1811/65725/CFAES_ESO_1170.pdf?sequence=1)
+        * Meeting the Needs of CALS Students for Computing Capabilities Final Report of the Ad Hoc Committee on College of Agriculture and Life Sciences Student Computing Competencies* (http://files.eric.ed.gov/fulltext/ED402901.pdf)
+        * Student and Faculty Perceptions of ICT Use in Undergraduate Agriculture Courses (http://www.jae-online.org/attachments/article/1772/jae54.3.pdf#page=172)
+        * Computer Usage and Perceptions of Incoming Students at a 2-year Agricultural School (http://s3.amazonaws.com/academia.edu.documents/30395125/nacta_journal_sept_2012.pdf?AWSAccessKeyId=AKIAJ56TQJRTWSMTNPEA&Expires=1438013697&Signature=xSbzM1MMJlM4LuqWFo%2BQIFPxleE%3D&response-content-disposition=inline#page=4)
+        * Only one Ag student signed up for Computational Thinking in the past year (despite having a large presence at VT)
+    Agriculture has a disporportionate female population, so drawing from their ranks also supports the ongoing goal of bringing women into computing
+Bioinformatics is not Agriculture
+    Bioinformatics is an increasingly popular subject to introduce computing to Life Sciences students
+    However it is distinct from the field of Agriculture at large
+    Represents a narrow specialization in the field, only genetics
+    Still definitely has value, but we want to explore other approaches (isn't a one-size-fits-all solution)
+Hypothesis:
+    By tailoring the content to Ag majors, we can appeal to them more
+Our attempt at teaching CS to Ag:
+    Population
+        N=20
+        High school students
+        Sampling biases
+            Interested in Agriculture Engineering
+            these students voluntarily signed up for the course
+            they're in goverernor's school because they're good students
+    Instructional Strategy
+        (This section is presented with examples of the lessons and the immediate feedback gathered from the students)
+        Day 1: Abstraction
+            Abstract Things + Stakeholders
+                Abstraction of a cow
+                According to different stakeholders
+        Day 2: Algorithms
+            Blockly Maze
+            Card Sorting
+        Day 3: Programming
+            Language
+            Blockpy examples
+            Codecademy
+        Day 4: HCI
+            Learned about affordances
+            Examples of bad and good interfaces in their life
+            Went over examples of current integrations of CS and Ag
+        Day 5: 
+            Presentations
+            Summary Presentation
+    Results
+        Assessment instruments
+            4 question pre-/post- about core topics in course.
+            Evaluated with a rubric
+        Learning Gains measured:
+            Learned about Abstraction well, but the other topics didn't see very large boosts. Since they came in not knowing much about the subject, that's positive.
+            What is "Abstraction?" => Average Gain is 42.5%, Very Large, Significant
+            What is "Programming"  => Average Gain is 28.33%, Large, Significant
+            What are "Algorithms"? => Average Gain is 19.58%, Moderate, Significant
+            What is Computer Science? => Average Gain is 2.5%, Small, Not significant
+        Motivational Gains measured:
+            Students entred course with high reports of motivations according to MUSIC model and left with only marginally higher reports. Still, this is encouraging that the material was not bad.
+            Increase in Success? => Average Gain is 20%, Moderate, Significant
+            Increase Usefulness? => Average Gain is 10%, Small, Not significant
+            Increase in Interest? => Average Gain is 10%, None, Not significant
+        Qualitiative Analysis of different results:
+            Students felt that the Ag material wasn't very interesting
+            The maze and interactive components were most useful
+            TODO - gathered textual information on what was "boring", "interesting", "hard", "easy", etc.
+        Conclusions
+            * The Ag material seemed to be less appealing than the other material - contextualization may not be appropriate for these learners, because they are not sufficientlly domain-identified
+            * Students had no idea about Abstraction, so focusing more experience on that is a good idea. They didn't seem to find this material particularly interesting, though, so it needs to be improved from a motivational perspective.
+            * Many students were able to point to an actionable "future plan" for learning more CS, so using activities that were unable to be completed during the class was an excellent idea
+Future
+    * Tighter integration of CS+Ag material
+    * Work with more traditional Ag majors
+    * How do high schoolers differ from undergrads, once they've become domain-identified?
+    * Establish whether Ag majors are truly different from other types of majors

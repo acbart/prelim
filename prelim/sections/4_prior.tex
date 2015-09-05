@@ -1,4 +1,4 @@
-\subsection{Datasets as a Holistic Motivating Context}
+\section{Datasets as a Holistic Motivating Context}
 
 I propose using datasets as a motivating introductory computing context.
 As established in the previous subsection, this is not a novel approach -- upper forms have always historically used datasets and recently lower forms have started too.
@@ -16,21 +16,21 @@ Before describing what I have done and will do, however, this section will descr
 \end{wrapfigure}
 
 Data science is the process of answering questions by building, exploring, and processing datasets.
-There are many theoretical models that define the term more strictly, but in general it is described as an iterative model of collection, sanitizing, processing, rendering, and interpreting.
+There are many theoretical models that define the term more strictly, but in general it is described as an iterative model of collecting, sanitizing, processing, rendering, and interpreting.
 Figure \ref{fig-data-science} gives a visual overview of this process.
 My research will not attempt to narrowly define data science; instead, the goal is simply to use elements of the data science process.
 
 It is crucial to understand that the goal is not to teach students how to become data scientists, anymore than it is the goal of Media Computation to teach students how to be professional computational artists.
 As a context, using datasets is simply a means to an end -- it may involve any components of the generalized data science process at any level.
-Some professors may identify data science as a learning objective in and of itself -- that is fine, but they are attempting to teach something that is, at some level, distinct from computing itself.
+Some professors may identify data science as a learning objective in and of itself. That is fine, but they are attempting to teach something that is, at some level, distinct from computing itself.
 
 My core thesis is that data science, used properly, is an excellent context for motivating students across all possible factors of motivation: providing opportunities for agency, a sense of usefulness and authenticity, controllable complexity, the potential to be interesting situationally and towards individualized interest, and a promotion of caring and ethics.
-Data Science accomplishes this by being an almost ``meta-context'' -- it is a general framework for working with an infinitely wide array of different data contexts.
+Data Science accomplishes this by being a ``meta-context'' -- it is a general framework for working with an infinitely wide array of different data contexts.
 However, there are many challenges in doing so.
 
 \subsection{Big Data}
 
-A large categorization of data is Big Data. Big Data is much in the news these days, from reports of massive data
+One large categorization of data is Big Data. Big Data is much in the news these days, from reports of massive data
 dredging by the NSA to tens of millions of credit cards stolen by
 hackers from commercial databases.
 Big Data has become crucial to scientific advances from understanding the
@@ -55,9 +55,9 @@ Clearly, ``bigness'' is a function of the learner's experience, but that is stil
 A more precise definition is the ``3V Model'' \cite{douglas2012importance}, which posits that there are three dimensions that distinguish big data from ordinary, run-of-the-mill data:
 
 \begin{description}
-	\item[Volume:] The total quantity of the information, usually measured in bytes or number of records. However, this also extends laterally: the number of fields in the structure of the data also impacts the complexity and size. The threshold at which data becomes big is a function of the hardware and software being used -- for instance, embedded systems may consider gigabyte-sized files to be big, while modern servers might not struggle until the petabyte level.
+	\item[Volume:] The total quantity of the information, usually measured in bytes or number of records. However, this also extends laterally: the number of fields in the structure of the data also impacts the complexity and size. The threshold at which data becomes big is a function of the hardware and software being used. For instance, embedded systems may consider gigabyte-sized files to be big, while modern servers might not struggle until the petabyte level.
 	\item[Velocity:] The rate at which new information is added to the system. High velocity big data implies a distributed architecture, since new data must be arriving from somewhere. The dynamicity of data can vary widely across these architectures, with data updating every year, every day, or even multiple times a second.
-	\item[Variety:] The format or formats of the data. Ideally, data are always distributed in a way that is readily accessible -- for instance, simple text-based formats such as CSV and JSON are widely supported, relatively lightweight, and human-readable. More sophisticated data formats for image and audio are also typically well-supported, although still more complicated. However, projects using specialized, compressed binary formats or, more dangerously, multiple formats (e.g., image archives organized with XML files), are more complex.
+	\item[Variety:] The format or formats of the data. Ideally, data are always distributed in a way that is readily accessible. For instance, simple text-based formats such as CSV and JSON are widely supported, relatively lightweight, and human-readable. More sophisticated data formats for image and audio are also typically well-supported, although still more complicated. However, projects using specialized, compressed binary formats or, more dangerously, multiple formats (e.g., image archives organized with XML files), are more complex.
 \end{description}
 
 Silva~\cite{Silva:2014} taught an introductory course truly focused on techniques for tackling Big Data: NoSQL, MapReduce, NewSQL.
@@ -99,5 +99,5 @@ Careful consideration must be made when choosing problems and designing contexts
 
 \begin{description}
 \item[Inconsistency of Storage:] High variety data is composed of many different kinds of file formats -- some of which are more complicated than others.
-\item[Inconsistency of Tools:] Different languages usually offer many different tools to interact with the exotic formats of the data -- however, these tools vary greatly in availability, usabililty, and compatability across platforms. For instance, binary image data is supported as a first-class programming object in the Racket programming environment, but can only be loaded using libraries such as Pygame in Python, which the user may or may not have installed.
+\item[Inconsistency of Tools:] Different languages usually offer many different tools to interact with the exotic formats of the data. However, these tools vary greatly in availability, usability, and compatibility across platforms. For instance, binary image data is supported as a first-class programming object in the Racket programming environment, but can only be loaded using libraries such as Pygame in Python, which the user may or may not have installed.
 \end{description}

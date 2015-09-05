@@ -22,14 +22,17 @@
 \title{An Instructional Design Case Study for Computer Science Education}
 \numberofauthors{1}
 \author{
-	\alignauthor {Austin Cory Bart, Eli Tilevich, Clifford A. Shaffer, Dennis Kafura}\\
-	\email{\{acbart, tilevich, shaffer, kafura\}@vt.edu}\\
-	\affaddr{Virginia Tech}  \\
+	%\alignauthor {Austin Cory Bart, Eli Tilevich, Clifford A. Shaffer, Dennis Kafura}\\
+	%\email{\{acbart, tilevich, shaffer, kafura\}@vt.edu}\\
+	%\affaddr{Virginia Tech}  \\
 }
 
 \maketitle
 \begin{abstract}
-Abstract will go here
+Instructional Design is the systematic design of instruction, a pragmatic but principled approach to an age-old problem of how to optimally promote measurable learning.
+This paper introduces a popular Instructional Design model (the Dick \& Carey Model) by contextualizing it in a case study of designing a learning module for a new course.
+The paper walks through all 10 phases of the process, and is meant to be a meaningful introduction to the technique.
+Although there are many possible variations and alternate models possible when designing instruction, the core ideas of the process can be helpful for novice and expert designers alike.
 \end{abstract}
 
 % A category with the (minimum) three required fields
@@ -42,22 +45,19 @@ Abstract will go here
 \section{Introduction}
 
 Instructional Design is the systematic design of effective Learning Experiences. 
-Its history stretches back into the 1940s.
-
-However, there has been few reported cases of its usage in Computer Science Education.
-
-This paper describes a specific, popular Instructional Design model through a Computer Science Education case study.
-
-\subsection{Roles}
-An Instructional Designer is expected to be the advocate for the learner.
-They are, first and foremost, dedicated to providing an optimal learning experience.
-The instructional designer may or may not be responsible for actually physically teaching the learners (indeed, some instructional materials are designed without any physical instructor at all).
+Its history stretches back into the 1940s. However, there has been few detailed, reported cases of its usage in Computer Science Education.
+This paper describes a specific, popular Instructional Design model through a Computer Science Education case study on variables.
+It is our hope that readers will adopt or be influenced by the model in order to approach their courses with the same rigor they apply to software development.
 
 \subsection{Models of Instructional Design}
 
-A number of competing models 
-ADDIE
-AGILE
+In this case study, we use the Dick \& Carey model of Instructional Design, originally published in 1978 but continually updated and refined since then.
+Figure \ref{dick-carey-overview} gives an overview of this model.
+The advantage of the D\&C model is that it is a teaching model -- steps that are natural and implicit for an expert instructional designer are spelled out at each step.
+There are many other popular instructional design models that vary in their dispositions and affordances.
+For example, the ADDIE model is less exhaustive, and has its roots in military training. 
+The AGILE model is taken from the Software Engineering model of the same name, and shares its philosophy of evolutionary development and rapid response to change.
+An interested reader is encouraged to read further on these models and find one that suits their style.
 
 \begin{figure*}
 \begin{center}
@@ -103,23 +103,22 @@ AGILE
 \end{center}
 \end{figure*}
 
-In this case study, we use the Dick \& Carey model of Instructional Design, originally published in 1978 but continually updated and refined since then.
-Figure \ref{dick-carey-overview} gives an overview of this model.
-The model is meant to be iterative.
-
 %http://delivery.acm.org.ezproxy.lib.vt.edu/10.1145/1160000/1151596/p41-east.pdf?ip=128.173.127.127&id=1151596&acc=ACTIVE%20SERVICE&key=B33240AC40EC9E30%2E80AE0C8B3B97B250%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=650919337&CFTOKEN=97456003&__acm__=1435239969_2e413e7f69af34d044bfae7cb3720913
 
 %http://delivery.acm.org.ezproxy.lib.vt.edu/10.1145/1290000/1288595/p111-caspersen.pdf?ip=128.173.127.127&id=1288595&acc=ACTIVE%20SERVICE&key=B33240AC40EC9E30%2E80AE0C8B3B97B250%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=650919337&CFTOKEN=97456003&__acm__=1435239847_0c792845f04d9cd59e557a2cb011434e
 
-One of the most influential\cite{anglin1992reference} instructional theories is Gang\'{e}'s Theory of Instruction, a complex Cognitivist model that categorizes different types of learning outcomes (e.g., ``Verbal Information'' such as reciting the definition of a term, ``Attitudinal'' such as choosing to not smoke) and breaks down the process of learning into nine coherent steps. Gang\'{e} stresses that different learning outcomes require very different instructional implementations of the general instructional model. This instructional theory informs the design of complete Instructional Design models such as the Dick and Carey model \cite{carey2001systematic}. Although different ID models suggest different approaches to creating instructional materials, those materials are all typically patterned after Gang\'{e}'s instructional events.
+\subsection{An Instructional Designer}
+An Instructional Designer is expected to be the advocate for the learner.
+They are, first and foremost, dedicated to providing an optimal learning experience.
+The instructional designer may or may not be responsible for actually physically teaching the learners (indeed, some instructional materials are designed without any physical instructor at all).
 
 \section{The Case Study}
 
-In this section, we will describe each phase of the D\&C model and our results using the model.
+In this section, we will describe each phase of the D\&C model contextualized in a lesson on using variables..
 We took on the role of instructional designers to create new content for an introductory computing class on ``Computational Thinking'' for non-Computer Science majors.
 The students in this course are expected to have no prior programming experience and are taking the course as part of the university's general requirements.
-They come from many different disciplines, including the arts, sciences, engineering, agriculture, and more.
-Because the curriculum is largely designed from scratch, there are many opportunities for instructional design.
+They come from many different disciplines, including arts, sciences, engineering, agriculture, and more.
+Because the course is new for our institution, there are many opportunities for instructional design.
 
 When reviewing our results, keep in mind that the model is meant to be iterative, and any results we have generated are the result of several iterations. 
 Any work presented is therefore neither completed nor prototypical.
@@ -127,7 +126,7 @@ Any work presented is therefore neither completed nor prototypical.
 \subsection{Identify Instructional Goal}
 
 The first step in the Dick \& Carey Model is to identify the instructional goal(s) that you want to accomplish.
-Critically, it does not describe anything about how the instructor will teach the material -- only what learners are expected to be able to do at the end of instruction.
+Critically, the goal does not describe anything about how the instructor will teach the material -- only what learners are expected to know and be able to do at the end of instruction.
 This goal can come from a variety of sources.
 The most obvious source is a department- or instructor- mandated curriculum, which may explicitly lay out what is expected of students.
 Goals can also come from a perceived gap in learners existing ability.
@@ -137,7 +136,7 @@ Because instructional design can be a very time and energy consuming process, it
 
 A complete goal statement should describe: the learners; the performance context; the action that learners should be able to do in the performance context; and the tools that are available to the learners in the performance context.
 A major, common misstep in writing an instructional goal is to create a \textit{fuzzy goal}, usually describing an abstract, unobservable outcome using verbs such as ``appreciate'' or ``know''.
-To correct a vague goal, the designer should begin by writing down the goal.
+To correct a fuzzy goal, the designer should begin by writing down the goal.
 Then, they list examples of what people do to demonstrate that they have achieved this goal.
 The designer can use this list to iteratively develop more concrete goals that will lead to observable outcomes.
 
@@ -153,7 +152,7 @@ Our final goal statement is:
 
 \subsection{Conduct Instructional Analysis}
 
-The next step is conduct an Instructional Analysis, which will spell out exactly what the successful learner will do in the performance context.
+The next step is to conduct an Instructional Analysis, which will spell out exactly what the successful learner will do in the performance context.
 Like the Instructional Goal, it does not describe how to teach the material, although it is easy for practice-oriented thinkers to accidentally start diagramming the lesson instead.
 The Instructional Analysis first requires the designer to classify the goal statement based on the the kind of learning it requires.
 Then, the designer identifies and organizes the \textit{subskills} involved in the skill being learned, and places them into an Instructional Analysis Diagram.
@@ -185,7 +184,7 @@ Much as you would decompose the steps of a program, you decompose the skills int
 Unlike a programming language, however, it is strictly up to the designer to decide when to terminate the iterative decomposition.
 It is also possible to have branches and cycles, as is typical for flowcharts.
 Some of the most basic subskills can be considered ``Entry Skills'' -- the learner can be expected to already have mastered them before the instruction begins.
-These substeps might, in turn, involve Verbal Knowledge, which is denoted with a triangular ``V'' node.
+Substeps might also involve Verbal Knowledge, which is denoted with a triangular ``V'' node.
 Verbal Information is much simpler to diagram, although the designer can cluster the topics if they want;
 in the runtime analysis example from before, for example, you might group the algorithms by their Big O values.
 Attitudinal Skills can be considered a special form of the other skills: to resolve it, simply consider what skill the behavior in the goal is most akin to.
@@ -199,15 +198,31 @@ The complete diagram is available in the online appendix.
 During the next phase, you will need to identify properties about the learners, the learning context, and the performance context. 
 There are many factors involved in learner and context analysis.
 
-Dick \& Carey suggest 8 crucial factors: (1) entry skills, (2) prior knowledge of the topic 
-area, (3) attitudes toward content and potential delivery system, (4) academic 
-motivation, (5) educational and ability levels, (6) general learning preferences, 
-(7) attitudes toward the organization giving the instruction, and (8) group characteristics.
+Dick \& Carey suggest 8 crucial factors for understanding your learners: (1) entry skills (the previously described abilities relevant to instruction), (2) prior knowledge of the topic 
+area, (3) attitudes toward content and potential delivery system (e.g., whether they prefer web-based or in-person instruction), (4) academic motivation, (5) educational and ability levels, (6) general learning preferences, (7) attitudes toward the organization giving the instruction, and (8) group characteristics (e.g., is the group of learners heterogenous or homogenous?).
+In some cases, the designer will intuitively know this information.
+In others, it is necessary to investigate through surveys and interviews.
+It is possible that this data cannot be collected until the course has already started, such as through a pre-test.
+While unfortunately, designers should plan accordingly to collect the most meaningful data possible.
+
+Understanding the performance and learning context is a simpler task, but still important.
+The 4 criteria for the performance context are: (1) supervisor support, (2) physical aspects of the site (e.g., tools, facilities, etc. that are available on the site), (3) social aspects of the site (e.g., coworkers, underlings, etc. that are available on the site), (4) relevance of skills to the workplace (described as a ``reality check'' by Dick \& Carey -- how will they use what they learn?). 
+There are 4 similar criteria for the learner context: (1) compatability of site with instructional requirements, (2) adaptability of site to simulate workspace, (3) adaptability of delivery approaches, (4) learning site constraints.
+
+In the Computational Thinking course of our case study, it is difficult to characterize the average learner and their performance context.
+Students enter the course with limited prior experience with computation and, in many cases, low self-efficacy.
+They can be expected to have entry skills related to basic computer usage (e.g., keyboarding, browser usage), but even these are varied.
+Their performance context varies even more, as students return to their home disciplines and move onto disparate careers using different degrees of computation.
+For the purposes of our instructional unit, we constrained the learning context to be remote and online, in order to deliver the content outside of the existing course timeline.
+Our complete learner and context analysis is available in the online appendix, arranged in tabular form for convenience.
 
 \subsection{Write Performance Objectives}
 
-For every 
 Writing performance objectives is a simple, but repetitive, phase.
+For every node in the subskill analysis, a performance objective is written.
+Conditions
+Behavior
+Criteria
 
 \subsection{Develop Assessment Instruments}
 
@@ -215,6 +230,7 @@ There are four kinds of assessments.
 
 \subsection{Develop Instructional Strategy}
 As software developers, it is extremely tempting to 
+
 \subsection{Develop and Select Instructional Materials}
 Instructional Design Models such as Dick \& Carey usually delay the design of instructional materials till the end of the entire process, focusing initially on analysis of the learners, the performance context, the instructional goal, and a host of other critical factors. At that point, a content delivery system is chosen based on its educational affordances and suitability for the learning experience being developed. This delay reflects the typical role of an Instructional Designer as a \textit{consumer} of instructional technology -- they survey the available techniques and technology (e.g., traditional lecture, essay writing, websites), and choose the one that fits their need.
 
@@ -235,6 +251,9 @@ Instructional Design Models such as Dick \& Carey usually delay the design of in
 \caption{Gang\'{e}'s Nine Events of Instruction}
 \label{gange-events}
 \end{figure}
+
+
+One of the most influential\cite{anglin1992reference} instructional theories is Gang\'{e}'s Theory of Instruction, a complex Cognitivist model that categorizes different types of learning outcomes (e.g., ``Verbal Information'' such as reciting the definition of a term, ``Attitudinal'' such as choosing to not smoke) and breaks down the process of learning into nine coherent steps. Gang\'{e} stresses that different learning outcomes require very different instructional implementations of the general instructional model. This instructional theory informs the design of complete Instructional Design models such as the Dick and Carey model \cite{carey2001systematic}. Although different ID models suggest different approaches to creating instructional materials, those materials are all typically patterned after Gang\'{e}'s instructional events.
 
 Gang\'{e}'s nine events are summarized in Figure \ref{gange-events}, taken indirectly from\cite{gagne1985conditions}. This model is described as an ordered, one-way sequence; however, in practice, some steps might be repeated and cycled between. For instance, very negative feedback might prompt the learner to return from step 7 to step 6. Modifications of the model have also been discussed in the literature. For example, to adapt for more Constructivist tastes, one could swap steps 4 and 6, so that students have the opportunity to engage with the materials before receiving instruction.
 
