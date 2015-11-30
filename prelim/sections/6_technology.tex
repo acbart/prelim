@@ -12,13 +12,13 @@ Although there are confounding factors to working with such a heavily experiment
 The students in the Computational Thinking course present a unique profile.
 A few of them will have had prior programming experience, but most of them have had very minimal interactions with computers (indeed, they often describe themselves as ``not a computer person'').
 These students may not believe that Computational Thinking will help them.
-This is largely because they have more clearly defined domain identities, and may not see how Computational Thinking fits into them.
+This is largely because they have more clearly defined domain identities (that is, they have clearer career goals and established interests within their discipline), and may not see how Computational Thinking fits into them.
 So, indeed, these students often have low motivation, especially in their sense of Success and Usefulness.
 
 In the first offering of the course, 25 students enrolled in the course, and 20 students finished the coursework.
 In the second offering, 40 students initially enrolled and 35 successfully passed the course.
 Figure \ref{data-demographics} indicates the relevant demographic data collected through surveys.
-Largely, the students represent the population at Virginia Tech, albeit with some disproportion towards certain majors than others.
+Largely, the students represent the population at Virginia Tech, albeit with some bias towards certain majors.
 It is worth pointing out the excellent gender diversity within the class.
 
 \begin{figure*}
@@ -37,6 +37,9 @@ It is worth pointing out the excellent gender diversity within the class.
 		Yes & 10 & 7 \\
 		No & 10 & 32 \\
 	\end{tabular}
+
+\vspace{20pt}
+
 \centering
 	\begin{tabular}{c|c|c}
 		\multicolumn{3}{c}{Year}\\\hline
@@ -59,14 +62,14 @@ It is worth pointing out the excellent gender diversity within the class.
 		Natural Resources & 0 & 0 \\
 	\end{tabular}
 \end{minipage}
-\caption{Demographic Data of Computational Thinking Students}
+\caption{Demographic Data for Computational Thinking Students}
 \label{data-demographics}
 \end{figure*}
 
 
 \subsection{The Content}
 
-Virginia Tech defines four learning objectives for ``Computational and Quantitative Thinking''~\cite{vt-vision}. Although the Computational Thinking only satisfies four of these objectives outright, they are all considered valuable end-goals:
+Virginia Tech defines six learning objectives for ``Computational and Quantitative Thinking''~\cite{vt-vision}. Although the Computational Thinking only satisfies four of these objectives outright, they are all considered valuable end-goals:
 \begin{enumerate}
 	\item Explain the application of computational or quantitative thinking across multiple knowledge domains.
 	\item Apply the foundational principles of computational or quantitative thinking to frame a question and devise a solution in a particular field of study.
@@ -76,7 +79,7 @@ Virginia Tech defines four learning objectives for ``Computational and Quantitat
 	\item Evaluate conclusions drawn from or decisions based on quantitative data.
 \end{enumerate}
 
-This content is mapped roughly into four instructional units on Computational Modelling, Algorithms, Data Intensive Inquiry, and Social Impacts. The lattermost unit is threaded throughout the course, while the first three are roughly sequential. Figure \ref{course-outline} gives a high-level overview of the content of this course.
+This content is mapped roughly into four instructional units on Computational Modelling, Algorithms, Data Intensive Inquiry, and Social Impacts. The Social Impacts unit is threaded throughout the course, while the other three are roughly sequential. Figure \ref{course-outline} gives a high-level overview of the content of this course.
 
 \begin{figure*}
 \begin{tabularx}{\textwidth}{ |l|X| }
@@ -100,17 +103,66 @@ The course uses a considerable amount of modern pedagogical techniques, many of 
 Perhaps the most influential technique is the organization of students into cohorts.
 Near the beginning of the semester, students are put into groups of 5-6, balancing based on year and gender where possible, and avoiding putting similar majors into the same group.
 These cohorts primarily function as a support structure that students can rely on to get help and encouragement.
-Although cohorts work together on many smaller in-class assignments, every student is ultimately responsible for their own work -- the final project, for instance, is individual to each student.
+Although cohorts work together on many smaller in-class assignments, every student is ultimately responsible for their own work. The final project, for instance, is individual to each student.
 
 Class time is split between presentation (typically stand-up lecture) and participation (typically computer-based work or cohort discussion) using an Active Learning style whereever possible.
-Earlier questions in the course often have students completing questions on paper or doing more kinetic exercises.
-Later questions rely on the automated Kennel questions, until the students reach the open-ended project work.
+Earlier assignmentsin the course often have students completing questions on paper or doing more kinetic exercises.
+Later assignments rely on the automated BlockPy questions, until the students reach the open-ended project work.
 
-Work in the class is considered to be under a mastery style -- deadlines are enforced only in so far as they motivate students to complete assignments, not in order to punish.
-Students are free to work on the material as long as they need.
+Work in the class is considered to employ a mastery style -- students are allowed to attempt the material as many times as required.
+Deadlines are loose, so that students are free to work on the material as long as they need.
 A recurring message within the course is that ``failing is okay, as long as you keep trying''.
 
 \section{Research Questions}
+
+\subsection{Research Question #1}
+
+\textit{RQ1: How can tools support the use of Data Science as an introductory context?}
+
+
+
+    Tools: CORGIS Libraries, Online portal, and BlockPy blocks
+    Experiment: Create architecture and specific instances of the tools above, and then evaluate them based on the questions.
+    Existing problems:
+        CORGIS Library has too many divergent libraries, and its impossible to maintain
+            Solution: A new generalized architecture that abstracts the data and metadata to a higher level
+        There is still too high a barrier for instructors to transform a data source into a classroom ready tool
+            Solution: An evolution of the RTW Online Building tool to make it even easier to transform a JSON/CSV data source into a Java/Python/Racket/BlockPy library
+        Students have diverging computer hardware (i.e. some are fast, some are slow), so making the datasets have the right size is tricky
+            Solution: Analyze the architectural suitability of different architectures (e.g., should datafiles be stored in memory or processed on disk) and how the software can adapt itself to a students' hardware
+        Different datasets have wildly varying shapes, but it'd be ideal to have uniform, variable shapes
+            Solution: Develop a system for manipulating datasets to have given shapes by restructuring the data according to certain templates
+    Evaluation: All of the tools that are created will be tested for usability where applicable.
+
+How does the Student-Driven Data Context impact students' motivation and engagement, especially compared to other components of the course?
+    Student-Driven Data Context: The pedagogoical appraoch used throughout the course, where students are given freedom to choose a data source of value to them and use that for their final project.
+    Experiment: Over the course of the semester, they'll be surveyed 2 times (pre-/post-) and interviewed individually about their experiences.        
+    Motivation: self-reported, based on the MUSIC model (Empowerment, Usefulness, Success, Interest, Caring)
+        Quantitative questions:
+            Students will be surveyed with a 6-point Likert-scale instrument that makes statements about the motivational aspects and components of the course:
+                Motivational Aspects: [ Empowering, Useful to career goals, helpful to your learning, interesting to you, valuable to your peers ]
+                Course Components: [ Working with real-world data, Programming, Abstractions, Cohort work, Social Impacts ]
+        Qualitative questions:
+            Students will be interviewed about how they worked with their dataset
+            Empowerment:
+                What aspects of your dataset did you have control over? What did you feel limited by with your dataset? How did you decide to choose to your dataset? Did you want more or less scaffolding? How does this compare to other aspects of the course?
+            Usefulness:
+                What problems were you able to solve with your dataset? What couldn't you do with your dataset? How well does your dataset align to your career goals? How does this compare to other aspects of the course?
+            Success:
+                How did you get to know your dataset? What things still confuse you about your dataset? When you opened your dataset, did you know what to do? How does this compare to other aspects of the course?
+            Interest:
+                Was your dataset interesting? What was boring about your dataset? How does this compare to other aspects of the course?
+            Caring:
+                Do you feel that this dataset would be generally valued by your peers in your program? Do you feel that this dataset would be generally valued by your peers in this class? Do you feel that this dataset would be generally valued by the instructors? How does this compare to other aspects of the course?
+    Engagement: 
+        observed behavior: attendance, participation in class activities, course/project grades, completion of assignments and readings
+        self-reported: intention to continue taking CS courses, desire for more/less of different course components (e.g., more maze, more programming, more real-world data)
+    Expectation: 
+        1) Students will attribute a large amount of motivation to the data sources
+        2) Student's reported Usefulness, more than their Interest, is important in predicting engagement outcomes.
+        3) We will see general increases in both Motivation and Engagement outcomes over the course of the semester.
+
+
 
 In this section, I outline the research problems that I will explore.
 
@@ -197,12 +249,6 @@ A given dataset has some motivational value that is a function of the student, t
 	\end{description}
 	
 \subsubsection{Comparison of the Context} As outlined in section 3, there are a number of different contexts available to instructors. What makes data science a particularly effective one, compared to the alternatives? I will conduct surveys of students in order to find out how they compare from their perspective. The goal of this research question is to find out the trade-offs and value of this context, and whether it can be a true all-in-one.
-
-\begin{figure}[!ht]
-\psfig{file=images/spyder-explorer.eps, width=\linewidth}
-\caption{The Variable Explorer in the Spyder Programming Environment}
-\label{fig-spyder-explorer}
-\end{figure}
 
 \subsection{Academic Motivation and Learning?}
 There is strong evidence that motivation predicts performance in the course, and my research will contribute to this growing base.

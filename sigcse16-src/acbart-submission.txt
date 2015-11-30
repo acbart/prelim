@@ -1,0 +1,57 @@
+Student Research Competition Proposal Format and Contents (limited to 800 words)
+
+Problem and Motivation: This section should clearly state the problem being addressed and explain the reasons for seeking a solution to this problem.
+
+Background and Related Work: This section should describe the specialized (but pertinent) background necessary to appreciate the work. Include references to the literature where appropriate, and briefly explain where your work departs from that done by others. Reference lists do not count towards the limit on the length of the abstract.
+
+Approach and Uniqueness: This section should describe your approach in attacking the problem and should clearly state how your approach is novel.
+
+Results and Contributions: This section should clearly show how the results of your work contribute to computer science and should explain the significance of those results.
+
+Static Type Inference for Precise Representation of a Dynamically-typed, Block-Based Language
+
+Problem and Motivation:
+
+    Blocks are great user interface.
+    
+    Block languages for systems like 
+    
+    BlockPy is a new Block-based programming interface for Python that 
+    
+    However
+    But type analysis is hard on python
+    representing it with a block-based language, you lose a lot of information
+    Example of indexing
+    Example of connecting blocks that don't work
+    
+    Consider the following Python expression: `my_data[a_variable]`
+    Using only context-insensitive lexical analysis, it is impossible to know if this expression is a numerical index into an array or a dictionary lookup.
+    However, these two operations are very distinct, and it would be very helpful for beginners to see a specific block (i.e. a "get ith item" block vs. a "get key" block).
+    
+
+Background and Related Work:
+
+    Polymorphic Blocks: statically typed version of Blockly
+
+    "Giving people a dynamically-typed language does not mean that they write dynamically-typed programs."
+    
+    PyPy uses 
+    
+    Static typing in newest version
+
+Approach and Uniqueness:
+
+    
+
+Results and Contributions:
+
+Scaffolding introductory learners
+Python is a dominant language
+BlockPy
+Existing work on python
+
+"But no one programs that way"
+In particular, our students should be encouraged to code a certain way
+Side-benefit: dead code elimination
+By applying Abstract Intepretation, you can build up a estimated model of the types
+Demand a sound analysis

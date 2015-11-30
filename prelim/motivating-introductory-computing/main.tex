@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.5in}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0in}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.1in}
+
+% if you want a double-spaced thesis, uncomment this line:
+% \renewcommand{\baselinestretch}{2}
+
+\usepackage{graphicx}
+\usepackage{hyperref} % automatically turns citations and the table of contents into PDF links
+\usepackage{longtable} % allows for tables that span across more than one page
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage[table]{xcolor}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{pdfpages}
+\usepackage[titletoc]{appendix}
+\usepackage{tabularx}
+\usepackage[ampersand]{easylist}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{subcaption} % allows the use of multiple images in a single figure
+\usepackage{placeins} % allows the use of the \FloatBarrier command to force images into sections
+\usepackage[T1]{fontenc} % allows for certain symbols, such as < and >, to be inserted directly into the text
+\usepackage[utf8]{inputenc} % allows for international symbols, like ö, to appear in the text 
+
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% \usepackage{todonotes} % allows for \todo commands
+
+\definecolor{light-gray}{gray}{0.90}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\hypersetup{
+    unicode=false,          	% non-Latin characters in AcrobatÕs bookmarks
+    pdftoolbar=true,        	% show AcrobatÕs toolbar?
+    pdfmenubar=true,        	% show AcrobatÕs menu?
+    pdffitwindow=false,     	% window fit to page when opened
+    pdfstartview={FitH},    	% fits the width of the page to the window
+    pdftitle={Austin Cory Bart's Preliminary Proposal},    	% title
+    pdfauthor={Austin Cory bart},     % author
+    pdfsubject={Motivating Introductory Computing with Student-Driven Datasets},   % subject of the document
+    pdfcreator={Overleaf},   % creator of the document
+    colorlinks=true,       % false: boxed links; true: colored links
+   linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=black      % color of external links
+}
+
+\usetikzlibrary{arrows,positioning} 
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    box/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    arrow/.style={
+           <->,
+           thick,
+           %shorten <=2pt,
+           %shorten >=2pt,
+					}
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\title{Motivating Introductory Computing with Student-Driven Datasets} 
+\author{Austin Cory Bart}
+\maketitle     
+
+\newpage
+\tableofcontents
+\pagebreak
+\listoffigures
+
+\newpage   
+\input{sections/0_summary}
+    
+\newpage
+\pagenumbering{arabic}
+\pagestyle{myheadings}
+\setcounter{page}{1}
+
+
+\pagebreak
+
+\input{sections/1_problem}
+\input{sections/2_literature}
+\input{sections/3_proposal}
+\input{sections/4_prior}
+\input{sections/5_intervention}
+\input{sections/6_questions}
+\input{sections/7_plan}
+\input{sections/8_conclusion}
+% chapter 1: introduction
+%\input{include/sections/1_introduction/introduction.tex}
+
+% chapter 2: related work
+%\input{include/sections/2_relatedwork/relatedwork.tex}
+
+% chapter 3: system frontend walkthrough and use cases 
+%\input{include/sections/3_system_frontend/system_frontend.tex}
+
+% chapter 4: the system itself
+%\input{include/sections/4_system_backend/system_backend.tex}
+
+% chapter 5: system evaluation
+%\input{include/sections/5_evaluation/evaluation.tex}
+
+% chapter 6: conclusions
+%\input{include/sections/6_conclusions/conclusions.tex}
+
+% reference
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+\begin{appendices}
+
+\includepdf[pages=1, scale=0.7, pagecommand=\section{Motivation Survey (Pre)}]{pdfs/ct-survey-first.pdf}
+\includepdf[pages=2-, scale=0.7, pagecommand={}]{pdfs/ct-survey-first.pdf}
+
+\includepdf[pages=1, scale=0.7, pagecommand=\section{Motivation Interview}]{pdfs/ct-interview.pdf}
+\includepdf[pages=2-, scale=0.7, pagecommand={}]{pdfs/ct-interview.pdf}
+%  \input{include/sections/A_survey/survey.tex}
+  %\input{include/sections/B_open_ended_responses/open_ended_responses.tex}
+\end{appendices}
+
+
+\end{document}

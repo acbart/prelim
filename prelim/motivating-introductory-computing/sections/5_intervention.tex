@@ -1,0 +1,114 @@
+\section{Intervention Context}
+
+With the development of new technology described in the following section, interventions will be staged through Virginia Tech's new ``Introduction to Computational Thinking'' course, created to help fulfill the university's new General Education Requirements~\cite{vt-vision}. 
+This course has already been run for two semesters, deeply incorporating much of my existing research work.
+The course is taught and developed primarily by Dr. Dennis Kafura, although I have also been involved as associate instructor, managing course materials, server and technology administration, and assisting with in-class teaching.
+However, now that the course is more solidly defined, my role is shifting into a more observational function in order to drive my dissertation work.
+As a research endeavor, the course is heavily instrumented to provide data on its novel pedagogies and technologies.
+Although there are confounding factors to working with such a heavily experimental course, it presents a unique testbed for materials and is an excellent source for mining research results.
+
+\subsection{The Learners}
+
+The students in the Computational Thinking course present a unique profile.
+A few of them will have had prior programming experience, but most of them have had very minimal interactions with computers (indeed, they often describe themselves as ``not a computer person'').
+These students may not believe that Computational Thinking will help them.
+This is largely because they have more clearly defined domain identities (that is, they have clearer career goals and established interests within their discipline), and may not see how Computational Thinking fits into them.
+So, indeed, these students often have low motivation, especially in their sense of Success and Usefulness.
+
+In the first offering of the course, 25 students enrolled in the course, and 20 students finished the coursework.
+In the second offering, 40 students initially enrolled and 35 successfully passed the course.
+Figure \ref{data-demographics} indicates the relevant demographic data collected through surveys.
+Largely, the students represent the population at Virginia Tech, albeit with some bias towards certain majors.
+It is worth pointing out the excellent gender diversity within the class.
+
+\begin{figure*}
+\begin{minipage}{\linewidth}
+\centering
+	\begin{tabular}{c|c|c}
+	  \multicolumn{3}{c}{Gender}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Female & 6 & 21 \\
+		Male & 13 & 18 \\
+	\end{tabular}
+\centering
+	\begin{tabular}{c|c|c}
+	  \multicolumn{3}{c}{Prior Programming Experience}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Yes & 10 & 7 \\
+		No & 10 & 32 \\
+	\end{tabular}
+
+\vspace{20pt}
+
+\centering
+	\begin{tabular}{c|c|c}
+		\multicolumn{3}{c}{Year}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Freshman & 2 & 5 \\
+		Sophomore & 7 & 11 \\
+		Junior & 6 & 11 \\
+		Senior & 5 & 10 \\
+		Unknown & 0 & 2 \\
+	\end{tabular}
+\centering	
+	\begin{tabular}{c|c|c}
+	  \multicolumn{3}{c}{Colleges}\\\hline
+		& Fall 2014 & Spring 2015 \\\hline
+		Engineering & 2 & 2 \\
+		Agriculture & 0 & 1 \\
+		Sciences & 7 & 5 \\
+		Liberal Arts & 9 & 23 \\
+		Architecture & 1 & 7 \\
+		Natural Resources & 0 & 0 \\
+	\end{tabular}
+\end{minipage}
+\caption{Demographic Data for Computational Thinking Students}
+\label{data-demographics}
+\end{figure*}
+
+
+\subsection{The Content}
+
+Virginia Tech defines six learning objectives for ``Computational and Quantitative Thinking''~\cite{vt-vision}. Although the Computational Thinking only satisfies four of these objectives outright, they are all considered valuable end-goals:
+\begin{enumerate}
+	\item Explain the application of computational or quantitative thinking across multiple knowledge domains.
+	\item Apply the foundational principles of computational or quantitative thinking to frame a question and devise a solution in a particular field of study.
+	\item Identify the impacts of computing and information technology on humanity.
+	\item Construct a model based on computational methods to analyze complex or large-scale phenomenon.
+	\item Draw valid quantitative inferences about situations characterized by inherent uncertainty.
+	\item Evaluate conclusions drawn from or decisions based on quantitative data.
+\end{enumerate}
+
+This content is mapped roughly into four instructional units on Computational Modelling, Algorithms, Data Intensive Inquiry, and Social Impacts. The Social Impacts unit is threaded throughout the course, while the other three are roughly sequential. Figure \ref{course-outline} gives a high-level overview of the content of this course.
+
+\begin{figure*}
+\begin{tabularx}{\textwidth}{ |l|X| }
+\hline
+Topic (Length) &	Description \\\hline
+Computational Modeling \newline\newline
+ (2 weeks) & Model-based investigation of how complex global behavior arises from the interaction of many “agents”, each operating according to local rules. Students use case-based reasoning and encounter basic computation constructs in a highly supportive simulation environment. \\\hline
+Fundamentals of Algorithms \newline (4 weeks) & Study of the basic constructs of programming logic (sequence, decisions, and iteration) and program organization (procedures). A block-based programming language is used to avoid syntactic details. Students can see how these constructs are expressed in Python. \\\hline
+Data-intensive Inquiry \newline (7 weeks) & Project-based exploration of complex phenomena by algorithmically manipulating large-scale data from real-world sources. Students construct algorithms in Python using a supportive framework for accessing the data. \\\hline
+Social Impacts \newline (2 weeks) & Explore and discuss contemporary societal issues involving computing and information technology. \\\hline
+\end{tabularx}
+\caption{High-Level Course Overview}
+\label{course-outline}
+\end{figure*}
+
+It is clear that this material aligns smoothly with the content described in this preliminary proposal, in particular a focus on algorithms and abstraction.
+
+\subsection{The Course}
+
+The course uses a considerable amount of modern pedagogical techniques, many of which represent ongoing research questions.
+Perhaps the most influential technique is the organization of students into cohorts.
+Near the beginning of the semester, students are put into groups of 5-6, balancing based on year and gender where possible, and avoiding putting similar majors into the same group.
+These cohorts primarily function as a support structure that students can rely on to get help and encouragement.
+Although cohorts work together on many smaller in-class assignments, every student is ultimately responsible for their own work. The final project, for instance, is individual to each student.
+
+Class time is split between presentation (typically stand-up lecture) and participation (typically computer-based work or cohort discussion) using an Active Learning style whereever possible.
+Earlier assignmentsin the course often have students completing questions on paper or doing more kinetic exercises.
+Later assignments rely on the automated BlockPy questions, until the students reach the open-ended project work.
+
+Work in the class is considered to employ a mastery style -- students are allowed to attempt the material as many times as required.
+Deadlines are loose, so that students are free to work on the material as long as they need.
+A recurring message within the course is that ``failing is okay, as long as you keep trying''.
