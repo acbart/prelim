@@ -1,0 +1,45 @@
+Introduction
+        Educational Theories
+        Block-based Environments
+        Web-based Python Environments
+        Guided Environments
+Major Features
+        Dual Block/Text Modes
+        Guided Feedback
+        Python Execution Environment
+        Natural Language Code Description
+        Property Explorer
+        Parson's Problems
+        CORGIS Integration
+        Plotting
+        LTI Support
+        Headless Code Grading
+        Free and Open-source
+Design Issues
+        Internal Code Representation
+        Toolbars
+        Guided Feedback API
+        Block Interface
+        Dangling Blocks
+        LTI Trust
+        Parser Errors
+        Program Analysis in BlockPy
+BlockPy Use Cases
+        As a Teaching Aide
+Studies
+        Methodology
+        Evaluation
+            Post-Completion Behavior
+            Misleading Blocks
+            The Blank Canvas
+            Cargo-Cult Programming
+            Growth Mindsets and Deleting Blocks
+Future Work
+        The nature of authenticity
+        Tiered Block Interface
+        Missing Language Features
+        More APIs
+        Missing Contexts
+        Open-world data science
+        Improved Guidance
+Conclusion

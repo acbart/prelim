@@ -1,0 +1,66 @@
+Title
+Author(s) name, Institution
+    Computational X: Engaging Learners across Majors with Computational Thinking
+
+    Computational Thinking for Everyone
+
+How do we teach all these non-majors?
+
+Literature Review
+    Computation is becoming a new pillar within Higher Education. But what is "Computational Thinking", how do we teach it, and how do we know if our students have learned it?
+    
+    Computational Thinking is more than just integrating technology and more than just knowing how to code; it represents a fundamentally different way of solving problems [Wing 0].
+    
+    Computational Thinkers are able to abstract complex reality into concrete representations, create algorithms to process and refine those abstractions, and intrepret the results in a meaningful way.
+    Inherent to this domain are opportunities for creativity, *powers*, and ethical concerns.
+    
+    A number of competing themes have emerged in the literature to contextualize learners' first computing experiences.
+    Guzdial et al [Guzdial 1] uses media creation and manipulation to provide opportunities for creativity.
+    Our own approach [Kafura ITICSE] incorporates real-world datasets that students use to answer questions.
+    
+    When working with computing, supporting and motivating students is a central issue.
+    However, there are also conceptual difficulties.
+    
+    Define computational thinking
+
+Goals and objectives for the practice session (what should the participants know or be able to do after the session?)
+
+    After this session, participants will be able to:
+        Define Computational Thinking
+        List and define critical elements of Computational Thinking
+        Integrate elements of Computational Thinking into their lessons
+        Identify tools for concretely Computational Thinking
+        Assess students' understanding of Computational Thinking
+
+Description of practice to be exemplified
+
+    The presenters have created an introductory course on Computational Thinking for non-Computer Science majors who have never programmed before.
+    The course leverages a number of modern pedagogical techniques including active learning, situated learning experiences, social learning.
+    
+    Instructional Design practices can guide course development
+    Typical Educational Methods
+        Know your learners, know your objectives
+        Motivate learners
+            Make it connect with their careers
+        
+    In many ways, learning computation means learning an almost entirely new subject that blends both language, logic, and quantitative skills. 
+    
+    In our course, we provide numerous technological and pedagogical scaffolds, focusing strongly on students' self-efficacy.
+        
+    The course's primary assessment is designed as an authentic experience to iteratively answer a question from their own discipline by applying computational methods.
+    This is paired with smaller assessments to measure their verbal knowledge and intellectual skill development with regards to tasks such as tracing code, intepretting code, and explaining core concepts of Computational Thinking.
+
+Discussion
+
+    Participants in this session will be encouraged to discuss and plan concrete ways to incorporate computing into their teaching and learning.
+    How do we incorporate Computational Thinking into specific disciplines and courses?
+    How does Computational Criminal Justice differ from Computational Botany?
+    Finally, resources will be shared for attendees to learn how they can grow as Computational Thinkers themselves.
+    
+    
+References
+    Wing - what is CT
+    Kafura - CT course
+    Guzdial - Media comp
+    
+    

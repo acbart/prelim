@@ -1,0 +1,46 @@
+Thank you for meeting with me during SIGCSE in Memphis to discuss the
+status of the OpenDSA project. Our goal remains to develop course
+materials for use in a range of CS courses, primarily focused on Data
+Structures and Algorithms, but broadening to other topics such as
+Programming Languages, Translators and Compilers, and Formal Languages
+and Automata. We have made good progress both in developing content,
+and in developing infrastructure to support delivery of the content.
+We are currently supporting courses at about 5-10 institutions per
+semester, and are looking to make the infrastructure more portable so
+as to support a major scale-up in use of the materials.
+
+Here are some pointers to information about OpenDSA:
+* Our project homepage is at: http://algoviz.org/OpenDSA/
+* Our GitHub project is at: https://github.com/OpenDSA. The main content
+  repository is at: https://github.com/OpenDSA/OpenDSA
+* You can see an example of an OpenDSA eTextbook instance at:
+  http://algoviz.org/OpenDSA/Books/OpenDSA/
+
+When we spoke at SIGCSE, you indicated that you saw a need to support
+K12 teachers who are teaching CS-related courses.
+
+The CS Department at Virginia Tech already has available a range of
+relevant instructional materials (through OpenDSA). We have a
+sustained interest and expertise in teaching both the CS Principles
+course (we were in the second wave of proof-of-concept testers), and
+courses on Computational Thinking for non-majors (Dennis Kafura is in
+his third year of teaching this course). We have experience with
+developing portal websites of instructional material. (Ed Fox was a
+coPI for the NSF NSDL Portal for Computer Science, Ensemble. I was the
+PI for the Algoviz Portal, that cataloged hundreds of Algorithm
+Visualizations for instructors to use.)
+
+Given our range of experience and existing body of materials and
+infrastructure, we believe that we could successfully develop a
+resource for use by K12 teachers. This might include Professional
+Development and self-study materials, and it might also leverage
+Ensemble to provide curated information about existing resources that
+teachers could use in their classes (such as freely available systems
+for teaching block-based languages or programming environments).
+
+I would like to hear more about what you think the community needs,
+and if what I suggested appears to be on the right track. Perhaps we
+could work on a capacity building proposal or an Eagar proposal that
+would let us work with our K12 contacts to flesh out what such a site
+should contain.
+

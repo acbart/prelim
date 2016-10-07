@@ -1,0 +1,32 @@
+1. Project Plan
+
+One of the reviewers said:
+
+"While all the parts of the project are interesting and valuable, it's
+not completely clear that they tie together well.  At times, this feels
+like a bit of a hodge podge of approaches.  There is also a *lot* of
+work planned - five tools for the data system and a complex learning
+analytics system seem challenging.²
+
+
+Realizing that 15 pages is not Œenough¹ who would you respond to the above?
+
+* There is significant prior work to build upon here - CORGIS has been in development for years, and there have already been several iterations of BlockPy. OpenDSA is a platform that's been in development for years.
+* 
+
+2. Dissemination
+Reviewers were concerned with Dissemination, I.e., the existing plan
+focuses primarily on partner institutions.  Do you have plans for places
+like Sigcse, workshops, etc.?
+
+We have previously had two successful SIGCSE workshops on earlier version of CORGIS work and a Special Session on Instructional Design. We have published at SIGCSE, ITICSE, SPLASH-E, and COMPSAC-CELT about this work.
+
+3. Evaluation
+
+What is your response to the following concern:
+
+³The panel noted that the project would be significantly strengthened by a
+more careful evaluation plan that can assess each intervention
+individually²
+
+OpenDSA, BlockPy, CORGIS

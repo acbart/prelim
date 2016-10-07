@@ -1,0 +1,37 @@
+Reviewer 1:
+
+Summary: This special session will introduce attendees to the Dick & Carey model of instructional design. This model focuses on analyzing learners and their instructional goals, identifying objectives and measures (assessment), and design of course materials an evaluation of instructional effectiveness. The presenters intend present the material in an interactive way, in which participants will apply the model in small groups.
+
+Strengths: This session will introduce a little-known area to SIGCSE attendees, and is worthwhile for that alone. 
+
+The session will be hands-on, giving attendees a better idea of how to apply the concepts of the Dick & Carey model.
+
+Author Comments: I think this session would be stronger if it included some discussion of experience using this model. Presumably, the authors have some experience using this model - what impact did using it have? How did this help students or improve the teaching and learning experience? How did the results compare with whatever curriculum design methods you used previously? I think the answers to these questions would help motivate others to attend this session and learn more about the process.
+
+In section 4, a survey is mentioned. It's difficult to tell for certain, but I don't see how this survey helps the attendees learn about instructional design. 
+
+As the authors note, the material here might be better suited for a workshop. This proposal follows a workshop style in many ways, but in less time. I'm somewhat concerned that the shorter period scheduled for special sessions may be insufficient here. I'm also concerned that the open nature of a special session (where attendance is unpredictable, and people may wander in and out during the session) may reduce its effectiveness. But the authors make a valid point that because of the general lack of familiarity with instructional design that few people would be willing to make the financial investment required to attend a workshop.
+
+Reviewer 2:
+
+Summary: Special session proposal to introduce audience to a way to design courses rather than “just" teach. The analogy is that building courses is more than teaching just as building software is more than programming.
+
+Strengths: Hands-on introduction to a way of thinking about how we teach. Many of us think about these aspects but don’t express them in quite this way. Maybe we should. A special session opens the discussion and may encourage people to think about approaching their course development in this way. Hands-on practice problems also provides a way to connect conference attendees to people they may not know. It will be more active participation in the topic.
+
+Author Comments: Express the outline activities as what the participants will do rather than what will be done to them. That is, for Practice Problems, “Attendees will apply the model in small groups to solidify their knowledge.” In Post-Test, I would use “help them gauge what they learned in the session."
+
+Reviewer 3:
+
+Summary: The educational theory of Instructional Design and how it can benefit teaching and practice.
+
+Strengths: An interesting approach.
+
+Author Comments: Your proposal assumes that attendees are well versed in Instructional Design
+
+Reviewer 4:
+
+Summary: A systematic approach to planning teaching (akin to what software engineering is to programming) is presented and practiced in the session.
+
+Strengths: The approach is not very widely known. It will be interesting if it delivers on what it promises.
+
+Author Comments: No special comments. Sadly I won't be at SIGCSE. I'm quite curious about Instructional Design and going to read about it.
