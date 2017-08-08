@@ -1,0 +1,91 @@
+******************************************************************
+
+Reviewer 1:
+        Originality:  Accept
+        Quality:  Strong Accept
+        Relevance:  Accept
+        Presentation:  Strong Accept
+        Recommendation:  Strong Accept
+Summary:  The paper describes the implementation of an open access
+programming environment for novice learners in data science or
+computational thinking.
+
+Detailed comments:  The paper describes a practical implementation of a
+programming environment that suits students of both CS and non-CS
+majors. The entire paper is excellently organized, presented and argued.
+The work is educationally sound and useful. The implementation issues
+and decisions are described and convincingly justified in detail. The
+implementation takes advantage of and well integrates the
+state-of-the-art techniques in visual programming, program-to-text
+translation, Python language core technologies, program visualisation
+tools, as well as static program analysis tools. Although none of these
+are novel in this paper (all being existing work from others), the paper
+convincingly integrates all these seamlessly into a practical
+programming environment that supports teaching in a variety of contexts:
+introductory programming, big data analysis, computational literacy, and
+more importantly, grounded on real-life problems that students probably
+show interests.  The paper also includes a pilot evaluation that shows
+the system's potentials while admitting its current limitations with
+clear future directions for improvement. The open-access nature of the
+programming environment is an added contribution to the CS and
+educational community as it promises much broader impact as well as
+opening the path for collaborative improvement.  In short, the paper
+describes an excellent, promising and extensible programming environment
+for computing education in well-situated contexts that benefits students
+of both CS and non-CS majors.
+
+******************************************************************
+
+Reviewer 2:
+        Originality:  Neutral
+        Quality:  Weak Accept
+        Relevance:  Accept
+        Presentation:  Accept
+        Recommendation:  Weak Accept
+Summary:  the paper presents a new framework which can be used by
+students willing to learn programming, as well as instructors for such
+classes. Contrary to current trend of programming tutorial involving
+creation of games, this framework takes a more practical approach of
+choosing data science as sample use cases, which is likely to make
+students more interested about programming as it is directly linked with
+their career.
+
+Detailed comments:  Presentation - well articulated with example cases
+and easy to read.  Content - The paper talks in depth about the BlockPy
+framework which allows students to learn python programming using blocks
+to create the code in a visual manner. The authors present valid
+arguments for choosing python as the language, data science as use cases
+and the block method for visual programming. However, BlockPy borrows a
+lot of things from existing frameworks (which is acknowledged by the
+authors) and provides subtle novelties compared to the rest. It records
+keystrokes and analyses the logs to detect programming patterns to learn
+about student behaviour which may provide insights into the cognitive
+capability of students. This is an interesting approach, however, not
+much details have been provided, and I would recommend the authors to
+stress on this particular aspect as this can be important in the
+educational sector. The authors have also performed a survey on real
+students regarding the usability and effectiveness of BlockPy and have
+presented the results in an informative manner - though the survey
+population is rather small.
+
+******************************************************************
+
+Reviewer 3:
+        Originality:  Weak Accept
+        Quality:  Strong Accept
+        Relevance:  Strong Accept
+        Presentation:  Strong Accept
+        Recommendation:  Accept
+Summary:  presents BlockPy and also a pilot study based on this.
+
+Detailed comments:  1. Liked the thorough and lucid presentation.  2.
+Now, there are plenty of block languages for beginning learners
+(scratch, appinventor etc etc). So not such a novel concept?  3.
+However, liked the methodology of the pilot study and would like to
+learn more about it. Interesting that there were more females than male!
+4. Although the title states data science, the  paper has not much to do
+with that aspect of the work. Not clear about its relevance (for example
+in the pilot study).  5. Would have liked elaboration on the adaptive
+guided practice (i.e. beyond what was given).
+
+******************************************************************

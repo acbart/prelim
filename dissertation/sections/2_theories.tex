@@ -1,21 +1,14 @@
-\section{Educational Theories}
+\section{Educational Theories of Motivation and Cognition}
 
-There are many theories of how people learn, how to teach, and how to engage with students. 
-In this section of the proposal, we review dominant theories that guide the research.
-First, we will discuss how people learn, and the dominant theories that guide researchers.
-Then, we will discuss Instructional Design, which is concerned with how to support the learning process.
-Finally, we will look at motivation and engagement, the reason people choose to direct their energy towards goals.
+There are many theories of how people learn. 
+While several modern learning theories are typically applied within Computer Science Education, one of the more popular is Situated Learning Theory \cite{ben2004situated}.
 
-\subsection{Theories of Learning}
+Cognition vs. Motivation
+Situated Learning
 
+%TODO: Expand introduction to this section
 
-There are many, many theories of learning, far more than can be accurately captured here.
-However, there are a few major paradigms worth discussing briefly: Cognitivism, Constructivisim, and Behavioralism.
-Cognitivism emerged as a response to classical theories on Behaviorist learning -- the latter posits learning as a ``black box'' process, and the former encourages researchers to ``pry open the box'' \cite{learningtheories}.
-This in turn led to the development of Constructivism, which describes learning as an active process of linking knowledge based on prior, subjective experiences.
-These theories are not replacements for each, but lenses for analyzing different learning experiences. Cognitivism and Constructivism in particular are usually more useful for studying higher learning.
-
-\subsubsection{Situated Learning Theory}
+\subsection{Situated Learning Theory}
 
 Situated Learning Theory, originally proposed by Lave and Wenger, argues that learning normally occurs as a function of the activity, context, and culture in which it is situated\cite{lave-situated}.
 Therefore, tasks in the learning environment should parallel real-world tasks, in order to maximize the \textit{authenticity}.
@@ -33,64 +26,25 @@ All instruction and assessment must be aligned with reality such that success in
 However, there is a subtle nuance here -- authenticity is a perceived trait, not an objective one.
 Students derive value from their learning only if they \textit{perceive} authenticity, regardless of whether the instructor has successfully authenticated the experience.
 
-Situated Learning Theory has been applied to the domain of Computer Science before, with mixed results. A seminal paper by Ben-Ari \cite{ben2004situated} explores its application and limitations.
-This paper is somewhat hasty in its application of SL Theory by taking a macro-level view -- they narrowly look to Open-Source and Industry Software Development communities as the only potential CoPs and interpret SL Theory as strictly requiring constant legitimacy, largely ignoring the possibility for gradual development of authenticity within individual courses and modules throughout a curriculum:
+Situated Learning Theory has been applied to the domain of Computer Science before, with mixed results. A seminal paper by Ben-Ari \cite{ben2004situated} explores its application and limitations. This paper is somewhat hasty in its application of SL Theory by taking a macro-level view -- they narrowly look to Open-Source and Industry Software Development communities as the only potential CoPs and interpret SL Theory as strictly requiring constant legitimacy, largely ignoring the possibility for gradual development of authenticity within individual courses and modules throughout a curriculum:
 
 \begin{quote}
-What I am claiming is that situated learning as presented in their work cannot be accepted at face value, because it simply ignores the enormous gap between the world of education and the world of high-tech CoPs, which demand extensive knowledge of both CS subjects and applications areas.
-This gap can only be bridged by classical decontextualized teaching in high schools, colleges and universities.
+What I am claiming is that situated learning as presented in
+their work cannot be accepted at face value, because it simply ignores the
+enormous gap between the world of education and the world of high-tech
+CoPs, which demand extensive knowledge of both CS subjects and
+applications areas. This gap can only be bridged by classical decontextualized
+teaching in high schools, colleges and universities.
 \end{quote}
 
-However, other researchers have found it a useful lens for analyzing curricula.
-For instance, Guzdial and Tew \cite{guzdial2006imagineering} used the theory to innovatively explore and deal with the problem of inauthenticity within their Media Computation project.
-SL Theory clearly has value, but only as a function of the way that it is applied.
-In this preliminary proposal, I will take advantage of SL Theory as a generalized tool for exploring the topic of authenticity throughout introductory Computer Science.
+However, other researchers have found it a useful lens for analyzing curriculums. For instance, Guzdial and Tew \cite{guzdial2006imagineering} used the theory to innovatively explore and deal with the problem of inauthenticity within their Media Computation project. SL Theory clearly has value, but only as a function of the way that it is applied. In this preliminary proposal, I will take advantage of SL Theory as a generalized tool for exploring the topic of authenticity throughout introductory Computer Science.
+
+\subsection{The Application of Situated Learning Theory}
 
 The original work in Situated Learning Theory was categorically not about pedagogy or instructional design- it described how people learn and the importance of context and collaboration, but it did not recommend a particular style of classroom.
-
-\subsection{Theories of Instructional Design}
-
-Instructional Design is the systematic design of effective Learning Experiences. One of the most influential\cite{anglin1992reference} instructional theories is Gang\'{e}'s Theory of Instruction, a complex Cognitivist model that categorizes different types of learning outcomes (e.g., ``Verbal Information'' such as reciting the definition of a term, ``Attitudinal'' such as choosing to not smoke) and breaks down the process of learning into nine coherent steps. Gang\'{e} stresses that different learning outcomes require very different instructional implementations of the general instructional model. This instructional theory informs the design of complete Instructional Design models such as the Dick and Carey model \cite{carey2001systematic}. Although different ID models suggest different approaches to creating instructional materials, those materials are all typically patterned after Gang\'{e}'s instructional events.
-
-\subsubsection{Gagn\'{e}'s Instructional Events}
-
-\begin{figure}
-\begin{description}
-	\item[(1) Gain Attention:] Stimulate the learner and motivate them to engage with the material.
-	\item[(2) Describe Objectives:] Inform the learner will be able to do because of the instruction.
-	\item[(3) Stimulating Recall of Prior Knowledge:] Remind students of their prior knowledge.
-	\item[(4) Present the Material:] Using text, graphics, etc., give the instructional materials.
-	\item[(5) Provide Guidance:] Give instructions on how to use the instructional materials.
-	\item[(6) Elicit Performance:] Have the learners actively apply the new knowledge.
-	\item[(7) Provide Feedback:] Show the learner what they did well and poorly on.
-	\item[(8) Assess Performance Test:] Evaluate the learner on their performance
-	\item[(9) Enhance Retention and Transfer:] Generalize the instruction by showing similar applications.
-\end{description}
-\caption{Gang\'{e}'s Nine Events of Instruction}
-\label{gange-events}
-\end{figure}
-
-Gang\'{e}'s nine events are summarized in Figure \ref{gange-events}, taken indirectly from\cite{gagne1985conditions}. This model is described as an ordered, one-way sequence; however, in practice, some steps might be repeated and cycled between. For instance, very negative feedback might prompt the learner to return from step 7 to step 6. Modifications of the model have also been discussed in the literature. For example, to adapt for more Constructivist tastes, one could swap steps 4 and 6, so that students have the opportunity to engage with the materials before receiving instruction.
-
-Instructional Designers often identify three key interactions in a learning experience. In the simplest case, an instructor presents some new material, a learner participates in questions related to it, and the instructor assesses their performance as being excellent. Although it might appear that Gagn\'{e}'s model maps presentation to steps 1--5, participation to step 6, and assesssment to 7--9, this is an over-simplification of a much richer set of interactions. For instance, step 1 (Gain Attention) often involves a dialogue or other participation from the students, and step 7 often requires re-presentation of existing material or presentation of new material. In practice, every learning experience will end up being a unique combination of these interactions.
-
-Instructors and learners are involved in all of these interactions in different capacities and degrees. Presentation is primarily a flow of information from the Instructor to the learner. Participation is primarily an externalization of knowledge by the learner for the Instructor. Assessment is a mediation between the Instructor and the learner to align the externalization.
-
-Instructional Design Models such as Dick \& Carey usually delay the design of instructional materials till the end of the entire process, focusing initially on analysis of the learners, the performance context, the instructional goal, and a host of other critical factors. At that point, a content delivery system is chosen based on its educational affordances and suitability for the learning experience being developed. This delay reflects the typical role of an Instructional Designer as a \textit{consumer} of instructional technology -- they survey the available techniques and technology (e.g., traditional lecture, essay writing, websites), and choose the one that fits their need. In the remainder of this paper, we use instead take the Software Designer role of \textit{producer} of instructional technology in order to analyze some of the decisions that go into the design of these environments, from the retrospective of an Instructional Designer.
-
-\subsubsection{Situated Learning Environment Design}
-
-Situated Learning Theory is a theory of learning, not a theory of instructional design. However, subsequent research by Brown \cite{brown1989situated} and others expanded the theory so that it could be applied to the design of learning experiences. These expansions often naturally dictate the use of active learning techniques, demphasizing the role of lecture in favor of collaborative, problem-based learning activities.
+However, subsequent research by Brown \cite{brown1989situated} and others expanded the theory so that it could be applied to the design of learning experiences. These expansions often naturally dictate the use of active learning techniques, demphasizing the role of lecture in favor of collaborative, problem-based learning activities.
 
 Choi \& Hannafin \cite{situated-cognition} describe a particularly useful, concrete framework for designing situated learning environments and experiences. Because there is no official name given to this framework, as a matter of convenience we will refer to it as the Situated Learning Environment Design Framework (SLED Framework). This framework has four key principles:
-
-\begin{wrapfigure}{R}{0.5\textwidth}
-		\begin{center}
-				\psfig{file=images/content-context-2.eps, width=\linewidth}
-		\end{center}
-		\caption{Content vs. Context}
-		\label{fig-content-context}
-\end{wrapfigure}
 
 \begin{description}
 	\item[Context] ``... The problem's physical and conceptual structure as well as the purpose of activity and the social milieu in which it is embedded''\cite{rogoff1984everyday}, context is driven not just by the atmosphere of the problem at hand, but also by the background and culture surrounding the problem.
@@ -116,47 +70,20 @@ Choi \& Hannafin \cite{situated-cognition} describe a particularly useful, concr
 	Ultimately, the learner should join in the process of assessment as they transition to an expert – being able to meta-cognitively self-evaluate the effectiveness of ones methods and communicate results to others are key abilities of experts. 
 \end{description}
 
-There is a reciprocal relationship between contexts and content.
-Figure \ref{fig-content-context} demonstrates an example of this relationship for the expected emphasis on big data as context vs. content throughout an undergraduate curriculum, from a CS-0 (non-majors) course all the way to an upper-level course specifically on big data.
-Just as the upper-level course would naturally use big data as its context and content, a CS-0 course could still have content related to big data.
-However, the majority of the use of big data would be as the framing story for assignments, especially in earlier parts of the course.
-When students learn programming in the context of, say, game development, they are almost necessarily learning content related to game development that may not be universal to computer science -- e.g., how graphical resources are organized and accessed within the game engine.
-This content may be seen as a distraction by the instructor, or as useful side knowledge - for example, if a student had to learn how to use a command line in order to compile their game, they would be learning an authentic skill that might not be considered part of the core content, but is nonetheless generally useful.
-When evaluating a context, it is useful to consider what content it represents, and how authentic and useful it is.
-The authenticity of content that is attached to a context affects the authenticity of the learning environment as a whole.
+%% active learning, etc.
 
-Fascinatingly, the need for a strong context diminishes as learners mature and become domain-identified -- the content itself becomes the context.
-Learners start to see other contexts as nothing more than distractions and unnecessary fluff.
-This makes sense -- you would hope that Computer Science majors in their third semester would be naturally interested in the material, and this is borne out in experimental data.
-For instance, Yarosh \& Guzdial attempted to integrate Media Computation in a CS-2 (Data Structures) course, and found that the learners had ``outgrown the desire for a context''~\cite{yarosh2008narrating}. 
-These results are similar to results we found in our interventions with a CS-3 (Data Structures and Algorithms), where students seemed more irked by the surrounding context than intrigued.
+vs. Constructivism
+Learning Theories are lenses - they do not provide all the answers, but they simply give you a way to explore and analyze
 
-\begin{figure}[!ht]
-	\begin{center}
-		\psfig{file=images/smbc.eps, width=\linewidth}
-	\end{center}
-	\caption{Making the context ``Fun'' is not necessarily trivial, whether in physics education or computer science education.~\cite{SMBC}}
-	\label{fig-comic-context}
-\end{figure}
+Authentication is a tricky thing 
+Hazards of authentication:
+Pre-authentication - Everyone loves dinosaurs, so today's lesson uses dinosaur examples. What do you mean you don't want to learn about dinosaurs?
 
-Of course, it is up to instructor to determine the depth and breadth of the context's integration.
-The trade-off between the value and distraction added by the context is a delicate formula.
-Consider the scenario in figure \ref{fig-comic-context}.
-A steel wall is a relatively relatable concept for most students -- they can readily imagine such a large, durable object, and it somewhat reasonable to expect that objects would interfere with it.
-In this scenario, the instructors consider replacing the wall with a comic book character -- something that they anticipate will be more ``fun''.
-If they are in tune with their learners, this might actually be an effective context -- perhaps they know that their learners are comic book fans.
-However, because the integration is only at the surface level, it is possible that the learners will see this as a forced reference, and they will have a more negative reaction.
-It is also possible that they will not recognize the reference, or feel no positive emotions with it -- many contexts do not take into account gender, racial, or socio-economic characteristics of the anticipated learner.
+\subsection{MUSIC Model of Academic Motivation}
 
-
-\subsection{Theories of Motivation}
-
-Theories of learning are distinctive from theories of motivation; the former determines how learning occurs, but the latter determines if and why learning occurs.
-Situated Learning Theory, Constructivism, and other theories of learning have implications for how people choose to engage in the learning process, but they are not sufficient in themselves.
+Situated Learning is a theory of learning, but is not a comprehensive motivational framework -- it describes how people learn, but it is limited in explaining why people commit to learning.
 Instead, it is useful to turn to the dedicated motivational models as a lens to explore why people choose to participate and excel in Computer Science.
 In this preliminary proposal, we lean on the MUSIC Model of Academic Motivation as a primary framework.
-
-\subsubsection{MUSIC Model of Academic Motivation}
 
 The decision to use the MUSIC model was based on several criteria.
 Although there are many motivational models available, few strive to be holistic models specifically developed for academics.
@@ -184,28 +111,92 @@ As the former, it is a list of factors to consider when building modules, assign
 At all times, instructors can consider whether they are leveraging at least one construct to motivate their students.
 As the latter, it offers both a quantified instrument (MMAMI) and a structure to anchor a qualitative investigation on.
 The model has also directly been used tactically in course design: Jones describes a controlled classroom experiment to motivate students by having an experimental group reflect on how a course satisfies the constructs of the MUSIC model (e.g., prompted to answer ``How will the material presented here will be useful to you?'').
-Quantitative data gathered after the experiment indicated a significant increase in motivation.~\cite{mcginley2014brief}
+Quantitative data gathered after the experiment indicated a significant increase in motivation.
+%TODO: Cite Jones paper here
 
-\subsubsection{Other Models}
+\subsection{Summary}
 
-Although the MUSIC Model is a holistic model, it can be useful to explore other theories of motivation that it draws on.
-Self-efficacy is just such a theory, concerned with a learners judgment of their own capabilities.
-Self-efficacy is often a strong predictor of students performance.
-Students that believe they will fail will often do so, despite whatever ability they may have.
-Self-regulation is another such model, explaining how students approach the learning process.
-Self-regulated learners will work earlier, more often, and more intelligently to solve problems.
-They know when to get help, and how to ask for it.
-Unfortunately, self-regulatory abilities are in short supply.
-There are many other theories that are worth exploring.
+There are many theories of learning, cognition, and motivation that provide different outlooks on educational processes, models, and artifacts. In the context of this paper, we limit ourselves to Situated Learning Theory and the MUSIC Model of Academic Motivation. 
 
-\subsubsection{Extrinsic Motivation}
+\begin{itemize}
+	\item Situated Learning Theory posits that learning inseparably occurs within contexts
+	\item Active and collaborative learning experiences are superior to lectures
+	\item Authenticity is a crucial component of learning and must be carefully considered.
+	\item Curriculum materials can be concretely analyzed by looking to their Context, Content, Facilitations, and Assessment.
+	\item The MUSIC Model posits that academic motivation is a function of a student perceptions of Empowerment, Usefulness, Success, Interest, and Caring within a learning experience.
+\end{itemize}
 
-Although ideally, students will always be internally motivated to learn new subjects, this isn't always the case.
-Academics are a careful balance of extrinsic and intrinsic motivation, with both internal and external rewards.
-For instance, the ultimate goal of most formal education is certification, either by an accredited university or some other independent body.
-In order to keep students on task, positive and negative grades are assigned based on performance.
-Although these grades can drive negative behavior (e.g., nit-picking, arguments, etc.), they are ultimately necessary for some class of learners.
-It can be a serious challenge for instructors to assign grades and use other forms of extrinsic motivation, to avoid dragging students along in a rigid environment but also not preventing students from floundering.
-Too loose with a grading scheme, and students may deprioritize a course over stricter ones.
-Too hard, and students may feel overwhelmed.
-Although my research will not focus much on extrinsic motivation, it is important to understand its role in the classroom experience.
+
+\section{A Theory of Big Data}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \begin{center}
+        \includegraphics[width=0.48\textwidth]{"images/3VModel"}
+    \end{center}
+    \vspace{-\bigskipamount}
+    \caption{The 3V Model of Big Data}
+    \label{fig-3v}
+\end{wrapfigure}
+
+Big data has been loosely described as quantities of information that cannot be handled with traditional methods \cite{manyika2011big}.
+But ``traditional methods'' is a vague phrase that has different meanings to different learners. To a Humanities major in their first CS-0 course, the traditional method to sum a list is to use Excel. In this scenario, ``big data'' means anything that won't comfortably fit into Excel's working memory.
+However, to a third-year Computer Science major, the traditional method would be to write an iterative or recursive sequential loop; being given big data forces them to explore parallel models of execution.
+Clearly, ``bigness'' is a function of the learner's experience, but that is still not a solid definition.
+
+A more precise definition is the ``3V Model'' \cite{douglas2012importance}, which posits that there are three dimensions that distinguish big data from ordinary, run-of-the-mill data:
+
+\begin{description}
+	\item[Volume:] The total quantity of the information, usually measured in bytes or number of records. However, this also extends laterally: the number of fields in the structure of the data also impacts the complexity and size. The threshold at which data becomes big is a function of the hardware and software being used -- for instance, embedded systems may consider gigabyte-sized files to be big, while modern servers might not struggle until the petabyte level.
+	\item[Velocity:] The rate at which new information is added to the system. High velocity big data implies a distributed architecture, since new data must be arriving from somewhere. The dynamicity of data can vary widely across these architectures, with data updating every year, every day, or even multiple times a second.
+	\item[Variety:] The format or formats of the data. Ideally, data are always distributed in a way that is readily accessible -- for instance, simple text-based formats such as CSV and JSON are widely supported, relatively lightweight, and human-readable. More sophisticated data formats for image and audio are also typically well-supported, although still more complicated. However, projects using specialized, compressed binary formats or, more dangerously, multiple formats (e.g., image archives organized with XML files), are more complex.
+\end{description}
+
+\subsection{Challenges of High Velocity Data}
+
+It is not trivial to enable introductory students to work with high velocity data, which is necessarily distributed. Without any scaffolding, it is necessary to delay the use of such data until much later in the course. In a prior paper \cite{realtimeweb-splashe}, we outline the biggest barriers to high velocity data as a context:
+\begin{description}
+  \item[Access] The process of programmatically downloading and parsing a web-based resource is a non-trivial procedure requiring an understanding of both basic concepts (e.g., function calls, data transformation) and specialized web technology (e.g., the difference between GET and POST calls, building query parameters).
+	\item[Non-Idempotency] Because high velocity data is constantly changing, repeated calls to the same URL endpoint can return wildly different results, even over the course of a few minutes. This makes finding errors and testing considerably harder.
+	\item[Consistency] Web-based APIs are controlled and developed by independent entities, which means that changes can occur at any time with little to no notification or time for reaction. This means that students' code can become out of date even during the middle of testing their final project.
+	\item[Connectivity] Although internet speeds for students on a university campus are typically stable, this does not extend to off-campus students or students that are traveling. If the internet connection is down, then students might be completely unable to make progress.
+	\item[Efficiency] Even when the internet connection is stable, it might not always be fast. Requiring a round-trip to a server can greatly drag on the testing and development process, frustrating the student and decreasing the time spent learning.
+\end{description}
+
+\subsection{Challenges of High Volume Data}
+
+In this section, we highlight some of the more challenging aspects of introducing high volume data, similar to how we previously outlined the challenges of high velocity data.
+Some of these challenges are technical in nature, and some of them of a more pedagogical nature.
+These challenges lead to certain design requirements that must be satisfied in any scaffolding intended to introduce high volume data.
+
+\begin{description}
+	\item[Data Transmission:] Internet connections can be difficult and inconsistent, especially for off-campus
+and non-traditional students. Although most modern universities boast impressive wired connection
+speeds, these speeds rarely extend off-campus. And even when internet connections are top-notch,
+they can still be inadequate to serving the needs of transmitting big data collections to an entire
+classroom of students.
+  \item[Storage:] High Volume data is not just cumbersome to transmit, but also bothersome to store. Students may find that dealing with gigabytes of data, is an unpalatable experience.
+	\item[File Management:] Although learning how to interact with files on disk is a common topic in CS-1, it is usually reserved for the end of the course, and it may never be covered in a Computational Thinking course. 
+\end{description}
+
+
+\subsection{Challenges of High Variety Data}
+
+\begin{description}
+\item[Inconsistency of Storage:]
+\item[Inconsistency of Tools:]
+\item[Distribution of Data:] A common 
+\end{description}
+
+\subsection{General Challenges of Data}
+
+\begin{description}
+\item[Intentionally secured data] Differential privacy
+\item[Unintentionally secured data] Dead URLs, PDF codebooks
+\item[Non-uniform topologies] High volume data offers different contexts and problems than high velocity data.
+For instance, high velocity data typically lends itself to small quantities of data that are relevant to the current state of the real world -- for instance, students can walk outside and feel the current weather, which should correlate to real-time weather reports made available by a weather library.
+High volume data, on the other hand, lends itself to large quantities of mostly static data -- for instance, crime reports for a long period of time.
+Although high velocity data gives authentic answers in the here and now, high volume data gives authentic answers for the future through trends.
+Some fields have both kinds of data available -- meteorologists generate forecasts (high velocity, low volume) by studying historical climate data (high volume, low velocity).
+But some fields are not amenable to both -- digital historians typically have large stores of historical information (high volume), but it does not change quickly (low velocity).
+\item[Distribution of Data:] A common method when distributing data
+\end{description}

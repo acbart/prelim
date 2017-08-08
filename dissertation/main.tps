@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=main.tex
+Document=sections\5_success.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=160
+TopLine=11
+Cursor=1039
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\10_appendix.tex
+Document=sections\0_summary.tex
 
 [Frame1_View0,0]
-TopLine=1
-Cursor=262
+TopLine=0
+Cursor=0
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\4_prior.tex
+Document=sections\1_problem.tex
 
 [Frame2_View0,0]
-TopLine=55
-Cursor=3601
+TopLine=0
+Cursor=0
 
 [Frame3]
 Flags=0
@@ -65,14 +65,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
-Class=BibTeXView
-Document=references.bib
+NormalPos.right=1178
+NormalPos.bottom=417
+Class=LaTeXView
+Document=sections\8_publication.tex
 
 [Frame3_View0,0]
-TopLine=1150
-Cursor=37604
+TopLine=0
+Cursor=0
 
 [Frame4]
 Flags=0
@@ -83,14 +83,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\1_problem.tex
+Document=sections\3_literature.tex
 
 [Frame4_View0,0]
-TopLine=21
-Cursor=222
+TopLine=0
+Cursor=0
 
 [Frame5]
 Flags=0
@@ -101,14 +101,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\0_summary.tex
+Document=sections\6_technology.tex
 
 [Frame5_View0,0]
 TopLine=0
-Cursor=236
+Cursor=32
 
 [Frame6]
 Flags=0
@@ -119,14 +119,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=..\icer15dc\ICER-dc-acbart.tex
+Document=sections\2_theories.tex
 
 [Frame6_View0,0]
-TopLine=73
-Cursor=2267
+TopLine=292
+Cursor=15568
 
 [Frame7]
 Flags=0
@@ -137,14 +137,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\9_conclusion.tex
+Document=sections\4_prior.tex
 
 [Frame7_View0,0]
 TopLine=0
-Cursor=494
+Cursor=0
 
 [Frame8]
 Flags=0
@@ -155,14 +155,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\2_theories.tex
+Document=main.tex
 
 [Frame8_View0,0]
-TopLine=286
-Cursor=16785
+TopLine=0
+Cursor=178
 
 [Frame9]
 Flags=0
@@ -173,14 +173,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\6_technology.tex
+Document=sections\9_conclusion.tex
 
 [Frame9_View0,0]
-TopLine=109
-Cursor=6445
+TopLine=0
+Cursor=0
 
 [Frame10]
 Flags=0
@@ -191,14 +191,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
-Class=LaTeXView
-Document=sections\7_work.tex
+NormalPos.right=1178
+NormalPos.bottom=417
+Class=BibTeXView
+Document=references.bib
 
 [Frame10_View0,0]
-TopLine=64
-Cursor=3581
+TopLine=468
+Cursor=13792
 
 [Frame11]
 Flags=0
@@ -209,34 +209,16 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
+NormalPos.right=1178
+NormalPos.bottom=417
 Class=LaTeXView
-Document=sections\3_literature.tex
+Document=sections\7_work.tex
 
 [Frame11_View0,0]
-TopLine=216
-Cursor=11505
-
-[Frame12]
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-1
-MaxPos.y=-1
-NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=1141
-NormalPos.bottom=362
-Class=LaTeXView
-Document=sections\5_success.tex
-
-[Frame12_View0,0]
-TopLine=326
-Cursor=20820
+TopLine=0
+Cursor=0
 
 [SessionInfo]
-FrameCount=13
+FrameCount=12
 ActiveFrame=0
 

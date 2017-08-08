@@ -1,15 +1,122 @@
 \section{Problem Statement}
 
-Computing is increasingly considered a 21st century competency, paralleling its growing entrenchment within universities’ general education curriculum~\cite{wing2006}.
-At Virginia Tech, for instance, the core requirements at the university have recently shifted to require all undergraduate students to take credit hours in ``Computational Thinking'' -- emphasizing crucial topics in Abstraction, Algorithms, Computing Ethics, and more.
-The students in this course represent a diverse spread of majors from the arts, the sciences, engineering, agriculture, and more.
+A report by MGI and McKinsey's Business Technology Offices declares that ``... by 2018, the United States alone could face a shortage of 140,000 to 190,000 people with deep analytical skills as well as 1.5 million managers and analysts with the know-how to use the analysis of Big Data to make effective decisions''~\cite{McKinsey} .
+This gap, and the expanding recognition of ``Computational Thinking'' as a 21st century skill, increasingly requires that computation be positioned in a university's general education curriculum~\cite{wing2006}.
+For instance, Virginia Tech is now formalizing this requirement through a new course (``Introduction to Computational Thinking'') that all university students will eventually be required to take~\cite{vt-vision}.
+Such a course poses serious pedagogical and motivational challenges: how do we introduce Computational Thinking to students with no prior computing experience and convince them that the field can tangibly benefit their respective disciplines?
 
-Although they have rich backgrounds, non-major learners are a challenge for instructors because they have no prior background in computer science, are not confident about their ability to succeed in the course, and have no assurances that it will be a useful experience.
-These students are at-risk for dangerously low levels of motivation.
-As a more mature audience with domain-identified career goals and needs, existing interest-driven approaches to introductory computing may not be sufficiently effective~\cite{guzdial2006imagineering}.
-How do we motivate these unique learners?
 
-This work will develop new pedagogical approaches and technical tools to better understand and resolve this question.
-In particular, I will explore the efficacy of Student-driven Data Science as an introductory context.
-This context moves beyond basic models of motivation to take advantage of multiple dimensions of engagement.
-Although this idea has been known for a long time as successful for advanced computing courses, I propose new technology and pedagogy to enable its use in the introductory level, where it is most effective.
+
+We need more students in Computer Science and with Computational skills
+Describe introductory programming
+CS-1,2,3: Quick one-sentence descriptions
+As students progress to CS-3, motivation becomes less critical compared to self-regulation
+CS-0:  "Computational Thinking"
+Limited time to teach relevant concepts
+Desire to engage them
+In order to bring in these students, we must approach this from both the cognitive and motivational sides
+Want to keep students highly motivated
+Decontextualized assignments
+But we also have a new set of skills to teach students
+Data science
+Big Data
+What can technology and pedagogy do to solve this problem
+In this preliminary proposal, we describe work previously done and future work
+
+
+Computer Science and Computational Thinking
+New audiences
+
+
+
+Introductory programming
+	CS-1,2,3
+	Computational Thinking
+		Wing definition
+Contextualization
+	Abstract
+		Straw-man example of boring lists
+	Constructivism
+	Socio-constructivism
+	Situated Learning
+	Authentication
+		Preauthentication
+		Over-authentication (?) - I like dinosaurs, but you suck at teaching dinosaurs
+Scaffolding
+	Fading
+Media Computation
+	Pre-authentication - students won't find it realistic to their experiences
+	Under-authentication - not realistic enough for the students tastes
+	Over-authentication - overly engaging and distracting (Seductive Details)
+	
+	http://dl.acm.org/citation.cfm?id=2493397
+Proposed Theory
+	Retention hypothesis
+	Gender Hypothesis
+	Learning Hypothesis
+		Gains vs. Absolute
+	More-Computing Hypothesis
+		Code Aacdemy, Let's Code Blacksburg
+	
+Prior Work
+	Real-time Web
+Proposed Architecture
+	+Big-Data
+	+Sources
+	Python + Blockly
+Proposed curriculum
+	Usable as components or a whole
+	Good for students motivated by usefulness
+Work Plan
+
+
+Big Data is much in the news these days, from reports of massive data
+dredging by the NSA to tens of millions of credit cards stolen by
+hackers from commercial databases.
+Big Data has become crucial to scientific advances from understanding the
+genome to predicting climate change.
+It would do well for anyone these days to appreciate the capabilities
+and the limits of Big Data processing.
+Certainly a study of Big Data concepts aligns well with current
+efforts to acquaint a broad range of students to Computational
+Thinking, and it certainly would be of broad interest to most of these
+students.
+
+Leveraging the promise of Big Data offers unprecedented opportunities
+for improved economic growth and enhanced innovation.
+Unfortunately, computer scientists in the workforce are woefully
+unequipped for this shifting paradigm.
+Indeed, a report by MGI and McKinsey's Business Technology Offices
+declares that ``by 2018, the United States alone could face a
+shortage of 140,000 to 190,000 people with deep analytical skills as
+well as 1.5 million managers and analysts with the know-how to use the
+analysis of Big Data to make effective decisions.''\cite{McKinsey}
+In order to close this gap, we need to do more than just improve the
+education of existing students; we must draw from under-represented
+and non-traditional sectors.
+In particular, we need to start reaching out to non-majors through the banner of Computational Thinking.
+
+There are two main obstacles to effectively educating students on Big
+Data.
+First, its representation, manipulation, and expression is
+challenging, with modern curriculums and programming tools being
+inadequate.
+In fact, the definition of Big Data is quantities of information that
+cannot be handled with traditional methods\cite{McKinsey}.
+Second, postponing these topics until late in the curriculum, as is
+commonly done\cite{CS2013}, fails to prepare students to solve problems in this
+domain; the Computer Science Curricula 2013 recommends 10 core hours
+minimum, requiring more distribution of the material over the life of
+an undergraduate program.
+Moreover, learning how to manage this complexity is central to
+interdisciplinary work in everything from agriculture to medicine to
+law, and everything in between\cite{theory-end}.
+We cannot expect non-majors to progress too far through our own
+subject, so therefore work must be done to cover this material in
+introductory courses, as early and often as possible.
+
+Despite the difficulties, there are serious benefits to introducing Big Data problems earlier into the curriculum.
+By opening an entire new class of problems, assignments can be more varied.
+By exposing students to Big Data topics earlier, their foundational understanding will be stronger and they will develop a stronger interest in this important subject.
+And finally, we can introduce non-majors to useful skills that they can immediately apply to their own subjects, fostering interdisciplinary work.
+But how do we make this complicated and difficult topic accessible?

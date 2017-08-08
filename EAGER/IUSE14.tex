@@ -1,0 +1,1357 @@
+% Proposal to be submitted to IUSE program
+% http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504976
+% Due February 4, 2014
+
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{paralist}
+
+\begin{document}
+
+\newcommand{\NP}{\mbox{${\cal NP}$}}
+\renewcommand{\floatpagefraction}{.90} % My preference
+\renewcommand{\textfraction}{.10}
+
+\begin{center}
+\Large
+Title?\\
+Second line of title\\
+
+\bigskip
+EArly-concept Grants for Exploratory Research (EAGER)\\
+
+\end{center}
+
+\newpage
+
+\pagestyle{empty}
+
+We request support to study the efficacy 
+of and disseminate a STEM learning environment named OpenDSA.
+OpenDSA is an open-source project with international collaboration.
+It has the potential to fundamentally change instruction in courses on
+Data Structures and Algorithms (DSA) and Formal Languages and Automata
+(FLA).
+Such courses play a central role in Computer Science curricula.
+By combining textbook-quality content with visualization and a rich
+collection of automatically assessed interactive exercises,
+OpenDSA can solve the following problems with DSA and FLA courses.
+(1) Students often find this material difficult to comprehend because
+much of the content is about dynamic processes, such as the behavior
+of algorithms and their effects over time on data structures.
+Static media (textbooks) do a poor job of conveying dynamic process.
+(2) Algorithm visualizations (AVs) have been demonstrated to be
+pedagogically effective for presenting this material,
+but adoption has been lower than documented instructor
+support would indicate.
+OpenDSA's complete units of instruction help to ease the adoption
+problems that have plagued previous standalone AV efforts.
+(3) The greatest difficulty that DSA and FLA students encounter is
+lack of practice and lack of feedback about whether they understand
+the material.
+A typical course offers only a small number of homework
+problems and test problems, whose results come only long after the
+student gives an answer.
+OpenDSA provides a steady stream of exercises and activities
+with automated grading and immediate feedback on performance.
+Students (and instructors) can better know that they are on track.
+
+Written using HTML5 standards, OpenDSA can be used on all major
+browsers, most tablets, and many smart phones.
+OpenDSA's core infrastructure supports development of a wide range
+of interactive courseware and exercises, along with support for data
+collection used to analyze student performance.
+An initial core of about one semester's worth of instruction has been
+completed.
+
+This proposal seeks to scale up OpenDSA in a number of ways.
+The highly successful JFLAP software for interactive instruction on
+FLA will be redeployed within the OpenDSA framework using HTML5
+standards, thereby increasing access.
+A wide range of colleges and universities will be involved in
+disseminating OpenDSA and assessing its impact on student learning,
+and OpenDSA's use in a number of innovative instructional settings
+will be explored.
+The OpenDSA infrastructure will be enriched, allowing instructors
+to more easily tailor the materials to their specific classroom needs,
+and encouraging new content contributions from these instructors.
+A number of technical pedagogical experiments will be conducted,
+such as measuring the effects of augmenting content with audio
+narration in slideshows,
+and navigation through topics with concept maps.
+We will study how these materials can improve teaching in a range of
+courses for which we create relevant content.
+Our efforts will impact future active eTextbook projects by
+demonstrating successful ways to integrate content,
+interactivity, and assessment in an open-source, creative-commons
+environment.
+We will experiment with new models of dissemination for open-source
+content in conjunction with commercial online content publishers such
+as Zyante.
+
+\textbf{Intellectual Merit:}
+The main research objective of this project is to test the efficacy of
+OpenDSA, and determine the circumstances under which success can be
+achieved.
+In particular, we study the effect on student learning of integrating
+content with visualizations and a rich collection of practice
+exercises with automated feedback.
+We also study how using eTextbook materials affects the
+evolving pedagogical approaches of instructors of DSA and FLA courses.
+
+\textbf{Broader Impact:}
+Active eTextbooks are valuable beyond Computer Science.
+Prior research indicates that online instruction in many fields can
+be enhanced by student interaction with well-designed exercises.
+Our efforts will provide an exemplar of how collaborative,
+open-sourced workflows could be used to develop
+active eTextbooks for many disciplines.
+
+\newpage
+\setcounter{page}{1}
+\pagestyle{plain}
+\section{Active eTextbooks for DSA}
+\label{ProblemSec}
+
+Data Structures and Algorithms (DSA) play a central role in
+the Computer Science curricula~\cite{CS2013},
+defining the transition from learning programming to learning computer
+science.
+However, students often find this material difficult to
+comprehend because so much of the content is about the dynamic process
+of algorithms, their effects over time on data structures, and their
+analysis (determining their growth rates).
+Dynamic process is difficult to convey using static
+presentation media such as text and images in a textbook.
+During lecture, instructors typically draw on the board,
+trying to illustrate dynamic processes through words and constant
+changes to the diagrams.
+Many students have a hard time understanding these explanations at a
+detailed level or cannot reproduce the intermediate steps to
+get to the final result.
+Another difficulty is lack of practice with problems and exercises.
+Since the best types of problems for such courses are hard to grade by
+hand, students normally experience only a small number of
+homework and test problems, whose results come only long after the
+student gives an answer.
+The dearth of feedback to students regarding whether they understand
+the material compounds the difficulty of teaching and learning DSA.
+
+CS instructors have a long tradition of using Algorithm Visualization
+(AV)~\cite{NapsPanelShort,Shaffer10,Fouh:AV11}
+to convey dynamic concepts.
+Despite the fact that measuring pedagogical effectiveness of AVs is
+not an easy task, several AV systems have led
+to the improvement of learner's performance.
+Such improvements most likely occurr when the level of student
+engagement and interaction is
+higher~\cite{MetaStudy,urquiza09,Fouh:AV11}.
+AV has been used as a means both to deliver the necessary dynamic
+exposition, and to increase student interaction with 
+the material through interactive exercises~\cite{Malmi04}.
+Surveys~\cite{NapsPanelShort,ShafferSIGCSE11} show that
+instructors are positive about using AVs in theory, and students are
+overwhelmingly in favor of using AVs when given the opportunity.
+However, these same surveys show many impediments to AV adoption,
+including finding and using good materials, and ``fitting them'' into
+existing classes.
+Fortunately we do have experience with one area of computer science
+that has had strong AV adoption.
+That is formal languages and automata (FLA), where the educational
+software JFLAP~\cite{JFLAPsite} has been widely adopted in
+courses around the world.
+
+The OpenDSA project seeks to address all of the issues listed above.
+OpenDSA's goal is to build complete open-source, online, configurable
+eTextbooks for DSA and FLA courses.
+The content is presented as a series of small modules implemented
+using HTML5 technology.
+Thus the modules can be viewed on any modern browser with no
+additional plugins or software needed, and can even run on 
+tablets and many mobile devices.
+
+OpenDSA modules combine content in the form of text, visualizations,
+and simulations with a rich variety of exercises and assessment
+questions.
+Since OpenDSA modules are complete units of instruction, they
+are easy for instructors to use as replacements for their existing
+coverage of topics (similar to adopting a new textbook) rather than
+including an AV on top of their existing presentation.
+Since OpenDSA's exercises are immediately assessed, with problem
+instances generated at random, students gain far more practice than is
+possible with normal paper textbooks.
+Since the content is highly visual and interactive, students not only
+get to see the dynamic aspects of the processes under study,
+they also get to manipulate these dynamic aspects themselves.
+Emphasizing student engagement with the material conforms to the best
+practices as developed through more than a decade of research by the
+AV research community~\cite{NapsPanelLong,NapsLongImpact,KorhonenWG13}.
+
+Each module includes mechanisms for students to self-gauge how
+well they have understood the concepts presented.
+Self-assessment can increase learner's motivation, promote students'
+ability to guide their own learning and help them internalize factors
+used when judging performance~\cite{mcmillan2008,heidi09}.
+We do make use of simple multiple choice and give-a-number
+style questions, for which we use the Khan Academy Exercise
+Infrastructure~\cite{KhanAcademyExercise} to generate individual
+problem instances.
+We also include many interactive exercises.
+We make extensive use of ``algorithm simulation'' or ``proficiency''
+exercises, as pioneered by the TRAKLA2 project~\cite{Malmi04}.
+(Note that the TRAKLA2 developers from Aalto University in Helsinki are
+active participants in OpenDSA, having developed the JSAV graphics
+library~\cite{Karavirta:ITiCSE13,JSAVsite} and several OpenDSA exercises.
+One could view OpenDSA as ``TRAKLA3''.)
+In algorithm proficiency exercises, students are shown a data
+structure in a graphical interface,
+and must manipulate it to demonstrate knowledge of an algorithmic
+process.
+For example, they might show the swap operations that a given sorting
+algorithm uses.
+Or they might show the changes that take place when a new element is
+inserted into a tree structure.
+Other OpenDSA exercises make use of small simulations for algorithms
+or mathematical equations to let students see the effects that result
+from changing the input parameters.
+Small-scale programming exercises are automatically assessed for
+correctness.
+These problems are similar to small homework problems traditionally
+given in such a course, but which have been hard to grade.
+
+A key feature of OpenDSA is that it is an open-source project
+(hence the name).
+This is significant in a number of ways.
+One is that instructors are supported in configuring OpenDSA to their
+needs (selecting the modules that they need for their course).
+They can also revise any aspect of the material as they choose, and
+contribute such changes back to the project if they choose.
+We have as a goal to become a community resource with community
+contributions from a variety of instructors and students.
+This combination of use and contribution should promote broad
+``buy-in'' by the DSA and FLA instructional communities.
+Since the early days of Java, developing AVs has been used as training
+for students seeking to learn web technologies, but unfortunately such
+independent efforts often are soon lost~\cite{Shaffer10}.
+The OpenDSA project provides a framework within which students across
+the world could develop visualizations and contribute them to the
+broader community.
+
+OpenDSA disrupts the fundamental balance today between students,
+textbooks, course content and activities, and instructors.
+This approach of combining tutorial content with automated assessment
+makes OpenDSA's approach a potential solution to a major problem with
+another disruptor of education: the MOOC.
+MOOCs often suffer from a lack of meaningful assessment and coursework.
+OpenDSA provides a meaningful way to give students practice material
+and instructors an assessment mechanism in a way that scales up to
+MOOC-sized classes.
+Our fundamental research questions relate to studying the effects of
+this change in the balance, both on the part of students and on the
+part of instructors.
+How will OpenDSA impact student learning?
+How can the OpenDSA environment be used by instructors to support
+learning?
+How will eTextbooks encourage instructors to make changes in instruction?
+How can an eTextbook be disseminated?
+
+\section{Prior Work}
+\label{PriorWork}
+
+Programmed Learning, Programmed Instruction, Keller plan, and Integrated
+Learning System are concepts that formed the foundation for Computer
+Based Training (CBT) in the early to mid 1980s~\cite{Lockee2004}.
+The concept was originally based on B.F. Skinner's work~\cite{Skinner}.
+These ideas are still used, for example in the
+National Education Training Group (NETg) series from
+Thomson/Course Technologies.
+Typically such implementations are used by industry (HR departments)
+for employee training, and do not involve a human instructor.
+
+Most effort by CS educators involved with interactive AVs has focused
+on developing AV technologies and the AVs themselves.
+At best there have been small, focused tutorial modules that
+incorporate AVs into a particular topic or small set of topics
+within a course.
+For example, \cite{Ross02Theory} reports on
+web pages integrated with applets that were used in parts of a theory
+of computation course.
+Many instructors who teach FLA now use Rodger's JFLAP
+(as reported in \cite{CSK11}, JFLAP is one of the most widely used
+tools for FLA).
+In the preface of Rodger's user manual on JFLAP~\cite{RoF06}, 
+Rodger warns the reader ``our book assumes
+that the reader has read briefly about these topics first in an
+automata theory textbook or a compiler textbook''.
+
+Ross~\cite{Ross08} describes an infrastructure that uses Perl and
+Dreamweaver to create hypertextbooks.
+Parts of a theory of computing text
+and a biology book were produced using this technology.
+Unfortunately, the system requirements for these hypertextbooks
+hinder their wide adoption due to browser restrictions and use of Java
+applets.
+R{\"o}{\ss}ling and Vellaramkalayil~\cite{Roessling:Moodle} report on
+integrating AVs into Moodle-based lessons,
+but the emphasis is again on a technology that would support
+visualization-based hypertextbooks in Moodle.
+To our knowledge little progress has been made on the
+actual writing of such a textbook.
+
+Titterton, Lewis, and Clancy \cite{titterton2010experiences} have
+used a lab-centric mode of instruction for introductory CS courses at
+UC-Berkeley.
+Their current work is being done in Moodle and uses a
+small amount of AVs along with many ``check point'' exercises
+that students must complete as they progress through the material.
+It is built upon an earlier technology called UC-WISE that was
+developed and used at UC-Berkeley.
+Their materials are designed for introductory CS courses that aimed
+mostly at developing students' programming skills.
+Hence they make only limited use of AVs.
+Alharbi, Henskens, and Hannaford~\cite{Alharbi2010} are using eXe,
+an open-source authoring system that allows instructors to create
+academic-related web content using XML and HTML
+(\url{http://exelearning.org/}).
+Their efforts intend to help teach an Operating Systems course using
+visualization.
+Learners can interact with the AVs, and can take quizzes and tests
+online.
+They used the Sharable Content Object Reference Model
+(SCORM: \url{http://www.adlnet.gov/}) to support integration of
+digital teaching materials with a CMS (Moodle in their case).
+
+Karavirta~\cite{Karavirta2009} began to integrate AVs with hypertext
+using HTML and JavaScript, allowing the hypertextbook to be viewed
+in any browser without additional plug ins.
+Learners can interact with the animation and draw annotations on it,
+but his system did not store the annotation, nor support quizzes and
+tests.
+Note that Karavirta is now working with OpenDSA.
+He developed the JSAV support library, described in
+Section~\ref{Preliminary}.
+  
+Miller and Ranum's interactive eTextbook for Python
+programming~\cite{miller2012}, and
+\emph{CS Circles}~\cite{pritchard2013}
+by Pritchard and Vasiga are Python courses for novice programmers.
+To the best of our knowledge, these are the closest projects to our
+idea of an interactive eBook, and our interactions with their project
+motivated our use of reStructuredText (reST)~\cite{RST} and Sphinx
+(sphinx.pocoo.org) as our authoring system.
+Miller and Ranum produced a complete book that includes
+embedded video clips, active code blocks that can be edited within the
+book's browser page by the learner, and a code visualizer
+that allows a student to step forward and backward through example
+code while observing the state of program variables.
+Miller and Ranum's book runs on the Google App Engine and includes
+assessment activities requiring students to write a small function to
+perform a single action.
+Their grading system is rudimentary and only provides students
+with simple pass/fail feedback upon completing an exercise.
+In our opinion, the most important thing missing from this effort is a
+wider variety of automated assessment with immediate feedback.
+
+\emph{CS Circles} is an exercise-centric
+eTextbook for learning Python.
+It uses the WordPress Content Management System for authoring
+and the CodeMirror plugin~\cite{haverbeke2011} to allow in-browser
+code editing and automated programming assessment.
+Both Miller and Ranum's book and \emph{CS Circles} use Guo's online
+Python tutor~\cite{guo2013}, an embeddable web program visualization
+for Python.
+The online Python tutor takes a python source code as input and
+outputs an \textit{execution trace} of the program.
+The trace is encoded in JSON format and sent to the user's browser for
+visualization via HTTP GET requests.
+The backend can work on any webserver with CGI support or on the
+Google App Engine.
+
+Large scale use of educational hypermedia in South Korea
+provides interesting feedback about the challenges of eTextbooks.
+Kim and Jung~\cite{Korea} identify usability, portability,
+interactivity, and feedback as major elements to consider while
+designing such systems.
+Learners should be able to ask questions and receive help, as well as
+control, manipulate, search, and browse the eTextbook content.
+They also advocate for the development of models to support group
+collaboration.
+
+To our knowledge, OpenDSA is the first effort to write a complete
+eTextbook tightly integrated with AVs and automatically
+assessed exercises that could be used as the primary learning resource
+in a semester-long computer science course.
+This is surprising because Marc Brown's groundbreaking
+dissertation on AV from 1988~\cite{Brow:1988} states:
+``Much of the success of the BALSA system at Brown [at the time] is
+due to the tight integration of its development with the development
+of a textbook and curriculum for a particular course.
+BALSA was more than a resource for that course --
+the course was rendered in software in the BALSA system.''
+Some projects have developed AVs for all the topics of a course, such
+as JFLAP, which covers topics for a full course on FLA,
+and JHAV\'{E} and others for DSA topics.
+But none of these replace or otherwise integrate with tutorial
+information (i.e., the textbook).
+The closest that we are aware of is the AlVIE project~\cite{Alvie},
+which has AVs referenced directly from the (paper) textbook.
+
+Why have AV developers not heeded Brown and
+authored complete eTextbooks with integrated AVs and exercises?
+Why have they instead focused on developing AV technologies, separate
+from the tutorial content? 
+The answer is that creating an active eTextbook is a huge amount of work.
+DSA and FLA content is especially difficult to develop.
+Not only have CS educators as yet been unable to  
+author such an eTextbook, but commercial publishers (such as Zyante)
+that have successfully used interactive technologies for lower-level
+courses are finding the needs of a DSA course are much more complex.
+Another impediment had been technical.
+Java, JavaScript, and Flash collectively were a big step forward in
+providing cross-platform interactivity.
+HTML5 provides a further lowering of technical hurdles, making the
+development task less daunting by permitting one implementation to run
+on all major browsers, tablets, and even many mobiles.
+The vision for what an eTextbook can bring to Computer Science courses
+is laid out in a recent ITiCSE Working Group report~\cite{KorhonenWG13}.
+
+Sophisticated automated exercise environments have been
+developed to support K12 math instruction,
+such as IXL~\cite{IXL} and Khan Academy~\cite{KhanAcademy}.
+Many know Khan Academy (KA) for its collection of video
+lectures on a wide variety of topics.
+Equally important is the rich infrastructure and large collection of
+exercises that allow students to practice math problems.
+The KA infrastructure is especially notable since it is open source,
+with the exercises themselves implemented in HTML/JavaScript.
+Simple exercises include multiple choice,
+fill-in-the-blank, and ordering a set of choices.
+But the software infrastructure also allows developers to program
+unique interfaces and activities for specific exercises.
+The main limitation is only the designer's imagination for how to
+create an exercise such that the answer can be automatically graded.
+These capabilities are important to OpenDSA, since they allow us to
+use the KA exercise infrastructure to create exercises that
+are relevant to DSA and FLA rather than K12 math.
+The KA organization has attracted a significant
+number of volunteers who develop and contribute new exercises.
+We believe that both the exercise infrastructure and the volunteer
+contributor model are appropriate for developing OpenDSA.
+
+\section{Preliminary Progress on OpenDSA}
+\label{Preliminary}
+
+Project PIs Shaffer, Naps, and Rodger bring unique resources and
+experience that make this project feasible.
+We all have extensive experience both with creating relevant
+content~\cite{ShafferText,ShafferTextThird}
+and with AV courseware, including the
+JHAV\'{E}~\cite{naps1992pascal,naps1992pseudocode,pothering1995cpp,Naps05}
+and JFLAP~\cite{JFLAPsite,RoF06}
+systems, and the AlgoViz Portal~\cite{AlgoViz}.
+Naps has coordinated two ITiCSE Working Groups on
+AV~\cite{NapsPanelShort,NapsShortImpact} and two
+on eTextbooks~\cite{Roessling:VizCoSH,KorhonenWG13}.
+Between us we have active collaborations or extensive
+interactions with most of the major AV developers in the world.
+We have had some success in leveraging this extensive network of
+developers to help with OpenDSA (most importantly with the Aalto
+University group, but the author list of~\cite{KorhonenWG13} gives a
+good indication of our current interactions).
+
+Since 2011, Shaffer has worked with Ville Karavirta of
+Aalto University on JSAV, a JavaScript-based AV library
+that is meant to be the foundation for building AVs for the active
+eTextbook~\cite{JSAVsite,Karavirta:ITiCSE13}.
+Dr. Karavirta was a major developer for the TRAKLA2
+system~\cite{Malmi04,TRAKLAurl}, and TRAKLA2 serves as a key
+inspiration for our vision with its concept of
+``proficiency exercises''.
+Under funding from NSF TUES and NSF EAGER, we have already developed a
+substantial amount of content including class-tested chapters on
+linear structures, binary trees, sorting, and
+hashing~\cite{OpenDSAsite}.
+We encourage reviewers to look at a sample book instance available at
+the OpenDSA website, \url{http://algoviz.org/OpenDSA/Books/OpenDSA}.
+
+To the reader the fundamental unit of OpenDSA is the module, which is
+a single browser page containing text, graphics, visualizations, code
+snippets, and exercises of various types.
+A module corresponds to a section in a traditional
+textbook or a topic that might be covered in a single lecture or part
+of a lecture.
+They are generally equivalent to around 15-30 minutes of
+instruction, though some modules are much shorter.
+Modules can be grouped to form ``chapters''.
+Modules are authored using reStructuredText~\cite{RST} (reST).
+ReST is a so-called ``lightweight'' markup language, originally
+designed to produce Python program documentation.
+Sphinx is the engine that converts reST files to HTML, LaTeX, EPUB,
+or PDF documents according to specific ``directives''.
+A directive in Sphinx is equivalent to a macro in Microsoft Office
+documents or a markup command in LaTeX.
+A directive is implemented by a small Python program that controls how
+Sphinx should process the text included in the directive.
+We wrote several directives that augment support for creating
+book-length documents that Sphinx currently lacks.
+
+OpenDSA includes a configuration mechanism that allows instructors to
+select from among existing modules to compile into an
+eTextbook ``instance'' that contains only those modules that they wish
+to use for their course.
+Based on the configuration file, the module source and the indicated
+collection of independent visualizations and exercises are compiled
+together to produce a set of HTML pages (one per module) that define
+an instance of an OpenDSA eTextbook.
+Navigation through a given eTextbook is currently done through an
+index of modules that looks much like a traditional table of contents.
+
+OpenDSA uses a client-server architecture.
+A content server delivers the HTML documents along with embedded
+visualizations and exercises that make up the eTextbook.
+The data collection server is a web application that we built using
+the Django web framework with a MySQL database for data persistence.
+We designed an API to support communication between the OpenDSA
+``front end'' (the content that runs in the student's browser),
+and the data collection ``back end''.
+The back end collects the necessary information regarding student
+progress to provide a history of completed exercises for use by the
+student and the instructor.
+We also collect fine-grained user interaction data.
+Such log data can help debug usability or pedagogical problems with
+the tutorials, or guide redesign to discourage pedagogically poor
+student behavior~\cite{Breakiron2013}.
+Additional information on the OpenDSA architecture can be found
+in~\cite{Fouh14}.
+
+During Fall 2012, Spring 2013, and Fall 2013, OpenDSA materials have
+been used in classes at five universities in three countries,
+and OpenDSA is being used in three additional universities during
+Spring 2014.
+We have conducted a number of initial evaluations of OpenDSA, both for
+pedagogical effectiveness and for user satisfaction by students and
+instructors~\cite{Hall13}.
+OpenDSA was used to replace three weeks worth of standard lecture
+materials on sorting and hashing during October 2012 by around 60
+students in a DSA course at Virginia Tech.
+Students in the treatment section (that used OpenDSA) scored about one
+half of a standard deviation higher on the resulting exam than the
+control group (that did not use OpenDSA), but this was not
+statistically significant.
+Student evaluations on OpenDSA from every class over each semester of
+use have been highly positive.
+During Fall 2012, mean scores on preference for interactive online
+tutorials as compared to standard lecture actually went up after
+the students had experience with OpenDSA materials.
+Instructors have found that OpenDSA allows them to spend a greater
+fraction of lecture time on content related to the more abstract and
+difficult topics, and less on the mechanics of the algorithms.
+More details on our Fall 2012 evaluation can be found in~\cite{Hall13}.
+
+\section{JFLAP}
+\label{JFlap}
+
+JFLAP began in 1990 as a tool for pushdown automata written in C++ and
+X Windows, then added finite automata and Turing machines to become
+FLAP.
+Stand-alone tools for topics such as construction proofs, grammars,
+parsing algorithms, L-systems, and other models of Turing machines
+were eventually merged in.  
+In 1996 we initiated a Java version of FLAP, called JFLAP.
+In 2002, a new interface and new material was added such as
+Moore and Mealy machines, CYK parsing, and graph layout algorithms for
+automata.
+In 2011, a redesign of JFLAP was started to allow for a more flexible
+alphabet and several new features that should be completed in 2014.
+In addition, Rodger is writing a static FLA textbook that integrates
+JFLAP into the presentation.
+Students read the textbook and try JFLAP exercises by loading JFLAP
+files or creating new examples. 
+
+JFLAP is used around the world in FLA courses.
+The \url{jflap.org} site has over 460,000 visits since 2005, and by
+2006 JFLAP had been downloaded from over 160 countries.
+JFLAP was one of two finalist candidates in the NEEDS
+Premier Award for Excellence in Engineering Education Courseware
+competition in 2007.
+The submission packet contained letters from over 60
+faculty in support of JFLAP.
+There are nine books that use JFLAP in some way
+including~\cite{Lin11,Moz10,Gop06,Ben06,God08}.
+There are over fifteen JFLAP papers written by Rodger such
+as~\cite{RQS11,RLR07},
+and over twenty-five papers written by others that use JFLAP in some
+way such as modifying it for blind students~\cite{CRA12} or using it
+in a class~\cite{Nef10}.
+In 2005-2007 Rodger conducted a study on JFLAP with fourteen
+universities. 
+The majority of students indicated that having access to JFLAP
+made learning course concepts easier, made them feel more engaged in
+the course, and made the course more enjoyable ~\cite{RWL09}.
+
+With the software and the learning materials separate, students have
+to run the software and read along in the book, or switch 
+between an online textual copy and the software.
+JFLAP is written in Java and does not run on mobile devices or tablets.
+The logical next step is to fully integrate text with visualizations
+using HTML5.
+OpenDSA will provide the infrastructure for completing such an
+eTextbook.
+The current static learning materials rewritten using
+OpenDSA authoring support and automated assessment will be built into
+JFLAP practice exercises with OpenDSA infrastructure. 
+
+We propose a three-year plan for converting the main parts of JFLAP
+into an eTextbook using the OpenDSA structure.
+The first year will focus on types of automata, the 
+second will focus on proofs with automata, and the third year will
+focus on  grammars, parsing and associated  proofs.
+In parallel with the HTML5 implementation of JFLAP, each year the
+learning materials and assessments for the topics will be
+integrated into OpenDSA.
+
+\section{Research Agenda}
+\label{sec:plan}
+
+With existing support from NSF and volunteer efforts from a number of
+collaborators, OpenDSA is off to a good start in building the
+base infrastructure and initial content.
+We are somewhat ahead of the schedule laid out in the
+proposal that lead to our original TUES award.
+However, much remains to be done with content, infrastructure, and
+pedagogical studies, and many new opportunities have arisen as
+detailed below.
+The main research objective of the proposed project is to test the
+efficacy of the integrated OpenDSA courseware and determine the
+circumstances under which success can be achieved.
+In this section we describe the specific efforts to be made over the
+three-year life of this award.
+We present this in three broad areas of content development,
+infrastructure development, and pedagogical studies.
+
+Our goals include integrating certain existing AV-related projects
+into OpenDSA: JFLAP and TRAKLA2 (both described above) and
+JHAV\'{E}POP (described below).
+Doing this goes beyond just improving the original projects or giving
+them more exposure through reimplementation in HTML5.
+They have been carefully selected because they provide important
+activities for students within the context of DSA and FLA courses.
+Integration of these activities within OpenDSA creates a learning
+environment that is more than the sum of its parts.
+
+Throughout the development of OpenDSA, we have been guided by the
+principles of cognitive theory of multimedia presentation espoused
+by Richard Mayer~\cite{Mayer02,Mayer08}.
+Mayer has synthesized from pedagogical literature a set of principles
+that can inform the design of instructional multimedia such as
+OpenDSA.
+Derived from Cognitive Load Theory~\cite{Sweller1999}, it aims to
+maximize the benefits of engaging both the learner's verbal and visual
+channels, while minimizing distracting and extraneous material.
+The most compelling aspects of the principles are
+(1) they provide practical advice that can be used by designers, and
+(2) they are backed up (collectively) by literally hundreds
+of individual studies that measure learner gains.
+Mayer's work directly influences some of the goals listed next.
+
+\subsection {Content and Presentation}
+
+We have gone through three stages in our philosophy of presentation.
+When we first began the OpenDSA project, our primary goal was to
+tightly integrate textbook content with AVs, in order to solve
+problems with student comprehension of the dynamic processes
+associated with DSA.
+We soon realized that making students engage the material through a
+series of interactive exercises that provide immediate assessment and
+feedback is even more important than the visualizations.
+The third stage in our evolution came when we realized that visual
+presentation of all aspects of the content tends to be more effective
+than textual presentation.
+This means that, to the greatest extent possible, the textual content
+should be shifted into visuals supported by small amounts of text.
+This is most typically expressed in OpenDSA as a series of
+``slideshows'' embedded within the modules, whose pacing is controlled
+by the student.
+This more visual approach aligns well with Mayer's principles.
+Our evolution can be seen by comparing the current presentations on
+Sorting (the first OpenDSA chapter that we created) with the chapter
+on Linear Structures (one of the more recent chapters), which makes
+far more use of a series of small slideshows.
+
+We believe that we have a good understanding of how to use (algorithm)
+visualization to present the behavior of dynamic processes as embodied
+by algorithms and data structures.
+What we have so far failed to achieve is a better approach to
+presenting conceptual material, especially the large body of
+analytical reasoning that can be the most difficult aspects of DSA
+or FLA courses for students to grasp.
+In particular, students have trouble understanding the fundamental
+principles of algorithm analysis theory, or its practical application
+to analyzing particular algorithms.
+We believe that we can make good progress by studying various
+instances of visual proofs that exist in the relevant math and
+computing
+literature~\cite{Goodrich1998,Thompson2011,Blaheta2009,Sher2008,Hammack2006},
+and extracting a collection of principles that we can use to create
+effective visualizations of analytical material.
+We seek to develop a rich collection of techniques and supported
+graphical primitives to augment our presentations.
+We seek to address some especially hard topics in a
+standard DSA course.
+Of special interest to us are good tutorial presentations for
+recursion, algorithm analysis, and NP-completeness.
+In particular, for recursion we have a vision for an interactive
+tutorial driven by practicing many small programming exercises, under
+the guidance of an adaptive tutoring system that takes students
+through a progression of increasingly difficult material as they
+become ready for it.
+
+Our most pressing goal in terms of content is to complete a full
+semester course of OpenDSA materials where the content is delivered
+using as much visual support as possible.
+This means re-writing some of our earlier efforts (such as the Sorting
+chapter), creating new content, and further developing our repertoire
+of visual presentation techniques and tools.
+
+Mayer's work provides much support for
+the incorporation of audio narration to replace
+(note, \textbf{not} duplicate!) textual narration of the content
+associated with the visuals.
+This would naturally fit with the current slideshow-based presentation
+where a typical slide presents a (text) sentence with a visual such as
+the current state of a data structure.
+Thus, our first experimentation will develop audio narration for
+aspects of the tutorials.
+
+\subsection {Infrastructure Development}
+\label{plan:infrastructure}
+
+OpenDSA content is comprised of a large collection of modules, where a
+specific module typically has others as a prerequisite.
+Collectively, the modules and their prerequisite structure defines a
+directed graph that could be viewed as a concept map.
+This approach is inspired in part by the Khan Academy (KA) Knowledge
+Map (\url{http://www.khanacademy.org/exercisedashboard?k}), which
+shows a directed graph with the prerequisite relationships for
+a large body of exercises for K12 mathematics.
+In our vision, each node on the DSA concept map corresponds to a
+tutorial where content is integrated with a collection of assessment
+activities for a particular topic.
+A typical semester course might include 50-100 modules.
+We have begun preliminary work toward this goal as part of our
+EAGER/SAVI award, in conjunction with Sadhana Puntambekar of
+University of Wisconsin-Madison.
+Another use for a concept map is to reorganize the glossary,
+which is currently an alphabetical listing of terms with definitions.
+Organizing the glossary as a concept map would make it easy for
+students to explore the connections between related terms.
+
+Given a rich collection of modules and definitions for their
+prerequisite relationships, an instructor should be able to use 
+a simple interface to select a subset of modules to make up a given
+course.
+The selected modules can be processed to generate a ``book instance''.
+We currently support this ability through an XML-based configuration
+file.
+The next step is to provide a GUI for easily creating the
+configuration file.
+
+Instructors that have used OpenDSA have requested a mechanism for
+creating coursenotes for use in class presentations.
+While the AVs make for good in-class presentation tools, the module
+format does not directly lend itself to classroom presentation.
+A mechanism for authoring course slides (in reST) will be created that
+builds on the existing Sphinx slideshow theme.
+
+We currently generate a massive amount of interaction log data.
+We need improved tools to turn low-level (syntactic) interactions into
+semantic meaning.
+For example, how much time do students spend on
+various exercises or slideshow presentations?
+Once we have improved log analysis tools, we seek to
+take what we learn from the log data to encourage best
+learning behaviors.
+Prior experience shows that we must be careful to prevent students from
+abusing the ability to repeat exercises.
+If it is possible to achieve completion of a component by guessing,
+even if it is likely to take additional time, then
+some students will take that approach~\cite{Karavirta2005}.
+We also need to make sure that students do not find the
+exercises to be tedious or unreasonably time consuming.
+There are many fine details to work out.
+For example, the proficiency exercises typically require students to
+successfully perform a series of steps correctly.
+Naively, grading might simply count the number of steps done
+correctly.
+Unfortunately, if the student makes a mistake at any point in the
+process, it might be impossible to recover and get any additional
+steps correct, leading to a non-representative assessment of their
+performance.
+One solution is to always bring the student back ``on track'' when an
+incorrect step is made.
+But if this is not done carefully, it might lead students to guess.
+
+Our approach to key topics like recursion requires that we
+deliver and automatically assess small programming exercises.
+Standard test-case driven evaluation is already supported by OpenDSA
+in rudimentary form.
+We envision a more visual approach, as implemented in the
+JHAV\'{E}POP~\cite{JHAVEPOP} exercise system developed at University of
+Wisconsin--Oshkosh.
+There, the student's solution is presented back to the student
+in the form of a visualization generated from the student's code.
+In the original JHAV\'{E}POP, the student must decide if their answer
+is correct.
+We seek to tie this approach in with automated assessment of the
+exercises.
+This will be particularly useful for teaching topics like pointer
+manipulation.
+
+\subsection{Pedagogical Studies}
+
+OpenDSA provides the opportunity to change pedagogy away from
+lecture-and-textbook.
+Making the course more interactive requires
+mapping the current lecture course into an interactive
+format to ensure alignment across the associated course objectives.
+Students and instructors face many challenges when making a
+transition from lecture-based courses to any format where students are
+expected to spend significant time on their own working through
+materials and tutorials.
+In studies involving similar effort~\cite{Henry2010},
+the faculty report some pushback from students,
+because in a face-to-face course instructors typically do more of
+the delivery and interaction with the content.
+We expect that when a course is organized around an active eTextbook,
+students will spend more time out of class with the material.
+We want them to become involved in the learning in a
+deeper and more active way than they were in the past.
+Success is related to students' level of self-directed learning and
+self-regulated learning (SRL)~\cite{Muis2007,Hofer1997}.
+SRL affects how they manage the work required by the new format, how
+they interpret the new assessment mechanism,
+and their understanding of the shift in the role of instructor to
+facilitator.
+
+Henry, et al.~\cite{Henry2010} showed that students accustomed to
+traditional instructional strategies often require mentoring about how
+to direct their own learning of the material and perform the work.
+How do we build student's ability to self regulate? 
+Self-directed learning represents a paradigm shift for
+many students since the study habits that have brought them success in
+traditional learning environments are not always effective in the new
+settings~\cite{Hmelo-Silver2004}.
+Our evaluation of the process therefore has to be formative and
+promote continued improvement in student performance.
+We will design effective feedback rubrics and assessment methodologies
+that are replicable and scalable.
+
+We can hypothesize that instructors will start by using the eTextbook
+as a direct replacement for text and paper homework, and gradually
+evolve into larger changes in how they conduct their class.
+While OpenDSA enables pedagogical changes, does its availability
+encourage instructors to greater pedagogical experimentation?
+Does it encourage better teaching practices?
+Does it lead to more interactive classes?
+We will study and characterize the evolution of instructors' changing
+pedagogy with eTextbooks.
+
+\section{Implementation and Impact Study}
+\label{EvalSec}
+
+Specific research questions and metrics for the implementation and
+impact study are discussed in Table~\ref{Exhibit}.
+OpenDSA courseware will be evaluated in DSA and FLA courses at  
+Virginia Tech (CS3114), Duke (Compsci334), and UW-Oshkosh (CS271),
+as well as at a number of other institutions.
+Due to its large enrollment, CS3114 is given to two sections each
+semester.
+Similar to experiments in Fall 2012, these class sections can be used
+to group students into control and experimental cohorts, with control
+groups receiving traditional, lecture-based instruction while the
+experimental group uses OpenDSA courseware.
+The large enrollment provides an opportunity to simultaneously compare
+new and old strategies while minimizing confounding factors.
+
+From a teaching perspective, OpenDSA tutorials deliver course content
+incrementally, and balance teaching the content processes with
+interactive, auto-assessed activities that provide immediate feedback.
+From a learning perspective, they are intended to move students from a
+passive stance in a lecture-type classroom setting to an active
+position of constructing learning and tracking their own comprehension
+through immediate feedback received from the exercises.
+The theory of change driving the design and implementation of these
+tutorials is to encourage students' engagement with the content
+and involve them in the assessment loop as active participants in such
+a way that they, as well as their instructors, know that they are
+learning.
+According to Bandura's cognitive theory of
+self-efficacy~\cite{Bandura},
+instruction that allows students to check their own progress at a
+designated level of proficiency positively impacts outcome.
+Constructivist theory suggests that timely feedback
+can encourage students to modify their work.
+Lovett and Greenhouse~\cite{Lovett} show that receiving feedback on
+the process of learning gives significant improvement as compared to
+only receiving feedback from the instructor on performance outcomes.
+
+The following research questions will be explored through a study
+sample of courses taught by instructors recruited at the SIGCSE annual
+meeting, through the SIGSE listserv, and by personal contacts to
+project participants.
+Additionally, a control sample will be selected and matched
+within institution where number of course sections permit,
+or alternatively based on an array of population, geographic, and
+institutional mission indicators identified though features of the
+study sample.
+As part of our evaluation, we have requested funding to support
+instructors from outside the project who will adopt OpenDSA materials
+for their courses, and collect implementation and impact data for us.
+We have budgeted \$10,000 each year as stipends to support two outside
+adopters, for a total of six over the three years.
+While far more instructors than this are expected to use OpenDSA
+during this time,
+these instructors will be supported to both tailor OpenDSA content
+to their classes, and to conduct assessment beyond that
+normally expected from instructors who use OpenDSA.
+
+\begin{table}
+\caption{Research questions and data sources.
+Pre: Pre-Assessment test.
+Post: Post-Assessment test.
+AUD: Analytic User Data.
+SI: Student Interviews.
+MI: Midterm Interviews.
+EI: End-of-Semester Interviews.
+TL: Teacher Log.
+}
+\label{Exhibit}
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+Data Source&Pre&Post&AUD&SI&MI&EI&TL\\
+\hline
+\textbf{RQ1} Does OpenDSA increase student proficiencies&&&&&&&\\
+with core data structures and algorithms content?&X&X&&&&&\\
+\hline
+\textbf{RQ2} Does OpenDSA student proficiency exceed&&&&&&&\\
+that of students not exposed to OpenDSA?&&&&&&&\\
+\hline
+\textbf{RQ3} How do students use OpenDSA materials?&&&X&&&&\\
+\hline
+\textbf{RQ4} What factors led to instructor selection and&&&&&&&\\
+implementation of OpenDSA materials?&&&&X&&&\\
+\hline
+\textbf{RQ5} Do instructors change their use of OpenDSA&&&&&&&\\
+materials over time?&&&&&X&X&X\\
+\hline
+\textbf{RQ6} Are DSA fundamental course structures&&&&&&&\\
+altered based on implementation of OpenDSA?&&&&&&&X\\
+\hline
+\textbf{RQ7} Does OpenDSA use and/or course success vary&&&&&&&\\
+across student demographic and social dimensions?&X&X&&&&&\\
+\hline
+\end{tabular}
+\vspace{-\bigskipamount}
+\end{table}
+
+Data sources are tagged to key research questions in the table.
+\textbf{RQ1} and \textbf{RQ2}:
+A parallel item cognitive pre-assessment and post-assessment will be
+administered to the study group and the comparison group to measure
+degrees of student proficiency concerning DSA and FLA content.
+OpenDSA materials will consist of an open test bank and a
+closed test bank.
+The open test bank can be drawn from OpenDSA exercises, but will
+also be provided to the control group to use for review and
+assessment preparation purposes.
+The closed bank will be electronically administered with a
+proctor and used to measure progressions in core knowledge.
+\textbf{RQ3}: Analytic user data will consist of access frequency,
+overall time on task, and individual lesson completion time.
+These data permit the research team to gauge student use
+of OpenDSA as well as identify specific content that
+students collectively find difficult to understand.
+In addition to user data, randomized study sample site
+participants will be selected for small group interviews concerning
+the nature of OpenDSA materials use.
+\textbf{RQ4}, \textbf{RQ5}, and \textbf{RQ6}:
+Instructor implementation information will be gathered through a
+biweekly teacher log, a total of six entries per instructor, as well
+as midterm and end-of-semester follow-up interviews.
+Information such as content covered, course format, course learning
+environment, course activity, and course pace will be collected.
+\textbf{RQ7}: Data sources from \textbf{RQ1} and \textbf{RQ2}
+will be used to determine if OpenDSA materials have differential
+impacts on student academic outcomes and tendencies of integrated
+courseware use for individuals with different demographic
+characteristics such as females, underrepresented ethnic minorities,
+and first generation college students.
+
+Each data source will be collected in each project year.
+Study sites implementing OpenDSA will contain two student study
+samples (Spring and Fall semesters) each project year.
+Pre/post assessment data, analytic user data, small group student
+interviews, midterm and end-of semester interviews, and teacher logs
+will be collected or conducted from/for all study sites.
+Similarly, the control sites will also contain two student study
+samples each project year where pre/post assessment data and teacher
+log data will be collected for non-treatment comparison.
+
+The evaluation plan requires systematic data collection at multiple
+sites, along with planning, merging, analyzing, and documenting the
+data collected in these sites.
+We will conduct validity and reliability tests and report the
+psychometric quality of the instruments developed because aspects of
+this project require development of new tools and assessment.
+The plan is sufficiently complex that we have requested support for an
+external project consultant to execute the plan.
+
+Project evaluation provides continuous, timely, and constructive
+feedback through multiple evaluations during the course of the
+project, suggesting program changes, if necessary, to ensure
+project success.
+The evaluation plan is guided by these goals:
+\begin{enumerate}
+\itemsep=0pt
+\parskip=0pt
+\parsep=0pt
+\vspace{-\medskipamount}
+
+\item Determine whether project goals and benchmarks were
+reached concerning materials development, research, and
+dissemination.
+\item Determine whether the specified research methods were employed
+  during the implementation and impact study.
+\item Obtain feedback from students and teachers on their
+perception of the overall effectiveness of the OpenDSA materials.
+Interviews will be conducted with selected teachers and students.
+\item Measure the degree of transfer of the OpenDSA materials.
+\end{enumerate}
+
+\section{Dissemination Plan}
+\label{DissemSec}
+
+The ``open'' aspect of OpenDSA means that instructors themselves
+can become active participants in designing and contributing to the
+content that OpenDSA offers to their students.
+This involvement can come in many ways:
+
+\begin{itemize}
+\itemsep=0pt
+\parskip=0pt
+\parsep=0pt
+\vspace{-\bigskipamount}
+
+\item Given that OpenDSA is not a linear sequence of material but
+rather a ``bag of instructional resources'', instructors can
+define their own specific paths through the instructional modules,
+encapsulated as eTextbook ``instances''.
+These instances can then be distributed as OpenDSA configuration files
+for others to use.
+
+\item Instructors are able to contribute their
+own content to OpenDSA.
+These contributions might be any artifact type supported by OpenDSA
+such as text, visualizations, interactive activities, or exercises.
+  
+\item The contributions might be original (at least to OpenDSA),
+or modified from materials already existing in OpenDSA.
+\end{itemize}
+
+\vspace{-\bigskipamount}
+To encourage faculty to become involved in designing and creating
+OpenDSA content, we will offer workshops at conferences such as
+SIGCSE.
+Such workshops expose participants to materials that we have already
+developed, which aids adoption.
+They also show participants how to design and contribute their own
+materials.
+We anticipate doing workshops during each year of the project.
+
+In addition to the workshops, we will also hold ``advisory panel''
+meetings at SIGCSE that will be analogous to the stakeholder meetings
+for our AlgoViz Portal project that we hosted in 2008 and 2009.
+Such meetings involve individuals who have already become active in
+the OpenDSA community.
+The AlgoViz stakeholder meetings turned out to be extremely important
+in the evolution of that project and in its subsequent success.
+For OpenDSA, involving key players in the AV development community is
+an important part of generating a robust community of content
+developers.
+We therefore include in our budget support for both the workshops
+and the stakeholder meetings at SIGCSE during the years of the
+proposal.
+We include a request for some international travel support
+since some of our most important collaborators are located in Europe
+(see for example the support letter from Aalto University).
+
+One aspect of dissemination is the support that instructors need when
+using online materials with automated assessment.
+They need support for collecting and maintaining the (auto)
+graded material, and the ability to track progress for their
+students.
+OpenDSA currently provides this support as part of its server-side
+infrastructure.
+However, while it is feasible for an academic project to
+develop high-quality instructional material, and feasible
+for an academic project to make such materials available for a period
+of many years, it is not likely to be feasible for an academic project
+to sustain the infrastructure needed to support a large body of
+students (potentially 10s or 100s of thousands per year) and their
+instructors.
+This is the sort of service that is more appropriate for a commercial
+entity, providing hosting and back-end data collection as a service.
+
+Our vision requires that OpenDSA content always be open, and
+to be viewed as a community-based resource.
+However, we also seek to work with commercial service providers on a
+``value added'' basis, where the provider hosts OpenDSA book
+instances, and maintains student progress and instructional
+gradesheets in a FERPA-compliant manner.
+To this end, we have begun discussions to partner with Zyante
+(\url{http://www.zyante.com/}) to provide materials for their DSA
+offerings.
+We have a preliminary analysis of the infrastructure changes
+that will be needed for OpenDSA materials to communicate with
+Zyante's infrastructure.
+While not trivial, the necessary APIs can be designed that
+allow OpenDSA to both be usable in its open form, or
+used through Zyante (or potentially other service providers) with the
+instructor services added at a reasonable cost to students.
+This model could prove decisive to the future of eTextbooks and
+online courses in general.
+
+\section{Project Management}
+
+OpenDSA is a collaboration of several universities,
+including the three directly supported under this proposal.
+Dr. Shaffer will be responsible for coordinating the activities of the
+various participants.
+Dr. Ernst is experienced in educational research and development
+initiatives and will be responsible for phases of the project
+including data collection and reporting.
+They will work with the other PIs to develop the detailed instruments
+and collect the necessary data, as described in Section~\ref{EvalSec}.
+We request funding for 2.5 years of Postdoc support.
+The Postdoc will assist Dr. Shaffer in directing the software and
+content development efforts, interacting with outside faculty who will
+adopt and evaluate OpenDSA, and in conducting assessment activities
+(under the supervision of Dr. Ernst).
+
+Drs. Rodger and Naps will direct efforts at Duke and UW-Oshkosh,
+respectively.
+Dr. Rodger's will oversee reimplementation and deployment within the
+OpenDSA framework of JFLAP.
+She will perform evaluations at Duke with parts of the new JFLAP.
+Dr. Naps will work with Dr. Shaffer to develop OpenDSA content,
+consult on reimplementation of JHAV\'{E}POP,
+perform evaluations at UW-Oshkosh, and coordinate with adopting
+instructors.
+We already routinely hold Skype conference calls to coordinate our
+work, including with our partners at Aalto University.
+We will formalize this process into a regular monthly Skype discussion
+of the project PIs and other relevant participants.
+The annual meetings to precede the SIGCSE conference will serve as
+additional opportunities to interact in person with key stakeholders.
+
+Key timing aspects are as follows.
+Each year, we will recruit two outside faculty who will both
+use OpenDSA in a course, and provide extensive evaluation feedback.
+These individuals will be compensated by grant funds.
+We expect that a broad group of faculty will also adopt OpenDSA in
+their classes, but they will not have the same evaluation obligations.
+Our postdoc will take on management responsibilities for project
+development and implementing evaluation tasks.
+The postdoc should be in place by the middle of the first year.
+We will have our major stakeholder meetings at the annual SIGCSE
+conference in early March of years two and three.
+Some aspects of content development, infrastructure development,
+and pedagogical studies will be ongoing in each of the three years.
+But we expect to complete most of the remaining infrastructure
+development as described in Section~\ref{plan:infrastructure} during
+year one.
+Year two will see completion of most of the content-related tasks,
+with further polishing of materials in year three.
+Evaluation and dissemination will be ongoing throughout the life of the
+project, but will be the major focus of year three.
+
+\section{Broader Impacts}
+
+OpernDSA provides an interactive, visual presentation for dynamic
+material (algorithms and operations on data structures) as well as
+visual presentation of abstract concepts (such as algorithm analysis),
+combined with immediate feedback through interactive exercises.
+OpenDSA has the potential to improve the learning of students of DSA
+and FLA courses in ways never before possible.
+Beyond Computer Science, the models we provide for architecting,
+using in class, disseminating, and assessing eTextbook materials are
+broadly applicable across a range of STEM and non-STEM disciplines.
+
+This project has had many undergraduate students work on AV-related
+activities over the years.
+PI Naps managed a site REU project from 2009-2011 that supported
+5--10 undergraduates each summer to develop JHAV\'{E} modules.
+PI Shaffer has had approximately 20 undergraduate independent study
+students work on AV projects (9 during Spring 2014 semester alone),
+and PI Rodger has supervised over 20 undergraduates on JFLAP
+development.
+We anticipate that many undergraduates will in the future choose to do
+independent projects related to OpenDSA, including from other schools
+not directly supported by the project.
+Being an open-source project, OpenDSA provides a framework whereby
+such students can productively contribute.
+Shaffer has previously involved minority students through Virginia
+Tech's Multicultural Academic Opportunities Program (MAOP) internship
+program (equivalent to an NSF REU).
+We have budgeted money each year at Virginia Tech to
+support undergraduate researchers, including MAOP interns.
+Duke and UW-Oshkosh budgets include funds for undergraduate research.
+
+
+\section{Results from Prior NSF Support}
+
+\textbf{NSF TUES Phase I Project (DUE-1139861)}
+\emph{Integrating the eTextbook: Truly Interactive Textbooks for Computer
+Science Education.} PIs: C.A. Shaffer, T. Simin Hall, T. Naps,
+R. Baraniuk.
+\$200,000, 07/2012 -- 06/2014.
+\textbf{NSF SAVI/EAGER Award (IIS-1258571)}
+\emph{Dynamic Digital Text: An Innovation in STEM Education},
+PIs: S. Puntambekar (UW-Madison), N. Narayanan (Auburn),
+and C.A. Shaffer (2013). 
+\$247,933, 01/2013 -- 12/2014.
+\textbf{NSF CCLI Phase 1 Award (DUE-0836940)}
+\emph{Building a Community and Establishing Best Practices in
+Algorithm Visualization through the AlgoViz Wiki.}
+PIs: C.A. Shaffer, S.H. Edwards.
+\$149,206, 01/2009 -- 12/2010.
+\textbf{NSF NSDL Small Project (DUE-0937863)}
+\emph{The AlgoViz Portal: Lowering Barriers for Entry into an Online
+Educational Community.} PIs: C.A. Shaffer, S.H. Edwards, \$149,999,
+01/2010 -- 12/2011.
+\textbf{Intellectual Merit} 
+The first two projects provided online infrastructure
+(the AlgoViz Portal (\url{http://algoviz.org}) and related community
+development efforts to promote use of AV in computer science courses.
+This work was an important precursor to OpenDSA, as it
+allowed us to interact with many CS instructors and AV developers,
+leading us to an understanding of the fundamental missing parts in
+existing DSA instruction.
+They also initiated many of the international collaborations that lead
+to OpenDSA.
+Two journal papers~\cite{Shaffer10,Fouh:AV11} and five conference
+papers~\cite{ShafferSIGCSE07,ShafferSIGCSE10,ShafferSIGCSE11,ShafferPVW11,ShafferKoli11}
+have been produced relating to this work.
+The second pair of (ongoing) awards support the initial phases of
+OpenDSA, and an active collaboration involving Virginia Tech and Aalto
+University (Helsinki), among others.
+Publications related to this work so far
+include~\cite{KorhonenWG13,Karavirta:ITiCSE13,Hall13,Fouh14}.
+\textbf{Broader Impacts}
+include dissemination of AV artifacts and DSA courseware to a broad
+range of CS students, and made them available through the NSF NSDL.
+
+\medskip
+
+\textbf{NSF CCLI Phase 1 Awards (DUE-0341148 and DUE-0126494)}
+\emph{Integrating Algorithm Visualization into Computer Science
+Education.} PIs: T.L. Naps, S. Grissom, and M. McNally,
+\$71,993 for 2001--2002 and \$197,118 for 2003--2007.
+\textbf{REU grant (CNS-0851569)}
+\emph{Exploring Open Source Software: Development and Efficacy of
+Online Learning Environments in Computer Science},
+PIs: T.L. Naps and D. Furcy,
+\$261,167 for 2009--2012.
+\textbf{Intellectual Merit} 
+The first two grants resulted in significant development on the
+JHAV\'{E} algorithm visualization system.
+A website was established at \url{http://jhave.org} to disseminate
+the visualization-based materials that were produced for teaching
+data structures and algorithms.
+The following papers were published as a result of the
+grant, three had undergraduate students as
+co-authors~\cite{furcy2007blocktree,lucas2003visualgraph,NaRoPVW:2006,GAIGS_support,Naps05,NaMcPVW:2006,GrMcNa:2003,NaGr:2002,RoNa:2002}.
+\textbf{Broader Impacts}
+The REU grant provided student participants with extensive exposure to
+open-source software for the delivery of instructional algorithm
+visualizations, as developers, authors, and educational researchers.
+
+\medskip
+
+\textbf{NSF ITEST DRL-1031351}
+\emph{Collaborative Research: Scaling up an Innovative Approach for
+Attracting Students to Computing} 
+PIs: S.H. Rodger, S. Cooper (Stanford),
+W. Dann (CMU), M. Schep (Columbia College), 
+R. Stalvey (College of Charleston), P. Lawhead (U. Mississippi)). 
+\$2,499,870 for 2011--2016.
+This and award {\bf NSF ITEST 0624642} develop curriculum
+materials for the Alice programming language, integrating computer
+science into K-12.
+\textbf{Intellectual Merit:}
+We developed over 80 tutorials on CS and animation
+topics for all K-12 disciplines~\cite{CDL11,RDG12},
+teachers attending our workshops developed over 180 lesson plans
+(see \url{www.cs.duke.edu/csed/alice/aliceInSchools}).
+\textbf{Broader Impacts:} Summer workshops taught over 200 K-12
+teachers programming and how to integrate computing into their
+disciplines.
+Published papers include 7 female undergraduates as co-authors, who
+participated in teaching and mentoring the teachers.
+
+\textbf{NSF TUES DUE-1044191}
+\emph{Integrating Visualization and Interaction into the Formal
+Languages and Automata Course}
+PI: S.H. Rodger
+\$199,996 for 4/2011-- 03/2015.
+\textbf{Intellectual Merit:}
+This and prior award {\bf NSF CCLI 0442513} focus on enhancing
+JFLAP with new algorithms, designing curriculum materials, and running
+studies on the usability of JFLAP in learning automata theory.
+\textbf{Broader Impacts:}
+JFLAP is used extensively around the world in automata theory courses.
+The published papers~\cite{RWL09,RQS11} include five
+undergraduate co-authors.
+
+\medskip
+
+\textbf{NSF EHR (DRL-1156629)}
+\emph{Transforming Teaching through Implementing Inquiry project},
+PIs: J. Ernst, L. Bottomley, A. Clark, V.W. DeLuca, S. Ferguson,
+\$1,997,532, 2011--2015.
+\textbf{NSF EHR (DRL-1135051)}
+\emph{Re-designed High Schools for Transformed STEM Learning},
+PIs: E. Glennie, J. Ernst, \$1,954,066, 2011--2015.
+These projects showcase Co-PI Ernst's experience with developing and
+assessing STEM education initiatives.
+The first explores the use of cyberinfrastructure tools to improve
+quality and enhance delivery of professional development materials for
+grades 8-12 engineering, technology, and design educators.
+The second is a longitudinal research project to assess
+1) North Carolina New Schools Project (NCNSP) STEM strand school
+student learning over time, using extant data, survey data, and
+performance assessments, contrasted with student performance in a
+matched set of comparison high schools using traditional curricula;
+and
+2) School-level policies and instructional practices that
+schools employ to promote student learning through a series of case
+studies involving site visits and teacher logs.
+Publications include~\cite{Ernst12,Ernst13,Segedin13}.
+\textbf{Broader Impacts:} These projects informed the NCNSP STEM
+strand schools work with respect to implementation of the empirically
+re-visioned STEM model. They have provided a cyber system and content,
+focused on increasing engineering, technology, and design teacher
+quality, that is readily adaptable to the full breadth of STEM
+education implementation initiatives. 
+
+%\newpage
+%\input{managementplan}
+
+\newpage
+\pagestyle{empty}
+\bibliographystyle{plain}
+\bibliography{OpenDSA}
+
+\end{document}

@@ -1,0 +1,40 @@
+Instructional Design
+    Dick & Carey
+    Learning Objectives
+Theories of Learning
+    Cognitivist
+    Constructionist
+    Situated Learning Theory
+        Authenticity
+TPACK
+    Content Knowledge vs. Pedagogical Knowledge vs. Technological Knowledge
+Motivation/Engagement
+    MUSIC Model
+    Self-efficacy
+    Domain Identification
+Assessment
+Active Learning
+Peer Instruction
+Learner Misconceptions in CS
+Notational Machine
+Guzdial's book
+    https://dl.dropboxusercontent.com/u/2635522/LCD-CE-TOC-Preface-Dec2015.pdf
+    https://computinged.wordpress.com/resources-for-new-cs-teachers/
+    https://computinged.wordpress.com/2012/05/03/blog-post-999-research-questions-in-computing-education/
+Item-Response Theory
+
+What should we teach in Computing?
+How should we teach it?
+How do we assess it?
+
+
+Misconceptions
+    Learning Styles
+    
+https://computinged.wordpress.com/2015/11/18/a-cs-research-class-syllabus/
+
+If you're planning an academic career, you should know something about curriculum
+There'll be guest expert lecturers
+You'll get to apply it to a real part of the undergraduate curriculum
+
+Area 6: Data and Information

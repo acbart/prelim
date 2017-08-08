@@ -11,7 +11,8 @@ PROJECTS = {
     'tetc-blockpy': 'hymnfbvhxkqn',
     'lact-toce': 'hmgpntgdxpcw',
     'compsac-blockpy': 'frqkrzkmqdyv',
-    'sigcse-corgis': 'jygsxtkvfkrb'
+    'sigcse-corgis': 'jygsxtkvfkrb',
+    'dissertation': 'snmzxnvmwmjs'
 }
 
 try:
@@ -25,7 +26,7 @@ LOG_FILENAME = PROJECT_NAME+'.log'
 
 content = requests.get(URL).content
 
-soup = BeautifulSoup(content)
+soup = BeautifulSoup(content, 'lxml')
 
 main_content = soup.find(id='doc_content').string
 main_content = main_content.split('\\maketitle')[1]

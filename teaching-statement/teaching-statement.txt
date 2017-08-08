@@ -1,0 +1,33 @@
+Why do you teach the way you do?
+    Data, theory, and practice show this to be the best way that people learn.
+What should students expect of you as a teacher?
+    Fair, dedicated to their learning.
+    A teacher has a professional and moral obligation to advance their students
+What is a method of teaching you rely on frequently? Why don’t you use a different method?
+    Lecture is a small part of a much bigger learning process, so every lesson I develop incorporates a blend of presentation, participation, assessment, and feedback.
+    If students are not actively participating in constructing their understanding, they are not learning.
+    I also leverage the power of collaboration, group work, and independent learning wherever possible.
+What do you want students to learn? How do you know your goals for students are being met?
+    Assessments, whether formative or summative, are a key tool to improve my instruction and guide my learners to success.
+    Developing an environment where students feel comfortable demonstrating their current level is crucial.
+What should your students be able to know or do as a result of taking your class?
+    Computing, and in particular computer science, gives its users new powers
+    Students can accomplish things they could never do before, even at an introductory level: build interactive websites and games, find answers to questions at scale, and to solve real-world problems.
+    I believe that learning to think Computationally changes the way that people approach the world, and is now a necessary cornerstone of a broad liberal education.
+    Meanwhile, students who progress further into computing can unlock powers and understanding that are so sufficiently advanced so as to be magic.
+    There is a beauty and majesty to computing, and it is my job to share that vision with students.
+How can your teaching facilitate student learning?
+How do you as a teacher create an engaging or enriching learning environment?
+    I focus on multiple aspects of motivation: beyond making the material interesting and presenting with vigor, I always spend time drawing the big picture of how this can benefit their short-term understanding and long-term career needs.
+    For example, I incorporate multiple educational contexts into my course: fun computational puzzle games (e.g., where you must guide an avatar to escape a maze) followed by serious data science questions.
+    I always try to balance the challenges of the lesson so that students can have the perfect level of struggle and feel that they are solving worthwhile problems.
+    I let them know that I am always available to them to guide them to success, whether in the classroom, via email, or in office hours.
+    But most of all, I encourage them to stake a claim in their learning and find opportunities to incorporate their own passions.
+    For example, in the final project of my course, students tackle a massive research question of their own choosing, using a dataset they select from their own discipline. Although they all use the same general computational methods, it is up to the student to devise their own questions, build up their visualizations, and produce an answer.
+What specific activities or exercises do you use to engage your students? What do you want your students to learn from these activities?
+How has your thinking about teaching changed over time? Why
+    Every student has a rich background and potential to draw on, and I find it is valuable to differentiate the lessons to their benefit whereever I can.
+    
+    Automatic feedback tools are crucial for managing my larger courses, but there is often no substitute for sitting down next to a student and socratically walking them through their problems.
+    
+    
