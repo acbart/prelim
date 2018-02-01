@@ -1,0 +1,119 @@
+Audiences
+    Designers - Designing Pedagogical Datasets
+    Researchers - Understanding Data Science as a Context
+Data Science is a popular intro context
+    Particularly to engage non-majors
+    
+    Strongly connected to programming
+        Easily aligned with objectives
+        Flexible difficulty
+    Useful/"Authentic" - A modern skill (The Sexiest Job of the 21st Century)
+        Connect to their personal interests
+        Freedom to explore
+Prior Research
+    Sinbad, Anderson, BRIDGES
+    Highlight CORGIS study
+        Collection of 44 datasets related to X, Y, and Z
+        Curated and documented
+        Used in a Computational Thinking class for non-computing majors
+    Prior work
+        Published (Spring 2016)
+        Presented (Fall 2016)
+        New data (Fall 2016+Spring 2017+Fall 2018, ~300 students)
+    Results largely confirm prior work:
+        Data Science is still the most popular context from the survey, significantly so
+        Usefulness of learning to work with real-world data is higher than learning to program
+        Intent to Continue Learning is most strongly correlated with their perceptions about Programming (usefulness, interest, success) and not working with real-world data
+            Useful/Program 0.404*
+            Successful/Program 0.329*
+            Interesting/Program 0.408*
+What is Data Science?
+    Content
+        A process of iteratively exploring data to answer questions
+        Informed by programming, statistics, domain knowledge
+        Much discussion about what exactly to teach - statistics? machine learning? munging?
+    Context
+        Anchor story
+        A motivational tool for engaging students (learn more, work longer, say they had fun on surveys)
+        Minimal addition to Learning Objectives
+Pedagogical Datasets
+    A dataset specifically targetted at novices for learning purposes
+    Not necessarily for teaching data science
+"The Pragmatics of Pedagogical Dataset Development"
+    Guide to developing datasets
+    A living document
+    Overlaps with Data Science guides, but targetted
+    Link to website
+Pedagogical Dataset Development Process
+    Think Software Engineering
+Pragmatics of Pedagogical Datasets
+    Getting started
+        Think about audience
+        Think of scope (Freedom vs. Structure)
+            Students find their own dataset
+            Choose from a list of prepared datasets
+            Use a specific dataset
+            Less -> More control
+            Less -> More freedom
+            Easier to grade, more opportunities for creativity
+        Standardize your process early
+            Clean workspace
+            Have conventions
+            Break into phases
+            Structure and organization
+            Bug tracking
+        Learn the context
+    Collecting Data
+        Hunting sources
+            Filtering and searching
+            Google/Search Engines
+            Meta-lists
+            GitHub
+            DataIsPlural
+        File Formats
+            Open (CSV, JSON) <--> Closed (tools like PDF Extraction, OCR)
+        Scraping/Mining
+            Legality
+        Mash-ups
+    Restructuring
+        Options? Primitive Types, Heterogenous Collection, Homogenous Collection
+        Target structure (standardize?)
+        Layering
+        Indexing
+        Collapsing data/pivoting using an aggregate function/Binning
+        Stacking data
+    Manipulating
+        Standardized Fields
+        Naming (as hard as naming variables)
+        Missing Data - imputation, null values
+        Manual cleaning
+        Mathematical transformations (e.g., standardizing, log transform)
+    Data Representation
+        Numbers,
+        Text - apply extra analyses
+        Dates and Times
+        Measurements
+        Locations
+        URLs
+        Enumerated Data
+    Documentation
+        Nobody reads the documentation
+        Structure's complexity (Data Explorer)
+        Data's complexity (Preliminary analysis with histograms)
+    Data dissemination
+        File size
+        Availability
+        Closed or open?
+        Downloading, installation, opening
+        Versioning
+        Bit decay
+    Evaluation
+        Did students use it?
+        Did students enjoy it?
+        Did they understand it? Did they know what to do when confused?
+        Did they have enough options?
+        Revise it
+Interested?
+    CORGIS Project needs more datasets
+        more maintainers
+        Send students to contribute to us

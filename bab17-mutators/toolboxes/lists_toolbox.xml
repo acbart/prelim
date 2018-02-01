@@ -1,0 +1,15 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+  <block type="lists_create_with" inline="true">
+    <mutation items="3"></mutation>
+  </block>
+  <block type="_3list"></block>
+  <block type="listopen">
+    <value name="NAME">
+      <block type="listclosed"></block>
+    </value>
+  </block>
+  <block type="list_editable">
+    <field name="NAME">1,2,3,4,5</field>
+  </block>
+  <block type="plus_minus_list"></block>
+</xml>

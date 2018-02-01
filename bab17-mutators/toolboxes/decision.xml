@@ -1,0 +1,15 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+  <block type="controls_if"></block>
+  <block type="if">
+    <next>
+      <block type="elseif">
+        <next>
+          <block type="else"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="if_block"></block>
+  <block type="ifelse_block"></block>
+  <block type="ifelif_block"></block>
+</xml>
